@@ -1,0 +1,15 @@
+<style webc:scoped>
+	.highlight {
+		font-weight: bold;
+	}
+</style>
+
+<script webc:type="js">
+	this.names.map(name => {
+		if (name === this.$data.person) {
+			return `<span class="highlight">${name}</span>`;
+		} else {
+			return `<span>${name}</span>`;
+		}
+	}).join(", ");
+</script>

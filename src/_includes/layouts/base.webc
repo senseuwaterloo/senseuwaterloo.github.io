@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SENSE UW</title>
+	<meta name="description" content="SENSE UWaterloo">
+	<meta name="author" content="bolu61 <bolu61@zjc.dev>">
+	<style webc:keep>
+		@import "/colors.css";
+		@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+		@layer base {
+			:root {
+				--serif: Meriweather, Georgia, serif;
+				--sans: Montserrat, Arial, sans-serif;
+			}
+
+			html {
+				font-family: var(--serif);
+				background-color: var(--background);
+				color: var(--foreground);
+			}
+
+			body {
+				margin: 0;
+			}
+
+			header {
+				font-family: var(--sans);
+				font-size: 14px;
+				background-image: linear-gradient(to bottom, var(--muted), 80%, transparent);
+				color: var(--text-muted);
+				padding: 1rem 1rem;
+				padding-bottom: 2rem;
+				position: sticky;
+				top: 0;
+
+				&:before {
+					content: '';
+					height: 5rem;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					mask-image: linear-gradient(to bottom, black, transparent);
+					backdrop-filter: blur(6px);
+				}
+
+				nav {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					ul {
+						list-style: none;
+						display: flex;
+						gap: 1rem;
+					}
+
+					a {
+						color: var(--text-muted);
+						text-decoration: none;
+						text-transform: capitalize;
+					}
+
+				}
+			}
+
+			header>*,
+			main>section>*,
+			footer>* {
+				max-width: 48rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			main>section {
+				margin: 0 1rem;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-weight: normal;
+				text-transform: capitalize;
+			}
+
+			h1 {
+				font-family: var(--serif);
+				font-size: 3.5rem;
+				color: var(--foreground);
+				text-transform: capitalize;
+				margin: 3rem auto;
+			}
+
+			h2 {
+				font-family: var(--sans);
+				font-size: 14px;
+				color: var(--text-muted);
+				text-transform: uppercase;
+				margin: 3rem auto;
+			}
+
+			h3 {
+				font-size: 20px;
+				margin: 3rem auto;
+				margin-bottom: .5rem;
+			}
+
+			p {
+				color: var(--text-muted);
+				margin: .5rem auto;
+			}
+
+			hr {
+				border: none;
+				border-top: 1px solid var(--border);
+				margin: 6rem 0;
+			}
+
+			.hero {
+				text-align: center;
+				margin: 6rem 1rem;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+				column-gap: 4rem;
+				row-gap: 2.5rem;
+			}
+
+			footer {
+				font-size: small;
+				font-family: var(--sans);
+				color: var(--text-muted);
+				padding: 0 1rem;
+				margin: 6rem 0;
+
+				&>* {
+					display: flex;
+					justify-content: space-between;
+				}
+
+				a {
+					color: var(--text-muted);
+					text-decoration: none;
+				}
+			}
+		}
+	</style>
+	<style webc:keep @raw="getBundle('css')"></style>
+	<script webc:keep type="module" @raw="getBundle('js')"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div>SENSE Lab</div>
+			<ul>
+				<li><a href="/#publications">Publications</a></li>
+				<li><a href="/members">Members</a></li>
+				<li><a href="/#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main @raw="content"></main>
+
+	<hr>
+
+	<footer>
+		<div>
+			<div>
+				<div>Software Engineering and System Engineering Lab</div>
+				<div><a href="mailto:wshang@uwaterloo.ca">wshang@uwaterloo.ca</a></div>
+			</div>
+			<span>&copy; 2026</span>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<style webc:scoped>
+	:host {
+		display: block;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.title {
+		font-style: italic;
+	}
+
+	.authors,
+	.container,
+	.year,
+	a {
+		color: var(--text-muted);
+	}
+</style>
+
+<script webc:setup>
+	function format_name(name) {
+		return `${name.given} ${name.family}`;
+	}
+</script>
+
+
+<ul>
+	<li webc:for="item of (publications || [])">
+		<span @text="item['title']" class="title"></span>.
+		<author-list :@names="item['author'].map(format_name)" class="authors"></author-list>.
+		<span @text="item['container-title']" class="container"></span>.
+		<span @text="item['issued']['date-parts'][0][0]" class="year"></span>.
+		<a :href="item['URL']" @text="item['DOI']"></a>
+	</li>
+</ul>

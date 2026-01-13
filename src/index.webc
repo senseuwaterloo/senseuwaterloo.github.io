@@ -1,0 +1,45 @@
+<section class="hero">
+	<h1>Software Engineering and System Engineering Lab</h1>
+	<p>
+		We carry out research in the areas of software engineering for ultra-large-scale systems, software log mining,
+		empirical software engineering, mining software repositories and performance engineering.
+	</p>
+</section>
+
+<hr>
+
+<section id="research">
+	<h2>Research Areas</h2>
+	<div class="grid">
+		<section>
+			<h3>Performance Engineering</h3>
+			<p>Static analysis for detecting anti-patterns.</p>
+		</section>
+		<section>
+			<h3>Log Analysis</h3>
+			<p>Unsupervised metrics for system observability.</p>
+		</section>
+		<section>
+			<h3>Software Testing and Verification</h3>
+			<p>Testing and verification of software systems in large scale field environment.</p>
+		</section>
+		<section>
+			<h3>AI for Software Engineering</h3>
+			<p>Static analysis for detecting anti-patterns.</p>
+		</section>
+	</div>
+</section>
+
+<hr>
+
+<section id="publications">
+	<h2>Publications</h2>
+	<section>
+		<h3>Journal</h3>
+		<publication-list :@publications="$data.publications.journal"></publication-list>
+	</section>
+	<section>
+		<h3>Conference</h3>
+		<publication-list :@publications="$data.publications.conference"></publication-list>
+	</section>
+</section>
