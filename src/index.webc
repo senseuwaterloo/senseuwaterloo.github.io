@@ -43,3 +43,13 @@
 		<publication-list :@publications="$data.publications.conference"></publication-list>
 	</section>
 </section>
+
+<hr>
+
+<section id="contact">
+	<h2>Contact</h2>
+	<p>
+		I am looking for self motivated students to work with me. If you are interested, please submit your application on
+		<a href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">DearProf</a>.
+	</p>
+</section>
