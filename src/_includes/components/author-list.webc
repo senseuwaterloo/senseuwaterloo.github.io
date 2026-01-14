@@ -11,5 +11,5 @@
 		} else {
 			return `<span>${name}</span>`;
 		}
-	}).join(", ");
+	}).join(", ") + ".";
 </script>
