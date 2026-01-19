@@ -1,47 +1,161 @@
 [
   {
-    "DOI": "10.1007/s10664-024-10549-2",
-    "ISSN": "1382-3256",
-    "URL": "https://doi.org/10.1007/s10664-024-10549-2",
-    "abstract": "Neural Machine Translation (NMT) has experienced significant growth over the last decade. Despite these advancements, machine translation systems still face various issues. In response, metamorphic testing approaches have been introduced for testing machine translation systems. Such approaches involve token replacement, where a single token in the original source sentence is substituted to create mutants. By comparing the translations of mutants with the original translation, potential bugs in the translation systems can be detected. However, the selection of tokens for replacement in the original sentence remains an intriguing problem, deserving further exploration in testing approaches. To address this problem, we design two white-box approaches to identify vulnerable tokens in the source sentence, whose perturbation is most likely to induce translation bugs for a translation system. The first approach, named GRI, utilizes the GRadient Information to identify the vulnerable tokens for replacement, and our second approach, named WALI, uses Word ALignment Information to locate the vulnerable tokens. We evaluate the proposed approaches on a Transformer-based translation system with the News Commentary dataset and 200 English sentences extracted from CNN articles. The results show that both GRI and WALI can effectively generate high-quality test cases for revealing translation bugs. Specifically, our approaches can always outperform state-of-the-art automatic machine translation testing approaches from two aspects: (1) under a certain testing budget (i.e., number of executed test cases), both GRI and WALI can reveal a larger number of bugs than baseline approaches, and (2) when given a predefined testing goal (i.e., number of detected bugs), our approaches always require fewer testing resources (i.e., a reduced number of test cases to execute).",
     "author": [
       {
-        "family": "Shao",
-        "given": "Hanying"
-      },
-      {
-        "family": "Ding",
-        "given": "Zishuo"
+        "family": "Liao",
+        "given": "Lizhi"
       },
       {
         "family": "Shang",
         "given": "Weiyi"
       },
       {
-        "family": "Yang",
-        "given": "Jinqiu"
+        "family": "Sporea",
+        "given": "Catalin"
       },
       {
-        "family": "Tsantalis",
-        "given": "Nikolaos"
+        "family": "Toma",
+        "given": "Andrei"
+      },
+      {
+        "family": "Sajedi",
+        "given": "Sarah"
       }
     ],
-    "container-title": "Empirical Software Engineering",
-    "id": "10.1007/s10664-024-10549-2",
-    "issue": "1",
+    "container-title": "Proc. 33rd IEEE international conference on software analysis, evolution and reengineering, industry track (SANER industry)",
+    "id": "Liao2026_OnPracticalAdoptionStatic",
     "issued": {
       "date-parts": [
         [
-          2024,
-          10
+          2026
         ]
       ]
     },
-    "keyword": "Neural network, Neural machine translation, Software testing",
-    "publisher": "Kluwer Academic Publishers",
-    "publisher-place": "USA",
-    "title": "Towards effectively testing machine translation systems from white-box perspectives",
-    "type": "article-journal",
-    "volume": "30"
+    "title": "On the practical adoption of a static performance anti-pattern detector: An industrial case study",
+    "title-short": "On the practical adoption of a static performance anti-pattern detector",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Zhao",
+        "given": "Yixi"
+      },
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Tang",
+        "given": "Yiming"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Proc. 33rd IEEE international conference on software analysis, evolution and reengineering (SANER)",
+    "id": "Zhao2026_EmpiricalStudyPrivacyLeakage",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "title": "An empirical study of privacy leakage vulnerability in third-party android logs libraries",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Qin",
+        "given": "Qiaolin"
+      },
+      {
+        "family": "Zhao",
+        "given": "Jianchen"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Merlo",
+        "given": "Ettore"
+      }
+    ],
+    "container-title": "Proc. 33rd IEEE international conference on software analysis, evolution and reengineering (SANER)",
+    "id": "Qin2026_StoryAboutCohesionSeparation",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "title": "A story about cohesion and separation: Unsupervised metric for log parser evaluation",
+    "title-short": "A story about cohesion and separation",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Zongxiong"
+      },
+      {
+        "family": "Zhu",
+        "given": "Derui"
+      },
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Geng",
+        "given": "Jiahui"
+      },
+      {
+        "family": "Pretschner",
+        "given": "Alexander"
+      },
+      {
+        "family": "Grossklags",
+        "given": "Jens"
+      },
+      {
+        "family": "Hauswirth",
+        "given": "Manfred"
+      },
+      {
+        "family": "Schimmler",
+        "given": "Sonja"
+      }
+    ],
+    "container-title": "Proc. 48th IEEE/ACM international conference on software engineering (ICSE)",
+    "id": "Chen2026_LLM4JMH",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "title": "LLM4JMH: Studying the use of LLMs for generating java performance microbenchmarks",
+    "title-short": "LLM4JMH",
+    "type": "paper-conference"
   }
 ]

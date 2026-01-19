@@ -9,6 +9,10 @@
 		margin: 0;
 	}
 
+	li {
+		margin: 1rem auto;
+	}
+
 	.title {
 		font-style: italic;
 	}

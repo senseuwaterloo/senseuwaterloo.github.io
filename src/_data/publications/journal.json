@@ -1,9 +1,168 @@
 [
   {
-    "DOI": "10.1007/s10664-024-10549-2",
-    "ISSN": "1382-3256",
-    "URL": "https://doi.org/10.1007/s10664-024-10549-2",
-    "abstract": "Neural Machine Translation (NMT) has experienced significant growth over the last decade. Despite these advancements, machine translation systems still face various issues. In response, metamorphic testing approaches have been introduced for testing machine translation systems. Such approaches involve token replacement, where a single token in the original source sentence is substituted to create mutants. By comparing the translations of mutants with the original translation, potential bugs in the translation systems can be detected. However, the selection of tokens for replacement in the original sentence remains an intriguing problem, deserving further exploration in testing approaches. To address this problem, we design two white-box approaches to identify vulnerable tokens in the source sentence, whose perturbation is most likely to induce translation bugs for a translation system. The first approach, named GRI, utilizes the GRadient Information to identify the vulnerable tokens for replacement, and our second approach, named WALI, uses Word ALignment Information to locate the vulnerable tokens. We evaluate the proposed approaches on a Transformer-based translation system with the News Commentary dataset and 200 English sentences extracted from CNN articles. The results show that both GRI and WALI can effectively generate high-quality test cases for revealing translation bugs. Specifically, our approaches can always outperform state-of-the-art automatic machine translation testing approaches from two aspects: (1) under a certain testing budget (i.e., number of executed test cases), both GRI and WALI can reveal a larger number of bugs than baseline approaches, and (2) when given a predefined testing goal (i.e., number of detected bugs), our approaches always require fewer testing resources (i.e., a reduced number of test cases to execute).",
+    "author": [
+      {
+        "family": "Dai",
+        "given": "Hetong"
+      },
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Li",
+        "given": "Felix"
+      },
+      {
+        "family": "You",
+        "given": "Jianxin"
+      },
+      {
+        "family": "Shen",
+        "given": "Qianyun"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Dai2025_LPBGen",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "note": "Accepted",
+    "title": "LPB-gen: Systematic large log-parsing benchmarks generation",
+    "title-short": "LPB-gen",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Shuang"
+      },
+      {
+        "family": "Cheng",
+        "given": "Yuntao"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Xuan",
+        "given": "Jifeng"
+      },
+      {
+        "family": "He",
+        "given": "Sen"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Li2025_PerformanceAnalysis",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "note": "Accepted",
+    "title": "Performance analysis of AI-generated code: A case study of copilot, copilot chat, CodeLlaMa, and DeepSeek-coder models",
+    "title-short": "Performance analysis of AI-generated code",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Xiaohui"
+      },
+      {
+        "family": "Tan",
+        "given": "Youshuai"
+      },
+      {
+        "family": "Ding",
+        "given": "Zishuo"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Xuan",
+        "given": "Jifeng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Wang2025_Enhancing",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "title": "Enhancing log sentiments: An exploratory study of sentiments and emotions with software logs",
+    "title-short": "Enhancing log sentiments",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Tongwei"
+      },
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Hu",
+        "given": "Hanyang"
+      },
+      {
+        "family": "Nie",
+        "given": "Pengyu"
+      },
+      {
+        "family": "Koravadi",
+        "given": "Krishna"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "IEEE Software",
+    "id": "Zhang2025_Detecting",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "note": "Accepted",
+    "title": "Detecting DTC requirement-implementation inconsistencies using LLMs: An experience report",
+    "title-short": "Detecting DTC requirement-implementation inconsistencies using LLMs",
+    "type": "article-journal"
+  },
+  {
     "author": [
       {
         "family": "Shao",
@@ -27,21 +186,1830 @@
       }
     ],
     "container-title": "Empirical Software Engineering",
-    "id": "10.1007/s10664-024-10549-2",
-    "issue": "1",
+    "id": "Shao2024_Towards",
     "issued": {
       "date-parts": [
         [
-          2024,
-          10
+          2024
         ]
       ]
     },
-    "keyword": "Neural network, Neural machine translation, Software testing",
-    "publisher": "Kluwer Academic Publishers",
-    "publisher-place": "USA",
     "title": "Towards effectively testing machine translation systems from white-box perspectives",
-    "type": "article-journal",
-    "volume": "30"
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Ling",
+        "given": "Jun"
+      },
+      {
+        "family": "Du",
+        "given": "Fei"
+      },
+      {
+        "family": "Li",
+        "given": "Lingyu"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xuan"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Gao",
+        "given": "Chen"
+      },
+      {
+        "family": "Li",
+        "given": "Tong"
+      }
+    ],
+    "container-title": "Pattern Recognition",
+    "id": "Ling2024_Patient",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "Patient teacher can impart locality to improve lightweight vision transformer on small dataset",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Ma",
+        "given": "QiuYing"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xuan"
+      },
+      {
+        "family": "Ding",
+        "given": "ZiShuo"
+      },
+      {
+        "family": "Gao",
+        "given": "Chen"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Nong",
+        "given": "Qiong"
+      },
+      {
+        "family": "Ma",
+        "given": "Yubin"
+      },
+      {
+        "family": "Jin",
+        "given": "Zhi"
+      }
+    ],
+    "container-title": "Applied Intelligence",
+    "id": "Ma2024_Temporal",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "Temporal knowledge graph reasoning based on evolutional representation and contrastive learning",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Nourry",
+        "given": "Olivier"
+      },
+      {
+        "family": "Kashiwa",
+        "given": "Yutaro"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Shu",
+        "given": "Honglin"
+      },
+      {
+        "family": "Kamei",
+        "given": "Yasutaka"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Nourry2024_My",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "My fuzzers won’t build: An empirical study of fuzzing build failures",
+    "title-short": "My fuzzers won’t build",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Gao",
+        "given": "Chen"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xuan"
+      },
+      {
+        "family": "Jin",
+        "given": "Zhi"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Ma",
+        "given": "Yubin"
+      },
+      {
+        "family": "Li",
+        "given": "Linyu"
+      },
+      {
+        "family": "Ding",
+        "given": "Zishuo"
+      },
+      {
+        "family": "Liang",
+        "given": "Yuqin"
+      }
+    ],
+    "container-title": "Pattern Recognition",
+    "id": "Gao2024_Fewshot",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "Few-shot relational triple extraction with hierarchical prototype optimization",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Xia",
+        "given": "Yuanjie"
+      },
+      {
+        "family": "Liao",
+        "given": "Lizhi"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Xia2024_Reducing",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "Reducing the length of field-replay based load testing",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Xiaohui"
+      },
+      {
+        "family": "Zhang",
+        "given": "Tao"
+      },
+      {
+        "family": "Tan",
+        "given": "Youshuai"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Li",
+        "given": "Yao"
+      }
+    ],
+    "container-title": "Journal of Systems and Software",
+    "id": "Wang2024_How",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "How to effectively mine app reviews concerning software ecosystem? A survey of review characteristics",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Zhu",
+        "given": "Derui"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Zhou",
+        "given": "Xuebing"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      },
+      {
+        "family": "Grossklags",
+        "given": "Jens"
+      }
+    ],
+    "container-title": "IEEE Transactions on Information Forensics and Security",
+    "id": "Zhu2024_Vulnerabilities",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "title": "Vulnerabilities of data protection in vertical federated learning training and countermeasures",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Tan",
+        "given": "Youshuai"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Zhang",
+        "given": "Tao"
+      },
+      {
+        "family": "Fang",
+        "given": "Sen"
+      },
+      {
+        "family": "Luo",
+        "given": "Xiapu"
+      },
+      {
+        "family": "Chen",
+        "given": "Zijie"
+      },
+      {
+        "family": "Qi",
+        "given": "Shuhao"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Tan2023_STRE",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "title": "STRE: An automated approach to suggesting app developers when to stop reading reviews",
+    "title-short": "STRE",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Ding",
+        "given": "Zishuo"
+      },
+      {
+        "family": "Tang",
+        "given": "Yiming"
+      },
+      {
+        "family": "Cheng",
+        "given": "Xiaoyu"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Ding2023_LoGenTextPlus",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "title": "LoGenText-plus: Improving neural machine translation-based logging texts generation with syntactic templates",
+    "title-short": "LoGenText-plus",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Jangali",
+        "given": "Mostafa"
+      },
+      {
+        "family": "Tang",
+        "given": "Yiming"
+      },
+      {
+        "family": "Alexandersson",
+        "given": "Niclas"
+      },
+      {
+        "family": "Leitner",
+        "given": "Philipp"
+      },
+      {
+        "family": "Yang",
+        "given": "Jinqiu"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Jangali2022_Automated",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "Automated generation and evaluation of JMH microbenchmark suites from unit tests",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Ding",
+        "given": "Zishuo"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Ding2022_Towards",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "Towards learning generalizable code embeddings using task-agnostic graph convolutional networks",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Eismann",
+        "given": "Simon"
+      },
+      {
+        "family": "Costa",
+        "given": "Diego Elias"
+      },
+      {
+        "family": "Liao",
+        "given": "Lizhi"
+      },
+      {
+        "family": "Bezemer",
+        "given": "Cor-Paul"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "dropping-particle": "van",
+        "family": "Hoorn",
+        "given": "Andre"
+      },
+      {
+        "family": "Kounev",
+        "given": "Samuel"
+      }
+    ],
+    "container-title": "Journal of Systems and Software",
+    "id": "Eismann2022_Case",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "A case study on the stability of performance tests for serverless applications",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Haonan"
+      },
+      {
+        "family": "Tang",
+        "given": "Yiming"
+      },
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Zhang2022_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "Studying logging practice in test code",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Ding",
+        "given": "Zishuo"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Ding2022_Can",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "title": "Can pre-trained code embeddings improve model performance? Revisiting the use of code embeddings in software engineering tasks",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Liao",
+        "given": "Lizhi"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Ma",
+        "given": "Lei"
+      }
+    ],
+    "container-title": "ACM Transactions on Software Engineering and Methodology",
+    "id": "Liao2021_An",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "An empirical study of the impact of hyperparameter tuning and model optimization on the performance properties of deep neural networks",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Liao",
+        "given": "Lizhi"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Zeng",
+        "given": "Yi"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Sporea",
+        "given": "Catalin"
+      },
+      {
+        "family": "Toma",
+        "given": "Andrei"
+      },
+      {
+        "family": "Sajedi",
+        "given": "Sarah"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Liao2021_Locating",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Locating performance regression root causes in the field operations of web-based systems: An experience report",
+    "title-short": "Locating performance regression root causes in the field operations of web-based systems",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Lamothe2021_Assisting",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Assisting example-based API misuse detection via complementary artificial examples",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Quach",
+        "given": "Sophia"
+      },
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Adams",
+        "given": "Bram"
+      },
+      {
+        "family": "Kamei",
+        "given": "Yasutaka"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Quach2021_Evaluating",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Evaluating the impact of falsely detected performance bug-inducing changes in JIT models",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Guéhéneuc",
+        "given": "Yann-Gaël"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "ACM Computing Surveys",
+    "id": "Lamothe2021_Systematic",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "A systematic review of API evolution literature",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Locke",
+        "given": "Steven"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Liu",
+        "given": "Wei"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Locke2021_LogAssist",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "LogAssist: Assisting log analysis through log summarization",
+    "title-short": "LogAssist",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Quach",
+        "given": "Sophia"
+      },
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Kamei",
+        "given": "Yasutaka"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Quach2021_Empirical",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "An empirical study on the use of SZZ for identifying inducing changes of non-functional bugs",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Sayagh",
+        "given": "Mohammed"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Yao2021_Improving",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Improving state-of-the-art compression techniques for log management tools",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Zhenhao"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      },
+      {
+        "family": "Yang",
+        "given": "Jinqiu"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Li2021_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "title": "Studying duplicate logging statements and their relationships with code clones",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Shihab",
+        "given": "Emad"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Chen2020_PerfJIT",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "note": "Accepted",
+    "title": "PerfJIT: Test-level just-in-time prediction for performance regression introducing commits",
+    "title-short": "PerfJIT",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Liao",
+        "given": "Lizhi"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Zeng",
+        "given": "Yi"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Guo",
+        "given": "Jianmei"
+      },
+      {
+        "family": "Sporea",
+        "given": "Catalin"
+      },
+      {
+        "family": "Toma",
+        "given": "Andrei"
+      },
+      {
+        "family": "Sajedi",
+        "given": "Sarah"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Liao2020_Using",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "note": "Accepted",
+    "title": "Using black-box performance models to detect performance regressions under varying workloads: An empirical study",
+    "title-short": "Using black-box performance models to detect performance regressions under varying workloads",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Dai",
+        "given": "Hetong"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Chen",
+        "given": "Che-Shao"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Dai2020_Logram",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "Logram: Efficient log parsing using n-gram dictionaries",
+    "title-short": "Logram",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Abdellatif",
+        "given": "Ahmad"
+      },
+      {
+        "family": "Zeng",
+        "given": "Yi"
+      },
+      {
+        "family": "Elshafei",
+        "given": "Mohamed"
+      },
+      {
+        "family": "Shihab",
+        "given": "Emad"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Information and Software Technology",
+    "id": "Abdellatif2020_Simplifying",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "Simplifying the search of npm packages",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Alghamdi",
+        "given": "Hammam M."
+      },
+      {
+        "family": "Bezemer",
+        "given": "Cor-Paul"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      },
+      {
+        "family": "Flora",
+        "given": "Parminder"
+      }
+    ],
+    "container-title": "Journal of Software: Evolution and Process",
+    "id": "Alghamdi2020_Towards",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "Towards reducing the time needed for load testing",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Lamothe",
+        "given": "Maxime"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Lamothe2020_A3",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "A3: Assisting android API migrations using code examples",
+    "title-short": "A3",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Yao2020_Study",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "A study of the performance of general compressors on log files",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Adams",
+        "given": "Bram"
+      },
+      {
+        "family": "Sayagh",
+        "given": "Mohammed"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "Li2020_Qualitative",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "A qualitative study of the benefits and costs of logging from developers’ perspectives",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Yao",
+        "given": "Kundi"
+      },
+      {
+        "dropping-particle": "de",
+        "family": "Padua",
+        "given": "Guilherme Bicalho"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Sporea",
+        "given": "Steve"
+      },
+      {
+        "family": "Toma",
+        "given": "Andrei"
+      },
+      {
+        "family": "Sajedi",
+        "given": "Sarah"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Yao2019_Log4Perf",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "title": "Log4Perf: Suggesting and updating logging locations for web-based systems’ performance monitoring",
+    "title-short": "Log4Perf",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Zeng",
+        "given": "Yi"
+      },
+      {
+        "family": "Chen",
+        "given": "Jinfu"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Zeng2019_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "title": "Studying the characteristics of logging practices in mobile apps: A case study on f-droid",
+    "title-short": "Studying the characteristics of logging practices in mobile apps",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Trubiani",
+        "given": "Catia"
+      },
+      {
+        "family": "Jamshidi",
+        "given": "Pooyan"
+      },
+      {
+        "family": "Cito",
+        "given": "Jürgen"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Jiang",
+        "given": "Zhen Ming"
+      },
+      {
+        "family": "Borg",
+        "given": "Markus"
+      }
+    ],
+    "container-title": "IEEE Software",
+    "id": "Trubiani2018_Performance",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "Performance issues? Hey DevOps, mind the uncertainty!",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Thongtanunam",
+        "given": "Patanamon"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Thongtanunam2018_Will",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "Will this clone be short-lived? Towards a better understanding of the characteristics of short-lived clones",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Mujahid",
+        "given": "Suhaib"
+      },
+      {
+        "family": "Sierra",
+        "given": "Giancarlo"
+      },
+      {
+        "family": "Abdalkareem",
+        "given": "Rabe"
+      },
+      {
+        "family": "Shihab",
+        "given": "Emad"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Mujahid2018_Empirical",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "An empirical study of android wear user complaints",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Hassani",
+        "given": "Mehran"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Shihab",
+        "given": "Emad"
+      },
+      {
+        "family": "Tsantalis",
+        "given": "Nikolaos"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Hassani2018_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "Studying and detecting log-related issues",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Li2018_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "title": "Studying software logging using topic models",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Arif",
+        "given": "Muhammad Moiz"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Shihab",
+        "given": "Emad"
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Arif2018_Empirical",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "note": "Invited for ICSE 2018 Journal First",
+    "title": "Empirical study on the discrepancy between performance testing results from virtual and physical environments",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Kabinna",
+        "given": "Suhas"
+      },
+      {
+        "family": "Bezemer",
+        "given": "Cor-Paul"
+      },
+      {
+        "family": "Syer",
+        "given": "Mark D."
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Kabinna2017_Examining",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Examining the stability of logging statements",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "McIlroy",
+        "given": "Stuart"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Ali",
+        "given": "Nasir"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Communications of the ACM",
+    "id": "McIlroy2017_User",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "User reviews for top mobile apps in the google play store",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "dropping-particle": "da",
+        "family": "Costa",
+        "given": "Daniel Alencar"
+      },
+      {
+        "family": "McIntosh",
+        "given": "Shane"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Kulesza",
+        "given": "Uira"
+      },
+      {
+        "family": "Coelho",
+        "given": "Roberta"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "IEEE Transactions on Software Engineering",
+    "id": "daCosta2017_Framework",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "note": "Invited for ICSE 2017 Journal First",
+    "title": "A framework for evaluating the results of the SZZ approach for identifying bug-introducing changes",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Zou",
+        "given": "Ying"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Li2017_Towards",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Towards just-in-time suggestions for log changes",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Li",
+        "given": "Heng"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Li2017_Which",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Which log level should developers choose for a new logging statement?",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Tse-Hsun"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Nagappan",
+        "given": "Meiyappan"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      },
+      {
+        "family": "Thomas",
+        "given": "Stephen W."
+      }
+    ],
+    "container-title": "Journal of Systems and Software",
+    "id": "Chen2017_Topicbased",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Topic-based software defect explanation",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Hassan",
+        "given": "Safwat"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Hassan2017_Empirical",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "An empirical study of emergency updates for top android mobile apps",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Syer",
+        "given": "Mark D."
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Jiang",
+        "given": "Zhen Ming"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Automated Software Engineering",
+    "id": "Syer2017_Continuous",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Continuous validation of performance test workloads",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "McIlroy",
+        "given": "Stuart"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Ali",
+        "given": "Nasir"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "IEEE Software",
+    "id": "McIlroy2017_Is",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "title": "Is it worth responding to reviews? A case study of the top free apps in the google play store",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Nagappan",
+        "given": "Meiyappan"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Empirical Software Engineering",
+    "id": "Shang2015_Studying",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "title": "Studying the relationship between logging characteristics and the code quality of platform software",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Jiang",
+        "given": "Zhen Ming"
+      },
+      {
+        "family": "Adams",
+        "given": "Bram"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      },
+      {
+        "family": "Godfrey",
+        "given": "Michael W."
+      },
+      {
+        "family": "Nasser",
+        "given": "Mohamed"
+      },
+      {
+        "family": "Flora",
+        "given": "Parminder"
+      }
+    ],
+    "container-title": "Journal of Software: Evolution and Process",
+    "id": "Shang2014_Exploratory",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "title": "An exploratory study of the evolution of communicated information about the execution of large software systems",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Adams",
+        "given": "Bram"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Journal of Systems and Software",
+    "id": "Shang2012_Using",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "title": "Using pig as a data preparation language for large-scale mining software repositories studies: An experience report",
+    "title-short": "Using pig as a data preparation language for large-scale mining software repositories studies",
+    "type": "article-journal"
+  },
+  {
+    "author": [
+      {
+        "family": "Bettenburg",
+        "given": "Nicolas"
+      },
+      {
+        "family": "Shang",
+        "given": "Weiyi"
+      },
+      {
+        "family": "Ibrahim",
+        "given": "Walid"
+      },
+      {
+        "family": "Adams",
+        "given": "Bram"
+      },
+      {
+        "family": "Zou",
+        "given": "Ying"
+      },
+      {
+        "family": "Hassan",
+        "given": "Ahmed E."
+      }
+    ],
+    "container-title": "Science of Computer Programming",
+    "id": "Bettenburg2012_Empirical",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "title": "An empirical study on inconsistent changes to code clones at the release level",
+    "type": "article-journal"
   }
 ]
