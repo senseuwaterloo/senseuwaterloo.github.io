@@ -21,6 +21,7 @@
 				font-family: var(--serif);
 				background-color: var(--background);
 				color: var(--foreground);
+				scroll-behavior: smooth;
 			}
 
 			body {
@@ -162,10 +163,10 @@
 <body>
 	<header>
 		<nav>
-			<div>SENSE Lab</div>
+			<a href="#top">SENSE Lab</a>
 			<ul>
-				<li><a href="/#publications">Publications</a></li>
-				<li><a href="/#contact">Contact</a></li>
+				<li><a href="#publications">Publications</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
