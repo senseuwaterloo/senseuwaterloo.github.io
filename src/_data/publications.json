@@ -9,8 +9,56 @@
   },
   {
     "year": "2026",
+    "type": "journal",
+    "venue": "EMSE",
+    "topic": "ai-llm performance",
+    "content": "Shuang Li, Yuntao Cheng, Jinfu Chen, Jifeng Xuan, Sen He and <strong>Weiyi Shang</strong>. Performance Analysis of AI-Generated Code: A Case Study of Copilot, Copilot Chat, CodeLlaMa, and DeepSeek-Coder Models. <em>Empirical Software Engineering Journal.</em>",
+    "pdf": "EMSE_2026_SHUANG_LI.pdf"
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "Expert Systems with Applications",
+    "topic": "other",
+    "content": "Yubin Ma, Zhihong Zheng, Xuan Zhang, Zhi Jin, <strong>Weiyi Shang</strong>, Wei Cai, Chen Gao and LinYu Li. Using External Knowledge to Enhance User Preferences for Better Sequential Recommendation. <em>Expert Systems with Applications.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "Expert Systems with Applications",
+    "topic": "other",
+    "content": "Jiangbin Chen, Xuan Zhang, Kunpeng Du, Shaoheng Xie, Rui Zhu, Junda Li, <strong>Weiyi Shang</strong>, Zhi Jin. Collaborative Denoising and Semantic Preservation: A Sequential Recommendation Model via Frequency-Aware Diffusion and KAN. <em>Expert Systems with Applications.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "IJMLC",
+    "topic": "other",
+    "content": "Zhihong Zheng, Xuan Zhang, Yubin Ma, Chen Gao, Wei Cai, <strong>Weiyi Shang</strong>, Zhi Jin. HDNR: Hierarchical Disentanglement for News Recommendation. <em>International Journal of Machine Learning and Cybernetics.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "IEEE Software",
+    "topic": "ai-llm",
+    "content": "Tongwei Zhang, Kundi Yao, Hanyang Hu, Pengyu Nie, Krishna Koravadi, <strong>Weiyi Shang</strong>. Detecting Diagnostic Trouble Code Requirement-Implementation Inconsistencies Using LLMs: An Experience Report. <em>IEEE Software.</em>",
+    "pdf": "IEEESW_2025_TONG_ZHANG.pdf"
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "TOSEM",
+    "topic": "logging",
+    "content": "Xiaohui Wang, Youshuai Tan, Zishuo Ding, Jinfu Chen, Jifeng Xuan, <strong>Weiyi Shang</strong>. Enhancing Log Sentiments: An Exploratory Study of Sentiments and Emotions with Software Logs. <em>ACM Transactions on Software Engineering and Methodology.</em>",
+    "pdf": "TOSEM_2025_XIAOHUI.pdf"
+  },
+  {
+    "year": "2026",
     "type": "conference",
-    "venue": "ASE",
+    "venue": "EASE",
     "topic": "logging",
     "content": "Zhiyuan Chen, Love Jayesh Ahir, Ahmad Suleiman, Kundi Yao, Yiming Tang, <strong>Weiyi Shang</strong> and Daqing Hou. Do Privacy Policies Match with the Logs? An Empirical Study of Privacy Disclosure in Android Application Logs. <em>EASE 2026.</em>",
     "pdf": "log_policy_ease_2026.pdf"
@@ -75,25 +123,49 @@
     "year": "2025",
     "type": "journal",
     "venue": "EMSE",
-    "topic": "ai-llm performance",
-    "content": "Shuang Li, Yuntao Cheng, Jinfu Chen, Jifeng Xuan, Sen He and <strong>Weiyi Shang</strong>. Performance Analysis of AI-Generated Code: A Case Study of Copilot, Copilot Chat, CodeLlaMa, and DeepSeek-Coder Models. <em>Empirical Software Engineering Journal.</em>",
-    "pdf": "EMSE_2026_SHUANG_LI.pdf"
+    "topic": "ai-llm testing",
+    "content": "Hanying Shao, Zishuo Ding, <strong>Weiyi Shang</strong>, Jinqiu Yang, and Nikolaos Tsantalis. Towards Effectively Testing Machine Translation Systems from White-Box Perspectives. <em>Empirical Software Engineering.</em>",
+    "pdf": "SHAO-EMSE-2024.pdf"
+  },
+  {
+    "year": "2025",
+    "type": "journal",
+    "venue": "Expert Systems with Applications",
+    "topic": "other",
+    "content": "Kunpeng Du, Xuan Zhang, Chen Gao, <strong>Weiyi Shang</strong>, Yubin Ma, Zhi Jin and LinYu Li. Knowledge-Enhanced Prototypical Network with Graph Structure and Semantic Information Interaction for Low-Shot Joint Spoken Language Understanding. <em>Expert Systems with Applications.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2025",
+    "type": "journal",
+    "venue": "Knowledge-Based Systems",
+    "topic": "other",
+    "content": "Hexing Yang, Xuan Zhang, Chen Gao, <strong>Weiyi Shang</strong>, Kunpeng Du, Wei Cai, Danyang Wang and Tong Li. Task-Oriented Dynamic Knowledge Distillation for Continuous Few-Shot Relation Extraction. <em>Knowledge-Based Systems.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2025",
+    "type": "journal",
+    "venue": "Neural Networks",
+    "topic": "other",
+    "content": "Wei Cai, Zhihong Zheng, Xuan Zhang, <strong>Weiyi Shang</strong>, Yubin Ma, Wenjie Gao and Zhi Jin. Neighborhood Structure Enhancement and Denoising Method for Multi-Behavior Recommendation. <em>Neural Networks.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2025",
+    "type": "journal",
+    "venue": "Pattern Recognition",
+    "topic": "other",
+    "content": "Jun Ling, Fei Du, Lingyu Li, Xuan Zhang, <strong>Weiyi Shang</strong>, Chen Gao and Tong Li. Patient Teacher can Impart Locality to Improve Lightweight Vision Transformer on Small Dataset. <em>Pattern Recognition.</em>",
+    "pdf": "PR_2024_2.pdf"
   },
   {
     "year": "2025",
     "type": "journal",
     "venue": "TOSEM",
-    "topic": "logging",
-    "content": "Xiaohui Wang, Youshuai Tan, Zishuo Ding, Jinfu Chen, Jifeng Xuan, <strong>Weiyi Shang</strong>. Enhancing Log Sentiments: An Exploratory Study of Sentiments and Emotions with Software Logs. <em>ACM Transactions on Software Engineering and Methodology.</em>",
-    "pdf": "TOSEM_2025_XIAOHUI.pdf"
-  },
-  {
-    "year": "2025",
-    "type": "journal",
-    "venue": "IEEE Software",
-    "topic": "ai-llm",
-    "content": "Tongwei Zhang, Kundi Yao, Hanyang Hu, Pengyu Nie, Krishna Koravadi, <strong>Weiyi Shang</strong>. Detecting DTC Requirement-Implementation Inconsistencies Using LLMs: An Experience Report. <em>IEEE Software.</em>",
-    "pdf": "IEEESW_2025_TONG_ZHANG.pdf"
+    "topic": "logging testing",
+    "content": "Olivier Nourry, Yutaro Kashiwa, <strong>Weiyi Shang</strong>, Honglin Shu, and Yasutaka Kamei. My Fuzzers Won't Build: An Empirical Study of Fuzzing Build Failures. <em>ACM Transactions on Software Engineering and Methodology.</em>",
+    "pdf": "TOSEM_OLIVIER_2024.pdf"
   },
   {
     "year": "2025",
@@ -154,34 +226,10 @@
   {
     "year": "2024",
     "type": "journal",
-    "venue": "EMSE",
-    "topic": "ai-llm testing",
-    "content": "Hanying Shao, Zishuo Ding, <strong>Weiyi Shang</strong>, Jinqiu Yang, and Nikolaos Tsantalis. Towards Effectively Testing Machine Translation Systems from White-Box Perspectives. <em>Empirical Software Engineering.</em>",
-    "pdf": "SHAO-EMSE-2024.pdf"
-  },
-  {
-    "year": "2024",
-    "type": "journal",
-    "venue": "Pattern Recognition",
-    "topic": "other",
-    "content": "Jun Ling, Fei Du, Lingyu Li, Xuan Zhang, <strong>Weiyi Shang</strong>, Chen Gao and Tong Li. Patient Teacher can Impart Locality to Improve Lightweight Vision Transformer on Small Dataset. <em>Pattern Recognition.</em>",
-    "pdf": "PR_2024_2.pdf"
-  },
-  {
-    "year": "2024",
-    "type": "journal",
     "venue": "Applied Intelligence",
     "topic": "api",
     "content": "QiuYing Ma, Xuan Zhang, ZiShuo Ding, Chen Gao, <strong>Weiyi Shang</strong>, Qiong Nong, Yubin Ma and Zhi Jin. Temporal Knowledge Graph Reasoning Based on Evolutional Representation and Contrastive Learning. <em>Applied Intelligence.</em>",
     "pdf": "13QiuyingMa-AI.pdf"
-  },
-  {
-    "year": "2024",
-    "type": "journal",
-    "venue": "TOSEM",
-    "topic": "logging testing",
-    "content": "Olivier Nourry, Yutaro Kashiwa, <strong>Weiyi Shang</strong>, Honglin Shu, and Yasutaka Kamei. My Fuzzers Won't Build: An Empirical Study of Fuzzing Build Failures. <em>ACM Transactions on Software Engineering and Methodology.</em>",
-    "pdf": "TOSEM_OLIVIER_2024.pdf"
   },
   {
     "year": "2024",
