@@ -1,5 +1,5 @@
 <div id="pub-list" aria-live="polite"></div>
-<script type="application/json" id="pub-data" webc:keep @html="JSON.stringify($data.publications).replace(/</g, '\\u003c')"></script>
+<script @html="'window.__PUBS__ = ' + JSON.stringify($data.publications).replace(/</g, '\\u003c') + ';'"></script>
 
 <style webc:scoped>
 	:host {
@@ -129,11 +129,10 @@
 
 <script>
 	(() => {
-		const dataEl = document.getElementById("pub-data");
 		const listEl = document.getElementById("pub-list");
-		if (!dataEl || !listEl) return;
+		const raw = window.__PUBS__;
+		if (!listEl || !raw) return;
 
-		const raw = JSON.parse(dataEl.textContent);
 		const PI = "Weiyi Shang";
 
 		const VENUE_RULES = [
