@@ -5,25 +5,28 @@ description: "Open-source research tools, datasets, and replication packages dev
 
 <section id="tools">
 	<h2>Tools &amp; Replication Packages</h2>
-	<p>We believe in open science. We regularly release datasets, replication packages, and tools for our published research. Selected highlights:</p>
+	<p>We believe in open science. We release tools, datasets, and replication packages through the SENSE Lab GitHub organization. Selected highlights:</p>
 
-	<div class="table-wrap">
-		<table>
-			<thead>
-				<tr>
-					<th>Repository</th>
-					<th>Description</th>
-					<th>Category</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr webc:for="t of tools">
-					<td><a :href="t.href" target="_blank" rel="noopener" @text="t.name"></a></td>
-					<td @text="t.description"></td>
-					<td @text="t.category"></td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="tool-group content-wide" webc:for="g of tools">
+		<h3 @text="g.group"></h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Repository</th>
+						<th>Description</th>
+						<th>Category</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr webc:for="t of g.items">
+						<td><a :href="t.href" target="_blank" rel="noopener" @text="t.name"></a></td>
+						<td @text="t.description"></td>
+						<td @text="t.category"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 	<p>See all of our public repositories on <a href="https://github.com/senseuwaterloo" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -35,10 +38,20 @@ description: "Open-source research tools, datasets, and replication packages dev
 		color: var(--color-text-muted);
 	}
 
+	.tool-group h3 {
+		margin-top: 3.5rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.45rem;
+		color: var(--color-text);
+	}
+
+	.tool-group:first-of-type h3 {
+		margin-top: 2.5rem;
+	}
+
 	.table-wrap {
-		max-width: var(--content-wide);
 		overflow-x: auto;
-		margin-block: 2.5rem;
+		margin-bottom: 1rem;
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius);
 		box-shadow: var(--card-shadow);

@@ -15,7 +15,7 @@
     ]
   },
   {
-    "group": "Current Students",
+    "group": "Current Lab Members",
     "members": [
       {
         "name": "Hetong Dai",
@@ -66,6 +66,57 @@
         "role": "M.Sc. Student",
         "topic": "Software Engineering",
         "initials": "JM"
+      },
+      {
+        "name": "Minsi Lu",
+        "role": "Ph.D. Student",
+        "topic": "AI Software Performance",
+        "initials": "ML"
+      },
+      {
+        "name": "Tengyi Xu",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "TX"
+      },
+      {
+        "name": "Tianqin Meng",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "TM"
+      },
+      {
+        "name": "Lily Wang",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "LW"
+      },
+      {
+        "name": "Chole Wei",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "CW"
+      },
+      {
+        "name": "Pramod Chavali",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Toronto",
+        "initials": "PC"
+      }
+    ]
+  },
+  {
+    "group": "Visitors and Collaborators",
+    "members": [
+      {
+        "name": "Derui Zhu",
+        "role": "Assistant Professor",
+        "affiliation": "Rochester Institute of Technology",
+        "photo": "derui_zhu.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://www.rit.edu/directory/dxzvse-derui-zhu" },
+          { "label": "Scholar", "href": "https://scholar.google.com/citations?user=iELr97kAAAAJ&hl=en" }
+        ]
       }
     ]
   },
@@ -95,7 +146,7 @@
       {
         "name": "Dr. Judith Islam",
         "role": "Postdoc (2022)",
-        "affiliation": "Now: Assistant Professor at Iowa State University",
+        "affiliation": "Now: Assistant Teaching Professor at Iowa State University",
         "photo": "judith_islam.jpg",
         "links": [
           { "label": "Homepage", "href": "https://www.engineering.iastate.edu/people/profile/jislam/" },
@@ -120,7 +171,7 @@
       {
         "name": "Dr. Zishuo Ding",
         "role": "Ph.D. (2019–2024)",
-        "affiliation": "Now: Assistant Professor at HKUST",
+        "affiliation": "Now: Assistant Professor at HKUST(GZ)",
         "photo": "zishuo_ding.jpg",
         "links": [
           { "label": "Homepage", "href": "https://personal.hkust-gz.edu.cn/ding/" },
@@ -173,7 +224,7 @@
         "affiliation": "Now: Associate Professor at Wuhan University",
         "photo": "jinfu_chen.jpg",
         "links": [
-          { "label": "Homepage", "href": "https://jinfuchen.github.io/" },
+          { "label": "Homepage", "href": "https://jinfuchen.github.io/jinfu/" },
           { "label": "Scholar", "href": "https://scholar.google.com/citations?user=kP1zzqcAAAAJ" }
         ]
       }
@@ -182,10 +233,10 @@
   {
     "group": "Alumni — M.Sc. Students",
     "members": [
-      { "name": "Yixi Zhao", "role": "M.Sc. (2022–2025)", "affiliation": "Now: Developer at Scotia Bank", "initials": "YZ" },
+      { "name": "Yixi Zhao", "role": "M.Sc. (2022–2025)", "affiliation": "Now: Developer at Scotiabank", "initials": "YZ" },
       { "name": "Xiaoyu Cheng", "role": "M.Sc. (2022–2025)", "initials": "XC" },
       { "name": "An Chen", "role": "M.Sc. (2021–2025)", "initials": "AC" },
-      { "name": "Mostafa Jangali", "role": "M.Sc. (2019–2024)", "affiliation": "Now: Developer at ArcTrade", "initials": "MJ" },
+      { "name": "Mostafa Jangali", "role": "M.Sc. (2019–2024)", "affiliation": "Now: Developer at Arctrade", "initials": "MJ", "links": [{ "label": "Homepage", "href": "https://github.com/mjangali94" }, { "label": "Scholar", "href": "https://scholar.google.com/citations?user=vYllUD4AAAAJ&hl=en" }] },
       { "name": "Hanying Shao", "role": "M.Sc. (2022–2024)", "affiliation": "Now: Environment and Climate Change Canada", "initials": "HS" },
       { "name": "Andy Ta", "role": "M.Sc. (2021–2023)", "affiliation": "Now: Developer at Hopper", "initials": "AT" },
       { "name": "Haonan Zhang", "role": "M.Sc. (2019–2021)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "haonan_zhang.jpg" },
@@ -207,9 +258,9 @@
   {
     "group": "Alumni — B.Sc. (Undergraduate) Students",
     "members": [
-      { "name": "Felix Li", "role": "B.Sc. (2024)", "affiliation": "Now: Undergrad student at University of Waterloo", "initials": "FL" },
-      { "name": "Qianyun Shen", "role": "B.Sc. (2023)", "initials": "QS" },
-      { "name": "Jianxin You", "role": "B.Sc. (2023)", "affiliation": "Now: Developer at Ericsson", "initials": "JY" },
+      { "name": "Felix Li", "role": "B.Sc. (2024)", "affiliation": "Now: University of Waterloo", "initials": "FL" },
+      { "name": "Qianyun Shen", "role": "B.Sc. (2023)", "affiliation": "Now: University of Montreal", "initials": "QS" },
+      { "name": "Jianxin You", "role": "B.Sc. (2023)", "affiliation": "Now: University of Montreal", "initials": "JY" },
       { "name": "Sneha Sunil", "role": "B.Sc. (2022)", "affiliation": "Now: Developer at Microsoft", "initials": "SS" },
       { "name": "Yang Li", "role": "B.Sc. (2021)", "affiliation": "Now: Ph.D. student at National University of Singapore (NUS)", "initials": "YL" },
       { "name": "Sophia Quach", "role": "B.Sc. (2018)", "affiliation": "Now: Developer at Wiley Edge", "initials": "SQ" }
