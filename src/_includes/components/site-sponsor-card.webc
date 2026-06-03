@@ -62,11 +62,7 @@
 
 	@media (prefers-color-scheme: dark) {
 		img {
-			filter: grayscale(100%) invert(0.92);
-		}
-
-		a:hover img {
-			filter: grayscale(0%) invert(0.92);
+			filter: grayscale(100%) invert(0.08);
 		}
 	}
 </style>

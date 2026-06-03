@@ -1,6 +1,7 @@
 <a :href="href"
 	:target="href && href.startsWith('http') ? '_blank' : false"
-	:rel="href && href.startsWith('http') ? 'noopener' : false">
+	:rel="href && href.startsWith('http') ? 'noopener' : false"
+	:style="large ? 'padding: 1rem 2.5rem; font-size: 1.05rem;' : false">
 	<slot></slot>
 </a>
 <style webc:scoped>

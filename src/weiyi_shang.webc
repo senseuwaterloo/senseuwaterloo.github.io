@@ -57,7 +57,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	<site-info-card class="content-wide join">
 		<h3>Join the SENSE Lab</h3>
 		<p>Prof. Weiyi Shang is looking for self-motivated Graduate (Ph.D. &amp; M.Sc.) and Undergraduate research assistant students to join the team. If you are interested in log mining, performance engineering, and AI for software engineering, please apply below.</p>
-		<site-cta href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Apply on DearProf</site-cta>
+		<site-cta large="true" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Apply on DearProf</site-cta>
 	</site-info-card>
 </section>
 
@@ -165,6 +165,10 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 
 	.join {
 		text-align: center;
+	}
+
+	.join article {
+		padding: 3rem 2rem;
 	}
 
 	.join h3 {
