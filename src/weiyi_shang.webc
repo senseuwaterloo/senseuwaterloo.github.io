@@ -16,9 +16,9 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 				University of Waterloo
 			</address>
 			<nav>
-				<a class="btn-outline" href="mailto:wshang@uwaterloo.ca">Email</a>
-				<a class="btn-outline" href="https://scholar.google.com/citations?user=ZnERyl4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-				<a class="btn-primary" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply to Group</a>
+				<a href="mailto:wshang@uwaterloo.ca">Email</a>
+				<a href="https://scholar.google.com/citations?user=ZnERyl4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+				<a class="cta" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply to Group</a>
 			</nav>
 		</div>
 	</div>
@@ -57,7 +57,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	<site-info-card class="content-wide join">
 		<h3>Join the SENSE Lab</h3>
 		<p>Prof. Weiyi Shang is looking for self-motivated Graduate (Ph.D. &amp; M.Sc.) and Undergraduate research assistant students to join the team. If you are interested in log mining, performance engineering, and AI for software engineering, please apply below.</p>
-		<a class="btn-primary" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply on DearProf</a>
+		<a class="cta" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply on DearProf</a>
 	</site-info-card>
 </section>
 
@@ -113,6 +113,25 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 		gap: 1.5rem;
 		flex-wrap: wrap;
 		align-items: center;
+	}
+
+	/* Secondary quick-links render as outline buttons (the primary one is .cta) */
+	.hero nav a:not(.cta) {
+		font-family: var(--font-heading);
+		font-weight: 700;
+		font-size: 0.95rem;
+		padding: 0.7rem 1.85rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		color: var(--color-text);
+		transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+	}
+
+	.hero nav a:not(.cta):hover {
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+		background-color: var(--color-primary-light);
+		transform: translateY(-1px);
 	}
 
 	/* info-card slotted content tweaks for the profile */

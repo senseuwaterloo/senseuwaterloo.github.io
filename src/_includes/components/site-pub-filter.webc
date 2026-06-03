@@ -7,7 +7,7 @@
 			<input type="text" id="pub-search" placeholder="Search title, author, or venue…">
 			<button type="button" id="clear-search-btn" aria-label="Clear search" hidden>&times;</button>
 		</label>
-		<button type="button" id="toggle-all-pubs" class="btn-outline">Expand All</button>
+		<button type="button" id="toggle-all-pubs">Expand All</button>
 	</search>
 
 	<fieldset>
@@ -43,7 +43,7 @@
 
 	<div>
 		<output id="pub-counts">Showing all publications</output>
-		<button type="button" id="reset-filters" class="btn-text" hidden>Clear all filters</button>
+		<button type="button" id="reset-filters" hidden>Clear all filters</button>
 	</div>
 </form>
 <style webc:scoped>
@@ -106,19 +106,24 @@
 		box-shadow: 0 0 0 3px rgba(127, 127, 127, 0.25);
 	}
 
+	/* Override the themed <button> look for the inline × clear control */
 	#clear-search-btn {
 		position: absolute;
 		right: 1rem;
 		font-size: 1.35rem;
 		line-height: 1;
 		color: var(--color-text-muted);
+		background: none;
+		border: none;
 		padding: 0.25rem;
 		border-radius: 50%;
+		transform: none;
 	}
 
 	#clear-search-btn:hover {
 		color: var(--color-text);
 		background-color: var(--color-bg-alt);
+		transform: none;
 	}
 
 	fieldset {
@@ -173,18 +178,23 @@
 		color: var(--color-text-muted);
 	}
 
-	.btn-text {
+	/* Override the themed <button> look for the text-style reset control */
+	#reset-filters {
+		font-family: var(--font-body);
 		color: var(--color-primary);
 		font-weight: 600;
 		font-size: 0.88rem;
+		background: none;
+		border: none;
 		padding: 0.2rem 0.5rem;
 		border-radius: var(--radius-sm);
 		transition: color var(--transition-fast), background-color var(--transition-fast);
 	}
 
-	.btn-text:hover {
+	#reset-filters:hover {
 		color: var(--color-primary-hover);
 		background-color: var(--color-primary-light);
+		transform: none;
 	}
 
 	@media (max-width: 768px) {

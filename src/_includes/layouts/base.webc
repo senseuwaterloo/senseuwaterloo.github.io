@@ -488,49 +488,30 @@
 		}
 
 		/* ============================================================
-		   BUTTONS  (theme-level, reused across pages)
+		   CALL-TO-ACTION LINK  (a primary, filled <a> — e.g. "Apply")
 		   ============================================================ */
-		@layer buttons {
-
-			.btn-primary,
-			.btn-outline {
+		@layer cta {
+			.cta {
 				display: inline-block;
+				font-family: var(--font-heading);
 				font-weight: 700;
 				font-size: 0.95rem;
+				padding: 0.75rem 2rem;
 				border-radius: var(--radius-sm);
-				text-decoration: none;
-				transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-			}
-
-			.btn-primary {
 				background-color: var(--color-primary);
 				color: var(--color-bg-base);
-				padding: 0.75rem 2rem;
 				border: 1px solid var(--color-primary);
 				box-shadow: 0 4px 12px var(--color-shadow);
+				text-decoration: none;
+				transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 			}
 
-			.btn-primary:hover,
-			.btn-primary:focus-visible {
+			.cta:hover,
+			.cta:focus-visible {
 				background-color: transparent;
 				color: var(--color-primary);
 				transform: translateY(-2px);
 				box-shadow: 0 6px 16px var(--color-shadow);
-			}
-
-			.btn-outline {
-				background: transparent;
-				color: var(--color-text);
-				padding: 0.7rem 1.85rem;
-				border: 1px solid var(--color-border);
-			}
-
-			.btn-outline:hover,
-			.btn-outline:focus-visible {
-				border-color: var(--color-primary);
-				color: var(--color-primary);
-				background-color: var(--color-primary-light);
-				transform: translateY(-1px);
 			}
 		}
 	</style>
