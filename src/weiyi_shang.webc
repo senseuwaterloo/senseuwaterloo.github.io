@@ -9,7 +9,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 			<img src="/images/weiyi_shang.jpg" alt="Prof. Weiyi Shang">
 		</figure>
 		<div>
-			<h1>Weiyi (Ian) Shang</h1>
+			<h1>Weiyi Shang</h1>
 			<p class="role">Professor</p>
 			<address>
 				<a href="https://uwaterloo.ca/electrical-computer-engineering/" target="_blank" rel="noopener">Department of Electrical and Computer Engineering</a><br>
@@ -35,10 +35,42 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 		<site-info-card heading="Education">
 			<site-timeline :@items="profile.education"></site-timeline>
 		</site-info-card>
-		<site-info-card heading="Honors &amp; Awards">
+		<site-info-card heading="Awards &amp; Recognitions">
 			<site-timeline :@items="profile.honors"></site-timeline>
 		</site-info-card>
 	</site-grid>
+
+	<site-info-card heading="Professional Service &amp; Leadership" class="content-wide">
+		<div class="service">
+			<div>
+				<h4 class="card-subhead">Conference Organization &amp; Steering Committees</h4>
+				<p>Prof. Shang actively leads and serves the international software performance and DevOps research communities.</p>
+				<ul class="bullet-list">
+					<li><strong>Steering Committee:</strong> Standard Performance Evaluation Corporation (SPEC) Research Group; Steering Committee Chair of the PROMISE Conference (since 2023).</li>
+					<li><strong>General Chair:</strong> 20th International Conference on Predictive Models and Data Analytics in Software Engineering (PROMISE 2024).</li>
+					<li><strong>Program Co-Chair:</strong> 15th ACM/SPEC International Conference on Performance Engineering (ICPE 2024); PROMISE 2022.</li>
+					<li><strong>Workshop Co-Organizer:</strong> CSEI-SERIP 2019, IBF 2020.</li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="card-subhead">Editorial &amp; Academic Leadership</h4>
+				<p>Leading academic institutes and guest-editing special journal issues.</p>
+				<ul class="bullet-list">
+					<li><strong>Director:</strong> Software Engineering Research Centre (SERC), Concordia University (2021–2023).</li>
+					<li><strong>Guest Co-Editor:</strong> Special issue in the <em>Journal of Systems and Software (JSS)</em>.</li>
+					<li><strong>Journal Reviewing:</strong> Regular reviewer for top-tier journals including <em>IEEE Transactions on Software Engineering (TSE)</em>, <em>ACM Transactions on Software Engineering and Methodology (TOSEM)</em>, and <em>Empirical Software Engineering (EMSE)</em>.</li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="card-subhead">Program Committees &amp; Reviewer Recognition</h4>
+				<p>Serving as a technical committee member and recognized for peer-review excellence.</p>
+				<ul class="bullet-list">
+					<li><strong>Program Committees:</strong> Served on over 40 technical program committees of premier conferences (including ICSE, FSE, ASE, ICSME, MSR, SANER, and ICPE).</li>
+					<li><strong>Reviewer Awards:</strong> Recipient of the Distinguished Reviewer Award for <em>EMSE</em> in 2018, Outstanding Reviewer Award for <em>JSS</em> in 2017, and Distinguished Reviewer Award at Internetware 2025.</li>
+				</ul>
+			</div>
+		</div>
+	</site-info-card>
 
 	<site-info-card heading="Selected Recent Publications" class="content-wide">
 		<div class="pubs">
@@ -48,10 +80,18 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	</site-info-card>
 
 	<site-info-card heading="Teaching" class="content-wide">
-		<div class="course" webc:for="t of profile.teaching">
-			<h4 @text="t.title"></h4>
-			<p @text="t.description"></p>
+		<div class="profile-teaching-list">
+			<div class="profile-teaching-group" webc:for="u of courses">
+				<h4 @text="u.university"></h4>
+				<ul>
+					<li webc:for="c of u.courses">
+						<strong @text="c.title"></strong>
+						<span @text="c.meta"></span>
+					</li>
+				</ul>
+			</div>
 		</div>
+		<p class="more">Course descriptions are available on the <a href="/teaching/">Teaching page</a>.</p>
 	</site-info-card>
 
 	<site-info-card class="content-wide join">
@@ -140,8 +180,71 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 		margin-bottom: 1rem;
 	}
 
-	.course h4 {
+	/* Professional service groups + bullet lists */
+	.service {
+		display: flex;
+		flex-direction: column;
+		gap: 1.75rem;
+		margin-top: 1rem;
+	}
+
+	.bullet-list {
+		list-style: disc;
+		padding-left: 1.5rem;
+		margin-top: 0.75rem;
+	}
+
+	.bullet-list li {
 		margin-bottom: 0.5rem;
+		font-size: 0.98rem;
+		line-height: 1.6;
+	}
+
+	.bullet-list li:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Grouped teaching list */
+	.profile-teaching-list {
+		display: grid;
+		gap: 1.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.profile-teaching-group h4 {
+		color: var(--color-text);
+		font-family: var(--font-heading);
+		font-size: 1rem;
+		font-weight: 700;
+		margin-bottom: 0.85rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.profile-teaching-group ul {
+		display: grid;
+		gap: 1rem;
+		list-style: none;
+	}
+
+	.profile-teaching-group li {
+		display: grid;
+		gap: 0.3rem;
+	}
+
+	.profile-teaching-group strong {
+		color: var(--color-text);
+		font-size: 0.98rem;
+		line-height: 1.45;
+	}
+
+	.profile-teaching-group span {
+		color: var(--color-primary);
+		font-size: 0.82rem;
+		font-weight: 600;
+		line-height: 1.45;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
 	}
 
 	.pubs {
@@ -159,10 +262,6 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	}
 
 	.more {
-		margin-top: 1.5rem;
-	}
-
-	.course+.course {
 		margin-top: 1.5rem;
 	}
 

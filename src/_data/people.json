@@ -3,7 +3,7 @@
     "group": "Principal Investigator",
     "members": [
       {
-        "name": "Weiyi (Ian) Shang",
+        "name": "Weiyi Shang",
         "role": "Professor",
         "affiliation": "ECE, University of Waterloo",
         "photo": "weiyi_shang.jpg",
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "group": "Alumni — Postdoctoral Fellows",
+    "group": "Alumni — Research Associates and Postdoctoral Fellows",
     "members": [
       {
         "name": "Dr. Kundi Yao",
@@ -104,7 +104,7 @@
       },
       {
         "name": "Dr. Heng Li",
-        "role": "Postdoc (2019)",
+        "role": "Research Associate (2019)",
         "affiliation": "Now: Associate Professor at Polytechnique Montréal",
         "photo": "heng_li.jpg",
         "links": [

@@ -1,5 +1,8 @@
 <article>
-	<img webc:if="photo" :src="'/images/' + photo" :alt="name" loading="lazy">
+	<a webc:if="photo && homepage" :href="homepage" :target="homepage.startsWith('http') ? '_blank' : false" :rel="homepage.startsWith('http') ? 'noopener' : false" :aria-label="name + ' homepage'">
+		<img :src="'/images/' + photo" :alt="name" loading="lazy">
+	</a>
+	<img webc:if="photo && !homepage" :src="'/images/' + photo" :alt="name" loading="lazy">
 	<span webc:if="!photo" aria-hidden="true" @text="initials"></span>
 	<h4 @text="name"></h4>
 	<p webc:if="role" @text="role"></p>
@@ -50,6 +53,22 @@
 
 	article:hover img {
 		border-color: var(--color-primary);
+	}
+
+	/* Photo wrapped in a homepage link */
+	article>a {
+		display: inline-block;
+		border-radius: 50%;
+		margin-bottom: 1.25rem;
+	}
+
+	article>a img {
+		margin-bottom: 0;
+	}
+
+	article>a:focus-visible {
+		outline: 3px solid var(--color-primary);
+		outline-offset: 4px;
 	}
 
 	span {

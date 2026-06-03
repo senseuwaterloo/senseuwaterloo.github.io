@@ -10,7 +10,7 @@ description: "The Software Engineering and System Engineering (SENSE) Lab at the
 		<a href="https://uwaterloo.ca/electrical-computer-engineering/" target="_blank" rel="noopener">Department of Electrical and Computer Engineering</a>,
 		<a href="https://uwaterloo.ca/" target="_blank" rel="noopener">University of Waterloo</a>
 	</address>
-	<p>Led by Prof. Weiyi (Ian) Shang</p>
+	<p>Led by <a href="/weiyi_shang/">Prof. Weiyi Shang</a></p>
 	<div>
 		<p>I am looking for self-motivated students to work with me.</p>
 		<site-cta href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Submit Application</site-cta>
@@ -117,6 +117,19 @@ description: "The Software Engineering and System Engineering (SENSE) Lab at the
 		color: var(--color-text);
 		font-weight: 600;
 		margin-bottom: 2.5rem;
+	}
+
+	#hero address+p a {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: currentColor;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 4px;
+	}
+
+	#hero address+p a:hover {
+		color: var(--color-primary);
+		text-decoration-color: var(--color-primary);
 	}
 
 	#hero div {

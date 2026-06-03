@@ -11,7 +11,8 @@ description: "Members and alumni of the SENSE Lab at the University of Waterloo 
 		<site-grid min="220px">
 			<site-person-card webc:for="m of grp.members"
 				:name="m.name" :role="m.role" :topic="m.topic" :affiliation="m.affiliation"
-				:photo="m.photo" :initials="m.initials" :@links="m.links"></site-person-card>
+				:photo="m.photo" :initials="m.initials" :@links="m.links"
+				:@homepage="(m.links || []).find(l => l.label === 'Homepage')?.href || ''"></site-person-card>
 		</site-grid>
 		<div class="cta" webc:if="grp.group === 'Current Students'">
 			<p>We are looking for self-motivated students to join our group.</p>
