@@ -51,6 +51,7 @@
 		display: block;
 		max-width: var(--content-wide);
 		margin-inline: auto;
+		margin-bottom: 2.5rem;
 	}
 
 	form {
