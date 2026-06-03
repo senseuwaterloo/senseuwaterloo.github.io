@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- Leaf / Globe Icon -->
+  <g fill="#00A86B">
+    <!-- Left half of leaf -->
+    <path d="M30,12 C20,22 20,38 30,48 C30,38 25,28 30,12 Z" />
+    <!-- Right half of leaf -->
+    <path d="M30,12 C40,22 40,38 30,48 C30,38 35,28 30,12 Z" fill="#00875A" />
+    <!-- Leaf vein -->
+    <line x1="30" y1="12" x2="30" y2="48" stroke="currentColor" stroke-width="1.5" opacity="0.15" />
+  </g>
+  <text x="65" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="currentColor" letter-spacing="0.05em">ERA</text>
+  <text x="65" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="currentColor" opacity="0.6" letter-spacing="0.05em">ENVIRONMENTAL</text>
+</svg>

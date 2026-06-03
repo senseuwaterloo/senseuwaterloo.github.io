@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- Concordia Shield/Logo -->
+  <g transform="translate(15, 10)">
+    <!-- Stylized C -->
+    <path d="M25,5 C12,5 5,12 5,20 C5,28 12,35 25,35 L28,35 L28,29 L25,29 C16,29 12,25 12,20 C12,15 16,11 25,11 L28,11 L28,5 Z" fill="#930024" />
+    <path d="M22,12 Q28,20 22,28 L25,28 Q31,20 25,12 Z" fill="#FFD200" />
+  </g>
+  <text x="60" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="currentColor" letter-spacing="0.02em">Concordia</text>
+</svg>

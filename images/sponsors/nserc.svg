@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- Stylized Canadian Maple Leaf -->
+  <path d="M34,12 L37,22 L46,19 L42,28 L51,32 L40,36 L42,46 L35,40 L35,49 L33,49 L33,40 L26,46 L28,36 L17,32 L26,28 L22,19 L31,22 Z" fill="#E31837" />
+  <text x="65" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="0.05em" fill="currentColor">NSERC</text>
+  <text x="65" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="0.05em" fill="currentColor" opacity="0.8">CRSNG</text>
+</svg>

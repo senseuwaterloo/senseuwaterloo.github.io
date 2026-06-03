@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- Alibaba Orange Logo Profile -->
+  <g fill="#FF6A00">
+    <!-- Smiling side profile / 'a' -->
+    <path d="M30,12 C18,12 12,20 12,30 C12,40 18,48 30,48 C36,48 42,44 45,39 L45,47 L49,47 L49,13 L45,13 L45,21 C42,16 36,12 30,12 Z M31,17 C38,17 44,22 44,30 C44,38 38,43 31,43 C24,43 17,38 17,30 C17,22 24,17 31,17 Z" />
+    <!-- Smiley features inside -->
+    <path d="M28,26 C33,26 35,32 35,33 C35,33 34,34 33,34 C32,34 31,31 28,31 C25,31 24,34 23,34 C22,34 21,33 21,33 C21,32 23,26 28,26 Z" />
+    <circle cx="36" cy="23" r="2" />
+  </g>
+  <text x="65" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Alibaba Group</text>
+  <text x="65" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="500" fill="currentColor" opacity="0.6" letter-spacing="0.05em">RESEARCH PARTNER</text>
+</svg>
