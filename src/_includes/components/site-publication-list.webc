@@ -120,6 +120,32 @@
 		color: var(--color-text-muted);
 	}
 
+	.pub-links {
+		display: inline-block;
+		margin-left: 0.5rem;
+	}
+
+	.pub-links a {
+		display: inline-block;
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		padding: 0.15rem 0.6rem;
+		border-radius: 99px;
+		background-color: var(--color-primary-light);
+		color: var(--color-primary);
+		text-decoration: none;
+		transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+	}
+
+	.pub-links a:hover,
+	.pub-links a:focus-visible {
+		background-color: var(--color-primary);
+		color: var(--color-bg-base);
+		transform: translateY(-1px);
+	}
+
 	.pub-entry.hidden,
 	.pub-group.hidden,
 	.pub-year.hidden {
@@ -187,6 +213,7 @@
 				type,
 				topics: topicsOf(`${e.title || ""} ${c}`),
 				year: y != null ? String(y) : "",
+				pdf: e.pdf || "",
 			};
 		};
 		const esc = (s) => String(s).replace(/[&<>]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]));
@@ -206,7 +233,7 @@
 					const rows = items
 						.map(
 							(it) =>
-								`<div class="pub-entry" data-year="${it.year}" data-type="${it.type}" data-venue="${esc(it.venue)}" data-topic="${it.topics.join(" ")}"><p><span class="authors">${it.authors}</span>. <span class="title">${esc(it.title)}</span>. <em>${esc(it.container)}</em>.</p></div>`
+								`<div class="pub-entry" data-year="${it.year}" data-type="${it.type}" data-venue="${esc(it.venue)}" data-topic="${it.topics.join(" ")}"><p><span class="authors">${it.authors}</span>. <span class="title">${esc(it.title)}</span>. <em>${esc(it.container)}</em>.${it.pdf ? ` <span class="pub-links"><a href="/pubs/${encodeURI(it.pdf)}" target="_blank" rel="noopener">PDF</a></span>` : ""}</p></div>`
 						)
 						.join("");
 					return `<div class="pub-group"><h4>${label}</h4>${rows}</div>`;

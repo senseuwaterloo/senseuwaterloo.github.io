@@ -33,7 +33,8 @@
     },
     "title": "On the practical adoption of a static performance anti-pattern detector: An industrial case study",
     "title-short": "On the practical adoption of a static performance anti-pattern detector",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "pdf": "Lizhi_SANER_2026.pdf"
   },
   {
     "author": [
@@ -64,7 +65,8 @@
       ]
     },
     "title": "An empirical study of privacy leakage vulnerability in third-party android logs libraries",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "pdf": "SANER2026_Yixi.pdf"
   },
   {
     "author": [
@@ -100,7 +102,8 @@
     },
     "title": "A story about cohesion and separation: Unsupervised metric for log parser evaluation",
     "title-short": "A story about cohesion and separation",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "pdf": "QIAOLIN_SANER_2025.pdf"
   },
   {
     "author": [

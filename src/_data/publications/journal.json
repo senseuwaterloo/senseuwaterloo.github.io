@@ -38,7 +38,8 @@
     "note": "Accepted",
     "title": "LPB-gen: Systematic large log-parsing benchmarks generation",
     "title-short": "LPB-gen",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TOSEM_HETONG_DAI_2025.pdf"
   },
   {
     "author": [
@@ -79,7 +80,8 @@
     "note": "Accepted",
     "title": "Performance analysis of AI-generated code: A case study of copilot, copilot chat, CodeLlaMa, and DeepSeek-coder models",
     "title-short": "Performance analysis of AI-generated code",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE_2026_SHUANG_LI.pdf"
   },
   {
     "author": [
@@ -119,7 +121,8 @@
     },
     "title": "Enhancing log sentiments: An exploratory study of sentiments and emotions with software logs",
     "title-short": "Enhancing log sentiments",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TOSEM_2025_XIAOHUI.pdf"
   },
   {
     "author": [
@@ -160,7 +163,8 @@
     "note": "Accepted",
     "title": "Detecting DTC requirement-implementation inconsistencies using LLMs: An experience report",
     "title-short": "Detecting DTC requirement-implementation inconsistencies using LLMs",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "IEEESW_2025_TONG_ZHANG.pdf"
   },
   {
     "author": [
@@ -195,7 +199,8 @@
       ]
     },
     "title": "Towards effectively testing machine translation systems from white-box perspectives",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "SHAO-EMSE-2024.pdf"
   },
   {
     "author": [
@@ -238,7 +243,8 @@
       ]
     },
     "title": "Patient teacher can impart locality to improve lightweight vision transformer on small dataset",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "PR_2024_2.pdf"
   },
   {
     "author": [
@@ -285,7 +291,8 @@
       ]
     },
     "title": "Temporal knowledge graph reasoning based on evolutional representation and contrastive learning",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "13QiuyingMa-AI.pdf"
   },
   {
     "author": [
@@ -321,7 +328,8 @@
     },
     "title": "My fuzzers won’t build: An empirical study of fuzzing build failures",
     "title-short": "My fuzzers won’t build",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TOSEM_OLIVIER_2024.pdf"
   },
   {
     "author": [
@@ -368,7 +376,8 @@
       ]
     },
     "title": "Few-shot relational triple extraction with hierarchical prototype optimization",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "PR_2024_1.pdf"
   },
   {
     "author": [
@@ -403,7 +412,8 @@
       ]
     },
     "title": "Reducing the length of field-replay based load testing",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "YUANJIE_TSE_2024.pdf"
   },
   {
     "author": [
@@ -438,7 +448,8 @@
       ]
     },
     "title": "How to effectively mine app reviews concerning software ecosystem? A survey of review characteristics",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Xiaohui_JSS.pdf"
   },
   {
     "author": [
@@ -477,7 +488,8 @@
       ]
     },
     "title": "Vulnerabilities of data protection in vertical federated learning training and countermeasures",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "DERUI_TIFS.pdf"
   },
   {
     "author": [
@@ -525,7 +537,8 @@
     },
     "title": "STRE: An automated approach to suggesting app developers when to stop reading reviews",
     "title-short": "STRE",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "YOUSHUAI_TSE_2O23.pdf"
   },
   {
     "author": [
@@ -561,7 +574,8 @@
     },
     "title": "LoGenText-plus: Improving neural machine translation-based logging texts generation with syntactic templates",
     "title-short": "LoGenText-plus",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Ding_TOSEM.pdf"
   },
   {
     "author": [
@@ -600,7 +614,8 @@
       ]
     },
     "title": "Automated generation and evaluation of JMH microbenchmark suites from unit tests",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "MOSTAFA_TSE_2022.pdf"
   },
   {
     "author": [
@@ -631,7 +646,8 @@
       ]
     },
     "title": "Towards learning generalizable code embeddings using task-agnostic graph convolutional networks",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TOSEM_2022_Zishuo.pdf"
   },
   {
     "author": [
@@ -675,7 +691,8 @@
       ]
     },
     "title": "A case study on the stability of performance tests for serverless applications",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "JSS_2022_Eismann.pdf"
   },
   {
     "author": [
@@ -710,7 +727,8 @@
       ]
     },
     "title": "Studying logging practice in test code",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE_Haonan_2022.pdf"
   },
   {
     "author": [
@@ -741,7 +759,8 @@
       ]
     },
     "title": "Can pre-trained code embeddings improve model performance? Revisiting the use of code embeddings in software engineering tasks",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Zishuo_EMSE_2022.pdf"
   },
   {
     "author": [
@@ -772,7 +791,8 @@
       ]
     },
     "title": "An empirical study of the impact of hyperparameter tuning and model optimization on the performance properties of deep neural networks",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "LIZHI_TOSEM_2021.pdf"
   },
   {
     "author": [
@@ -820,7 +840,8 @@
     },
     "title": "Locating performance regression root causes in the field operations of web-based systems: An experience report",
     "title-short": "Locating performance regression root causes in the field operations of web-based systems",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Lizhi_TSE_2021.pdf"
   },
   {
     "author": [
@@ -847,7 +868,8 @@
       ]
     },
     "title": "Assisting example-based API misuse detection via complementary artificial examples",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Max_TSE_2021.pdf"
   },
   {
     "author": [
@@ -882,7 +904,8 @@
       ]
     },
     "title": "Evaluating the impact of falsely detected performance bug-inducing changes in JIT models",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Quach2021_Article_EvaluatingTheImpactOfFalselyDe.pdf"
   },
   {
     "author": [
@@ -909,7 +932,8 @@
       ]
     },
     "title": "A systematic review of API evolution literature",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "mlamothe_csur_2021.pdf"
   },
   {
     "author": [
@@ -945,7 +969,8 @@
     },
     "title": "LogAssist: Assisting log analysis through log summarization",
     "title-short": "LogAssist",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TSE2021_LogAssist.pdf"
   },
   {
     "author": [
@@ -976,7 +1001,8 @@
       ]
     },
     "title": "An empirical study on the use of SZZ for identifying inducing changes of non-functional bugs",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Quach2021_Article_AnEmpiricalStudyOnTheUseOfSZZF.pdf"
   },
   {
     "author": [
@@ -1007,7 +1033,8 @@
       ]
     },
     "title": "Improving state-of-the-art compression techniques for log management tools",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Kundi_TSE_2021.pdf"
   },
   {
     "author": [
@@ -1038,7 +1065,8 @@
       ]
     },
     "title": "Studying duplicate logging statements and their relationships with code clones",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Zhenhao_TSE_2021.pdf"
   },
   {
     "author": [
@@ -1067,7 +1095,8 @@
     "note": "Accepted",
     "title": "PerfJIT: Test-level just-in-time prediction for performance regression introducing commits",
     "title-short": "PerfJIT",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Jinfu2020TSE.pdf"
   },
   {
     "author": [
@@ -1120,7 +1149,8 @@
     "note": "Accepted",
     "title": "Using black-box performance models to detect performance regressions under varying workloads: An empirical study",
     "title-short": "Using black-box performance models to detect performance regressions under varying workloads",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Liao2020LogPerfReg.pdf"
   },
   {
     "author": [
@@ -1156,7 +1186,8 @@
     },
     "title": "Logram: Efficient log parsing using n-gram dictionaries",
     "title-short": "Logram",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "HetongTSE2020.pdf"
   },
   {
     "author": [
@@ -1191,7 +1222,8 @@
       ]
     },
     "title": "Simplifying the search of npm packages",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "npms.pdf"
   },
   {
     "author": [
@@ -1226,7 +1258,8 @@
       ]
     },
     "title": "Towards reducing the time needed for load testing",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "hammam_jsep.pdf"
   },
   {
     "author": [
@@ -1254,7 +1287,8 @@
     },
     "title": "A3: Assisting android API migrations using code examples",
     "title-short": "A3",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Max_TSE2020.pdf"
   },
   {
     "author": [
@@ -1285,7 +1319,8 @@
       ]
     },
     "title": "A study of the performance of general compressors on log files",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Kundi_EMSE2020.pdf"
   },
   {
     "author": [
@@ -1320,7 +1355,8 @@
       ]
     },
     "title": "A qualitative study of the benefits and costs of logging from developers’ perspectives",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Heng_TSE_2020.pdf"
   },
   {
     "author": [
@@ -1361,7 +1397,8 @@
     },
     "title": "Log4Perf: Suggesting and updating logging locations for web-based systems’ performance monitoring",
     "title-short": "Log4Perf",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Kundi_EMSE2019.pdf"
   },
   {
     "author": [
@@ -1393,7 +1430,8 @@
     },
     "title": "Studying the characteristics of logging practices in mobile apps: A case study on f-droid",
     "title-short": "Studying the characteristics of logging practices in mobile apps",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "Zeng2019_Article_StudyingTheCharacteristicsOfLo.pdf"
   },
   {
     "author": [
@@ -1432,7 +1470,8 @@
       ]
     },
     "title": "Performance issues? Hey DevOps, mind the uncertainty!",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "ieeeswperf.pdf"
   },
   {
     "author": [
@@ -1459,7 +1498,8 @@
       ]
     },
     "title": "Will this clone be short-lived? Towards a better understanding of the characteristics of short-lived clones",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE2018_pick.pdf"
   },
   {
     "author": [
@@ -1525,7 +1565,8 @@
       ]
     },
     "title": "Studying and detecting log-related issues",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE2018_mehran.pdf"
   },
   {
     "author": [
@@ -1556,7 +1597,8 @@
       ]
     },
     "title": "Studying software logging using topic models",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "emse2017_heng.pdf"
   },
   {
     "author": [
@@ -1584,7 +1626,8 @@
     },
     "note": "Invited for ICSE 2018 Journal First",
     "title": "Empirical study on the discrepancy between performance testing results from virtual and physical environments",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "emse_moiz.pdf"
   },
   {
     "author": [
@@ -1619,7 +1662,8 @@
       ]
     },
     "title": "Examining the stability of logging statements",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "emse_suhas.pdf"
   },
   {
     "author": [
@@ -1691,7 +1735,8 @@
     },
     "note": "Invited for ICSE 2017 Journal First",
     "title": "A framework for evaluating the results of the SZZ approach for identifying bug-introducing changes",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "TSE_Daniel.pdf"
   },
   {
     "author": [
@@ -1722,7 +1767,8 @@
       ]
     },
     "title": "Towards just-in-time suggestions for log changes",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE2016_heng_logjit.pdf"
   },
   {
     "author": [
@@ -1749,7 +1795,8 @@
       ]
     },
     "title": "Which log level should developers choose for a new logging statement?",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "EMSE2016_heng_level.pdf"
   },
   {
     "author": [
@@ -1784,7 +1831,8 @@
       ]
     },
     "title": "Topic-based software defect explanation",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "peter_jss2016.pdf"
   },
   {
     "author": [
@@ -1900,7 +1948,8 @@
       ]
     },
     "title": "Studying the relationship between logging characteristics and the code quality of platform software",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "emse_shang.pdf"
   },
   {
     "author": [
@@ -1943,7 +1992,8 @@
       ]
     },
     "title": "An exploratory study of the evolution of communicated information about the execution of large software systems",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "smr2013-WeiyiShang.pdf"
   },
   {
     "author": [
@@ -1971,7 +2021,8 @@
     },
     "title": "Using pig as a data preparation language for large-scale mining software repositories studies: An experience report",
     "title-short": "Using pig as a data preparation language for large-scale mining software repositories studies",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "jss2011_shang.pdf"
   },
   {
     "author": [
@@ -2010,6 +2061,7 @@
       ]
     },
     "title": "An empirical study on inconsistent changes to code clones at the release level",
-    "type": "article-journal"
+    "type": "article-journal",
+    "pdf": "sdarticle.pdf"
   }
 ]

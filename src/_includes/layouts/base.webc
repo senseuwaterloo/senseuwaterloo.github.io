@@ -54,7 +54,7 @@
 
 				/* Layout — full-width main, elements centered via auto margins */
 				--content-width: 48rem;   /* default prose column */
-				--content-wide: 64rem;    /* grids, tables, profile */
+				--content-wide: 60rem;    /* main container width (960px): grids, tables, profile */
 				--content-full: 100%;     /* full-bleed */
 				--gutter: 1.5rem;
 				--nav-height: 70px;

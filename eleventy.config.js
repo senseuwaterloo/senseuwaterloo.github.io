@@ -12,4 +12,6 @@ export default function (config) {
 
   // Images live alongside the uploaded source in upload/; copy them to /images.
   config.addPassthroughCopy({ "upload/images": "images" });
+  // Publication PDFs.
+  config.addPassthroughCopy("pubs");
 }

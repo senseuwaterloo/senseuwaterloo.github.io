@@ -51,6 +51,11 @@ description: "Research at the SENSE Lab: Green AIWare, software log mining, perf
 </section>
 
 <style>
+	/* Research content fills the wide container (matches main's 960px layout) */
+	#research>* {
+		max-width: var(--content-wide);
+	}
+
 	#research>p {
 		font-size: 1.05rem;
 		line-height: 1.8;
