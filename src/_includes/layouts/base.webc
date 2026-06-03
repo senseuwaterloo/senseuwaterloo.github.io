@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="color-scheme" content="light dark">
+	<meta name="google-site-verification" content="itVrl5J3titx2GqDIL_yO0cbGHZr_opOaq-nhAWH4nI">
 	<title @text="(title ? title + ' — ' : '') + 'SENSE Lab'"></title>
 	<meta name="description" :content="description || 'The Software Engineering and System Engineering (SENSE) Lab at the University of Waterloo, led by Prof. Weiyi Shang.'">
 	<meta name="author" content="Weiyi Shang">
