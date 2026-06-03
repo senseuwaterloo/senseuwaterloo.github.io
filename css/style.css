@@ -469,7 +469,8 @@ nav.scrolled {
 .hero-pi a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--color-border);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
