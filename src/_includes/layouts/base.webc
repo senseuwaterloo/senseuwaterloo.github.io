@@ -487,33 +487,6 @@
 			}
 		}
 
-		/* ============================================================
-		   CALL-TO-ACTION LINK  (a primary, filled <a> — e.g. "Apply")
-		   ============================================================ */
-		@layer cta {
-			.cta {
-				display: inline-block;
-				font-family: var(--font-heading);
-				font-weight: 700;
-				font-size: 0.95rem;
-				padding: 0.75rem 2rem;
-				border-radius: var(--radius-sm);
-				background-color: var(--color-primary);
-				color: var(--color-bg-base);
-				border: 1px solid var(--color-primary);
-				box-shadow: 0 4px 12px var(--color-shadow);
-				text-decoration: none;
-				transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-			}
-
-			.cta:hover,
-			.cta:focus-visible {
-				background-color: transparent;
-				color: var(--color-primary);
-				transform: translateY(-2px);
-				box-shadow: 0 6px 16px var(--color-shadow);
-			}
-		}
 	</style>
 	<style webc:keep @raw="getBundle('css')"></style>
 	<script webc:keep type="module" @raw="getBundle('js')"></script>

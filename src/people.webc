@@ -15,7 +15,7 @@ description: "Members and alumni of the SENSE Lab at the University of Waterloo 
 		</site-grid>
 		<div class="cta" webc:if="grp.group === 'Current Students'">
 			<p>We are looking for self-motivated students to join our group.</p>
-			<a class="cta" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply to SENSE Lab</a>
+			<site-cta href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Apply to SENSE Lab</site-cta>
 		</div>
 	</section>
 </section>

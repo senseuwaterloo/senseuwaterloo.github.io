@@ -18,7 +18,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 			<nav>
 				<a href="mailto:wshang@uwaterloo.ca">Email</a>
 				<a href="https://scholar.google.com/citations?user=ZnERyl4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-				<a class="cta" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply to Group</a>
+				<site-cta href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Apply to Group</site-cta>
 			</nav>
 		</div>
 	</div>
@@ -57,7 +57,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	<site-info-card class="content-wide join">
 		<h3>Join the SENSE Lab</h3>
 		<p>Prof. Weiyi Shang is looking for self-motivated Graduate (Ph.D. &amp; M.Sc.) and Undergraduate research assistant students to join the team. If you are interested in log mining, performance engineering, and AI for software engineering, please apply below.</p>
-		<a class="cta" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Apply on DearProf</a>
+		<site-cta href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">Apply on DearProf</site-cta>
 	</site-info-card>
 </section>
 
@@ -115,8 +115,8 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 		align-items: center;
 	}
 
-	/* Secondary quick-links render as outline buttons (the primary one is .cta) */
-	.hero nav a:not(.cta) {
+	/* Secondary quick-links render as outline buttons (the primary one is <site-cta>) */
+	.hero nav>a {
 		font-family: var(--font-heading);
 		font-weight: 700;
 		font-size: 0.95rem;
@@ -127,7 +127,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 		transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
 	}
 
-	.hero nav a:not(.cta):hover {
+	.hero nav>a:hover {
 		border-color: var(--color-primary);
 		color: var(--color-primary);
 		background-color: var(--color-primary-light);
