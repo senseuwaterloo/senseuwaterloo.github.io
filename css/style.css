@@ -466,6 +466,18 @@ nav.scrolled {
   margin-bottom: 2.5rem;
 }
 
+.hero-pi a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 4px;
+}
+
+.hero-pi a:hover {
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+}
+
 .hero-cta {
   margin-top: 2rem;
   padding-top: 2rem;
@@ -1348,6 +1360,22 @@ nav.scrolled {
   margin-inline: auto;
   margin-bottom: 1.25rem;
   transition: border-color var(--transition);
+}
+
+.person-photo-link {
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.person-photo-link .person-photo {
+  display: block;
+  margin-bottom: 0;
+}
+
+.person-photo-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
 }
 
 .person-card:hover .person-photo {
