@@ -1,5 +1,5 @@
 <div id="pub-list" aria-live="polite"></div>
-<script @html="'window.__PUBS__ = ' + JSON.stringify($data.publications).replace(/</g, '\\u003c') + ';'"></script>
+<script @html="'window.__PUBS__ = ' + JSON.stringify($data.publications).replace(/[<>&]/g, (c) => '\\u00' + c.charCodeAt(0).toString(16)) + ';'"></script>
 
 <style webc:scoped>
 	:host {
@@ -159,69 +159,10 @@
 		const raw = window.__PUBS__;
 		if (!listEl || !raw) return;
 
-		const PI = "Weiyi Shang";
-
-		const VENUE_RULES = [
-			[/methodology|tosem/i, "TOSEM"],
-			[/transactions on software engineering|\btse\b/i, "TSE"],
-			[/empirical software engineering and measurement|\besem\b/i, "ESEM"],
-			[/empirical software engineering|\bemse\b/i, "EMSE"],
-			[/journal of systems and software|\bjss\b/i, "JSS"],
-			[/information and software technology|\bist\b/i, "IST"],
-			[/computing surveys|\bcsur\b/i, "CSUR"],
-			[/ieee software/i, "IEEE Software"],
-			[/software maintenance|icsme/i, "ICSME"],
-			[/program comprehension|icpc/i, "ICPC"],
-			[/analysis, evolution|reengineering|saner/i, "SANER"],
-			[/mining software repositories|\bmsr\b/i, "MSR"],
-			[/performance engineering|icpe/i, "ICPE"],
-			[/automated software engineering|\base\b/i, "ASE"],
-			[/foundations of software engineering|\besec\b|\bfse\b/i, "FSE"],
-			[/international conference on software engineering|icse/i, "ICSE"],
-			[/software testing|verification and validation|icst/i, "ICST"],
-			[/software reliability|issre/i, "ISSRE"],
-			[/internetware/i, "Internetware"],
-			[/neural information processing|neurips/i, "NeurIPS"],
-			[/ieee access/i, "IEEE Access"],
-		];
-		const TOPIC_RULES = [
-			["logging", /\blog\b|logs|logging|observability|telemetry/i],
-			["performance", /performance|load test|microbenchmark|\bjit\b|regression|energy|efficien|benchmark/i],
-			["testing", /\btest|flaky|devops|\bci\b|quality assurance|\bgui\b|fuzz/i],
-			["api", /\bapi\b|workaround/i],
-			["ai-llm", /\bllm\b|language model|machine learning|deep learning|neural|\bai\b|\bgpt\b|code generation/i],
-		];
-
-		const venueOf = (c) => (VENUE_RULES.find(([re]) => re.test(c)) || [, "Other"])[1];
-		const topicsOf = (t) => {
-			const m = TOPIC_RULES.filter(([, re]) => re.test(t)).map(([k]) => k);
-			return m.length ? m : ["other"];
-		};
-		const authorsHtml = (a) =>
-			(a || [])
-				.map((x) => `${x.given || ""} ${x.family || ""}`.trim())
-				.map((n) => (n === PI ? `<strong>${n}</strong>` : n))
-				.join(", ");
-		const enrich = (e, type) => {
-			const c = e["container-title"] || "";
-			const y = e.issued && e.issued["date-parts"] && e.issued["date-parts"][0] && e.issued["date-parts"][0][0];
-			return {
-				title: e.title || "",
-				authors: authorsHtml(e.author),
-				container: c,
-				venue: venueOf(c),
-				type,
-				topics: topicsOf(`${e.title || ""} ${c}`),
-				year: y != null ? String(y) : "",
-				pdf: e.pdf || "",
-			};
-		};
 		const esc = (s) => String(s).replace(/[&<>]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]));
 
-		const entries = [
-			...(raw.journal || []).map((e) => enrich(e, "journal")),
-			...(raw.conference || []).map((e) => enrich(e, "conference")),
-		];
+		// Entries already carry year / type / venue / topic / formatted content / pdf.
+		const entries = Array.isArray(raw) ? raw : [];
 		const years = [...new Set(entries.map((e) => e.year).filter(Boolean))].sort((a, b) => b - a);
 		const GROUPS = [["journal", "Journal Papers"], ["conference", "Conference Papers"]];
 
@@ -233,7 +174,7 @@
 					const rows = items
 						.map(
 							(it) =>
-								`<div class="pub-entry" data-year="${it.year}" data-type="${it.type}" data-venue="${esc(it.venue)}" data-topic="${it.topics.join(" ")}"><p><span class="authors">${it.authors}</span>. <span class="title">${esc(it.title)}</span>. <em>${esc(it.container)}</em>.${it.pdf ? ` <span class="pub-links"><a href="/pubs/${encodeURI(it.pdf)}" target="_blank" rel="noopener">PDF</a></span>` : ""}</p></div>`
+								`<div class="pub-entry" data-year="${it.year}" data-type="${it.type}" data-venue="${esc(it.venue)}" data-topic="${esc(it.topic || "")}"><p>${it.content}${it.pdf ? ` <span class="pub-links"><a href="/pubs/${encodeURI(it.pdf)}" target="_blank" rel="noopener">PDF</a></span>` : ""}</p></div>`
 						)
 						.join("");
 					return `<div class="pub-group"><h4>${label}</h4>${rows}</div>`;
@@ -246,7 +187,7 @@
 		const fYear = document.getElementById("filter-year");
 		const fVenue = document.getElementById("filter-venue");
 		years.forEach((y) => fYear && fYear.appendChild(new Option(y, y)));
-		[...new Set(entries.map((e) => e.venue))]
+		[...new Set(entries.map((e) => e.venue).filter(Boolean))]
 			.sort((a, b) => (a === "Other" ? 1 : b === "Other" ? -1 : a.localeCompare(b)))
 			.forEach((v) => fVenue && fVenue.appendChild(new Option(v, v)));
 
