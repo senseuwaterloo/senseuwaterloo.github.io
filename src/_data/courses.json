@@ -1,0 +1,62 @@
+[
+  {
+    "university": "University of Waterloo",
+    "courses": [
+      {
+        "title": "CS 447/647 / ECE 453: Software Testing, Quality Assurance, and Maintenance",
+        "meta": "Undergraduate & Graduate Course | Winter 2024, Winter 2025",
+        "description": "Introduces students to systematic software testing methodologies, automated quality assurance tools, and software maintenance frameworks for large-scale systems."
+      },
+      {
+        "title": "SE 465: Software Testing and Quality Assurance",
+        "meta": "Undergraduate Course | Winter 2024, Winter 2025",
+        "description": "Covers fundamental concepts of software testing, including test case design, unit testing, structural coverage, automation tools, and static analysis."
+      },
+      {
+        "title": "SE 464: Software Design and Architectures",
+        "meta": "Undergraduate Course | Fall 2024",
+        "description": "Explores software architecture paradigms, design patterns, UML modeling, refactoring strategies, and component-level software design principles."
+      },
+      {
+        "title": "ECE 750: Mining Large Software Data",
+        "meta": "Graduate Course | Winter 2025",
+        "description": "Advanced seminar investigating modern techniques for extracting, preparing, and modeling data from large software repositories, execution logs, and system metrics."
+      }
+    ]
+  },
+  {
+    "university": "Concordia University",
+    "courses": [
+      {
+        "title": "SOEN 691: Mining Large Software System Data for DevOps",
+        "meta": "Graduate Course | Winter 2016, Fall 2017, Winter 2019, Winter 2020",
+        "description": "Covers state-of-the-art mining techniques applied to logs, telemetry, and source code repositories to support software maintenance and DevOps workflows."
+      },
+      {
+        "title": "SOEN 345: Software Testing and Quality Assurance",
+        "meta": "Undergraduate Course | Winter 2020",
+        "description": "Focuses on software quality control processes, testing methodologies, test automation, and validation standards."
+      },
+      {
+        "title": "SOEN 390: Software Engineering Team Project",
+        "meta": "Undergraduate Course | Winter 2018, Winter 2019",
+        "description": "A project-based course where student teams design, develop, and deploy a large-scale software system, practicing modern software lifecycle standards."
+      },
+      {
+        "title": "SOEN 341: Software Process",
+        "meta": "Undergraduate Course | Winter 2016, Winter 2017, Winter 2018",
+        "description": "Introduces software process models, agile practices, project management tools, requirements elicitation, and version control principles."
+      }
+    ]
+  },
+  {
+    "university": "Queen's University",
+    "courses": [
+      {
+        "title": "CISC 880: Engineering Ultra-large-scale Systems",
+        "meta": "Graduate Course | Winter 2015",
+        "description": "Explores architectural styles, operational challenges, logging architectures, and performance engineering practices for ultra-large-scale software deployments."
+      }
+    ]
+  }
+]

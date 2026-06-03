@@ -1,0 +1,45 @@
+<article>
+	<h3 @text="title"></h3>
+	<p webc:if="meta" @text="meta"></p>
+	<p @html="description"></p>
+</article>
+<style webc:scoped>
+	:host {
+		display: block;
+		margin-bottom: 2rem;
+	}
+
+	article {
+		background-color: var(--color-bg-surface);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		padding: 1.75rem;
+		box-shadow: var(--card-shadow);
+		transition: border-color var(--transition-fast);
+	}
+
+	article:hover {
+		border-color: var(--color-primary);
+	}
+
+	h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.5rem;
+		color: var(--color-text);
+	}
+
+	p:first-of-type {
+		font-size: 0.85rem;
+		color: var(--color-primary);
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	p:last-of-type {
+		font-size: 0.98rem;
+		color: var(--color-text);
+		line-height: 1.6;
+	}
+</style>

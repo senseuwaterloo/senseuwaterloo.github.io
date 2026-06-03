@@ -1,0 +1,86 @@
+<ol>
+	<li webc:for="item of items">
+		<time @text="item.date"></time>
+		<h4 @text="item.title"></h4>
+		<p @html="item.body"></p>
+	</li>
+</ol>
+<style webc:scoped>
+	:host {
+		display: block;
+	}
+
+	ol {
+		position: relative;
+		padding-left: 2rem;
+		margin-block: 1rem;
+	}
+
+	ol::before {
+		content: "";
+		position: absolute;
+		left: 6px;
+		top: 8px;
+		bottom: 8px;
+		width: 2px;
+		background-color: var(--color-border);
+	}
+
+	li {
+		position: relative;
+		margin-bottom: 2rem;
+	}
+
+	li:last-child {
+		margin-bottom: 0;
+	}
+
+	li::before {
+		content: "";
+		position: absolute;
+		left: -2rem;
+		top: 8px;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background-color: var(--color-bg-base);
+		border: 2px solid var(--color-primary);
+		transform: translateX(-6px);
+		transition: background-color var(--transition-fast);
+	}
+
+	li:hover::before {
+		background-color: var(--color-primary);
+	}
+
+	time {
+		display: block;
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: 0.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	h4 {
+		font-size: 1.15rem;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		color: var(--color-text-muted);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	p a {
+		text-decoration: underline;
+		text-decoration-color: var(--color-border);
+	}
+
+	p a:hover {
+		text-decoration-color: var(--color-primary);
+	}
+</style>

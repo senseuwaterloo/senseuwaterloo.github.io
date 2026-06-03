@@ -1,0 +1,206 @@
+<form onsubmit="return false">
+	<search>
+		<label>
+			<svg webc:keep xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.637 10.637Z" />
+			</svg>
+			<input type="text" id="pub-search" placeholder="Search title, author, or venue…">
+			<button type="button" id="clear-search-btn" aria-label="Clear search" hidden>&times;</button>
+		</label>
+		<button type="button" id="toggle-all-pubs" class="btn-outline">Expand All</button>
+	</search>
+
+	<fieldset>
+		<label>Topic
+			<select id="filter-topic">
+				<option value="all">All Topics</option>
+				<option value="logging">Logging &amp; Log Intelligence</option>
+				<option value="performance">Performance Engineering</option>
+				<option value="testing">Software Testing &amp; DevOps</option>
+				<option value="api">API Usability &amp; Evolution</option>
+				<option value="ai-llm">AI &amp; LLMs for SE</option>
+				<option value="other">Other Topics</option>
+			</select>
+		</label>
+		<label>Type
+			<select id="filter-type">
+				<option value="all">All Types</option>
+				<option value="journal">Journal Papers</option>
+				<option value="conference">Conference Papers</option>
+			</select>
+		</label>
+		<label>Year
+			<select id="filter-year">
+				<option value="all">All Years</option>
+			</select>
+		</label>
+		<label>Venue
+			<select id="filter-venue">
+				<option value="all">All Venues</option>
+			</select>
+		</label>
+	</fieldset>
+
+	<div>
+		<output id="pub-counts">Showing all publications</output>
+		<button type="button" id="reset-filters" class="btn-text" hidden>Clear all filters</button>
+	</div>
+</form>
+<style webc:scoped>
+	:host {
+		display: block;
+		max-width: var(--content-wide);
+		margin-inline: auto;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		text-align: left;
+		background-color: var(--color-bg-surface);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius);
+		padding: 1.75rem;
+		box-shadow: var(--card-shadow);
+	}
+
+	search {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		width: 100%;
+	}
+
+	search>label {
+		position: relative;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		position: absolute;
+		left: 1rem;
+		width: 1.25rem;
+		height: 1.25rem;
+		color: var(--color-text-muted);
+		pointer-events: none;
+	}
+
+	input {
+		width: 100%;
+		padding: 0.75rem 1rem 0.75rem 2.75rem;
+		font: inherit;
+		font-size: 0.95rem;
+		color: var(--color-text);
+		background-color: var(--color-bg-base);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+	}
+
+	input:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 3px rgba(127, 127, 127, 0.25);
+	}
+
+	#clear-search-btn {
+		position: absolute;
+		right: 1rem;
+		font-size: 1.35rem;
+		line-height: 1;
+		color: var(--color-text-muted);
+		padding: 0.25rem;
+		border-radius: 50%;
+	}
+
+	#clear-search-btn:hover {
+		color: var(--color-text);
+		background-color: var(--color-bg-alt);
+	}
+
+	fieldset {
+		border: none;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+	}
+
+	fieldset label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		font-family: var(--font-heading);
+		font-size: 0.82rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--color-text-muted);
+	}
+
+	select {
+		font: inherit;
+		font-size: 0.92rem;
+		color: var(--color-text);
+		background-color: var(--color-bg-base);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		padding: 0.65rem 2.25rem 0.65rem 1rem;
+		cursor: pointer;
+		appearance: none;
+		outline: none;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+		background-repeat: no-repeat;
+		background-position: right 0.75rem center;
+		background-size: 1rem;
+		transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+	}
+
+	select:focus {
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 3px rgba(127, 127, 127, 0.25);
+	}
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid var(--color-border);
+		padding-top: 1rem;
+		font-size: 0.88rem;
+		color: var(--color-text-muted);
+	}
+
+	.btn-text {
+		color: var(--color-primary);
+		font-weight: 600;
+		font-size: 0.88rem;
+		padding: 0.2rem 0.5rem;
+		border-radius: var(--radius-sm);
+		transition: color var(--transition-fast), background-color var(--transition-fast);
+	}
+
+	.btn-text:hover {
+		color: var(--color-primary-hover);
+		background-color: var(--color-primary-light);
+	}
+
+	@media (max-width: 768px) {
+		search {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		fieldset {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 480px) {
+		fieldset {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

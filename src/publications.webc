@@ -1,0 +1,10 @@
+---
+title: "Publications"
+description: "Journal and conference publications from the SENSE Lab at the University of Waterloo, with search and filtering by topic, type, year, and venue."
+---
+
+<section id="publications" class="section-alt">
+	<h2>Publications</h2>
+	<site-pub-filter></site-pub-filter>
+	<site-publication-list></site-publication-list>
+</section>

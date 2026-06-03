@@ -1,55 +1,155 @@
-<section class="hero">
-	<h1>Software Engineering and System Engineering Lab</h1>
-	<p>
-		We carry out research in the areas of software engineering for ultra-large-scale systems, software log mining,
-		empirical software engineering, mining software repositories and performance engineering.
-	</p>
-</section>
+---
+title: "Software Engineering and System Engineering"
+description: "The Software Engineering and System Engineering (SENSE) Lab at the University of Waterloo, led by Prof. Weiyi Shang. Research in software log mining, performance engineering, empirical software engineering, and mining software repositories."
+---
 
-<hr>
-
-<section id="research">
-	<h2>Research Areas</h2>
-	<div class="grid">
-		<section>
-			<h3>Performance Engineering</h3>
-			<p>Static analysis for detecting anti-patterns.</p>
-		</section>
-		<section>
-			<h3>Log Analysis</h3>
-			<p>Unsupervised metrics for system observability.</p>
-		</section>
-		<section>
-			<h3>Software Testing and Verification</h3>
-			<p>Testing and verification of software systems in large scale field environment.</p>
-		</section>
-		<section>
-			<h3>AI for Software Engineering</h3>
-			<p>Static analysis for detecting anti-patterns.</p>
-		</section>
+<section id="hero">
+	<h1>SENSE Lab</h1>
+	<p>Software Engineering and System Engineering</p>
+	<address>
+		<a href="https://uwaterloo.ca/electrical-computer-engineering/" target="_blank" rel="noopener">Department of Electrical and Computer Engineering</a>,
+		<a href="https://uwaterloo.ca/" target="_blank" rel="noopener">University of Waterloo</a>
+	</address>
+	<p>Led by Prof. Weiyi (Ian) Shang</p>
+	<div>
+		<p>I am looking for self-motivated students to work with me.</p>
+		<a class="btn-primary" href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply" target="_blank" rel="noopener">Submit Application</a>
 	</div>
 </section>
 
-<hr>
+<section id="about">
+	<h2>About the Lab</h2>
+	<p>The <strong>SENSE Lab</strong> (Software Engineering and System Engineering Lab) at the University of Waterloo conducts empirical and experimental research to build <strong>observable</strong>, <strong>performant</strong>, and <strong>maintainable</strong> software. We specialize in software log mining, software performance engineering, and the integration of AI tools for software development.</p>
 
-<section id="publications">
-	<h2>Publications</h2>
-	<section>
-		<h3>Journal</h3>
-		<publication-list :@publications="$data.publications.journal"></publication-list>
-	</section>
-	<section>
-		<h3>Conference</h3>
-		<publication-list :@publications="$data.publications.conference"></publication-list>
-	</section>
+	<site-grid min="280px">
+		<site-info-card heading="Observability">
+			<p>Analyzing logging practices and development metadata to build tools like log parsers, log level suggestors, and anomaly detection models.</p>
+		</site-info-card>
+		<site-info-card heading="Performance Assurance">
+			<p>Designing robust microbenchmarking, JIT compilation diagnostics, load testing workflows, and regression analysis for ultra-large-scale systems.</p>
+		</site-info-card>
+		<site-info-card heading="Academic Excellence">
+			<p>5+ Distinguished Paper Awards at ICSE/WCRE/ICPC, and all 9 graduated PhDs &amp; Postdocs successfully placed in faculty positions worldwide.</p>
+		</site-info-card>
+	</site-grid>
 </section>
 
-<hr>
+<style webc:scoped>
+	#hero {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		padding-block: 8rem 6rem;
+	}
 
-<section id="contact">
-	<h2>Contact</h2>
-	<p>
-		I am looking for self motivated students to work with me. If you are interested, please submit your application on
-		<a href="https://dearprof.com/positions/678878ae180e30e5ea1d910d/apply">DearProf</a>.
-	</p>
-</section>
+	#hero::before,
+	#hero::after {
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(100px);
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	#hero::before {
+		top: -10%;
+		left: 10%;
+		width: 300px;
+		height: 300px;
+		background-color: var(--hero-glow-1);
+	}
+
+	#hero::after {
+		bottom: -10%;
+		right: 10%;
+		width: 350px;
+		height: 350px;
+		background-color: var(--hero-glow-2);
+	}
+
+	#hero>* {
+		max-width: 45rem;
+	}
+
+	#hero h1 {
+		font-size: 3.5rem;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		margin-bottom: 0.75rem;
+		background: linear-gradient(135deg, var(--color-text) 50%, var(--color-primary));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	#hero>p:first-of-type {
+		font-size: 1.4rem;
+		color: var(--color-primary);
+		font-weight: 600;
+		font-family: var(--font-heading);
+		margin-bottom: 1.5rem;
+	}
+
+	#hero address {
+		font-style: normal;
+		font-size: 0.95rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+		margin-bottom: 0.75rem;
+	}
+
+	#hero address a {
+		color: var(--color-text);
+		font-weight: 500;
+		text-decoration: underline;
+		text-decoration-color: var(--color-border);
+		text-underline-offset: 4px;
+	}
+
+	#hero address a:hover {
+		color: var(--color-primary);
+		text-decoration-color: var(--color-primary);
+	}
+
+	#hero address+p {
+		font-size: 1.15rem;
+		color: var(--color-text);
+		font-weight: 600;
+		margin-bottom: 2.5rem;
+	}
+
+	#hero div {
+		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	#hero div p {
+		color: var(--color-text-muted);
+		margin-bottom: 1.25rem;
+	}
+
+	#about>p {
+		font-size: 1.15rem;
+		line-height: 1.8;
+		text-align: center;
+		max-width: 50rem;
+		margin-bottom: 4rem;
+	}
+
+	#about strong {
+		font-weight: 600;
+		color: var(--color-primary);
+	}
+
+	@media (max-width: 767px) {
+		#hero {
+			padding-block: 6rem 4rem;
+		}
+
+		#hero h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>

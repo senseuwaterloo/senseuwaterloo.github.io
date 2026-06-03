@@ -1,0 +1,53 @@
+{
+  "questions": [
+    { "number": "01", "text": "How to debug and verify software systems in the large scale field environment?" },
+    { "number": "02", "text": "Can we identify performance issues in ultra-large-scale systems?" },
+    { "number": "03", "text": "How to improve logging practice in software development and operation?" },
+    { "number": "04", "text": "What can we learn from past software development and operation history?" },
+    { "number": "05", "text": "How to scale software engineering research to cope with big data?" }
+  ],
+  "education": [
+    {
+      "date": "2010 – 2014",
+      "title": "Ph.D. in Computer Science",
+      "body": "Queen's University, Kingston, Canada<br>Supervised by Dr. Ahmed E. Hassan<br>Thesis: <em>Log Engineering: Towards Systematic Log Mining to Support the Development of Ultra-large Scale Systems</em>"
+    },
+    {
+      "date": "2008 – 2010",
+      "title": "M.Sc. in Computer Science",
+      "body": "Queen's University, Kingston, Canada<br>Supervised by Dr. Ahmed E. Hassan<br>Thesis: <em>Enabling Large-Scale Mining Software Repositories Studies Using Web-Scale Platforms</em>"
+    },
+    {
+      "date": "2004 – 2008",
+      "title": "B.Eng. in Computer Science",
+      "body": "Harbin Institute of Technology (HIT), China"
+    }
+  ],
+  "honors": [
+    { "date": "2025", "title": "ACM Distinguished Member", "body": "Recognized for outstanding scientific contributions to computing." },
+    { "date": "2025", "title": "Faculty Research Excellence Award", "body": "University of Waterloo, Faculty of Engineering." },
+    { "date": "2025", "title": "ACM SIGSOFT Distinguished Paper Award", "body": "Received at ICSE 2025 for performance regression research." },
+    { "date": "2021", "title": "CS-CAN Outstanding Early Career Researcher Award", "body": "National recognition for top computer science researchers in Canada." },
+    { "date": "2020", "title": "ACM SIGSOFT Distinguished Paper Award", "body": "Received at ICSE 2020 for release testing pipelines." },
+    { "date": "2013", "title": "ACM SIGSOFT Distinguished Paper Award", "body": "Received at ICSE 2013 for big data analytics cloud deployments." },
+    { "date": "2011", "title": "Best Paper Award", "body": "Received at WCRE 2011 for software execution logs evolution research." }
+  ],
+  "selectedPublications": [
+    "<strong>[ICSE 2026]</strong> Zongxiong Chen, Derui Zhu, Kundi Yao, <strong>Weiyi Shang</strong>, Jinfu Chen, Jiahui Geng, Alexander Pretschner, Jens Grossklags, Manfred Hauswirth, Sonja Schimmler. <em>LLM4JMH: Studying the Use of LLMs for Generating Java Performance Microbenchmarks.</em> The 48th IEEE/ACM International Conference on Software Engineering.",
+    "<strong>[TOSEM 2026]</strong> Jianchen Zhao, Kundi Yao, Masanari Kondo, Hetong Dai, <strong>Weiyi Shang</strong>, Yasutaka Kamei. <em>Not-So-Pretty: Studying and Segmenting Multiline Console Logs.</em> ACM Transactions on Software Engineering and Methodology.",
+    "<strong>[ICSE 2025]</strong> Lizhi Liao, Simon Eismann, Heng Li, Cor-Paul Bezemer, Diego Elias Costa, André van Hoorn, <strong>Weiyi Shang</strong>. <em>Early Detection of Performance Regressions by Bridging Local Performance Data and Architectural Models.</em> The 47th IEEE/ACM International Conference on Software Engineering. <strong>(ACM SIGSOFT Distinguished Paper Award)</strong>",
+    "<strong>[ASE 2025]</strong> Haonan Zhang, Kundi Yao, Zishuo Ding, Lizhi Liao, <strong>Weiyi Shang</strong>. <em>Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective.</em> The 40th IEEE/ACM International Conference on Automated Software Engineering.",
+    "<strong>[NeurIPS 2025]</strong> Derui Zhu, Dingfan Chen, Jinfu Chen, Jens Grossklags, Walter Pretschner, <strong>Weiyi Shang</strong>. <em>More Than Just Functional: LLM-as-a-Critique for Efficient Code Generation.</em> The Thirty-Ninth Annual Conference on Neural Information Processing Systems.",
+    "<strong>[TSE 2024]</strong> Yuanjie Xia, Lizhi Liao, Jinfu Chen, Heng Li, <strong>Weiyi Shang</strong>. <em>Reducing the Length of Field-replay Based Load Testing.</em> IEEE Transactions on Software Engineering."
+  ],
+  "teaching": [
+    {
+      "title": "ECE / SOEN 691: Mining Large Software System Data for DevOps",
+      "description": "Graduate level course detailing software repository mining, software log telemetry, APM tools integration, and data science for performance engineering. Topics focus on empirical methodologies for cloud-native deployment auditing."
+    },
+    {
+      "title": "SOEN 341: Software Process",
+      "description": "Core undergraduate course introducing modern Agile methodologies, software development lifecycles, test-driven development, continuous integration, and version control collaboration."
+    }
+  ]
+}

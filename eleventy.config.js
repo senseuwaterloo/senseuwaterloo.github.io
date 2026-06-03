@@ -1,5 +1,4 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
-import { RenderPlugin } from "@11ty/eleventy";
 
 export default function (config) {
   config.setInputDirectory("src");
@@ -9,20 +8,8 @@ export default function (config) {
     ],
     useTransform: true,
   });
-  config.addPlugin(RenderPlugin);
   config.addGlobalData("layout", "layouts/base");
-  config.addGlobalData("person", "Weiyi Shang");
-  config.addPassthroughCopy("src/colors.css");
-  config.addTransform("trim-whitespace", function (content) {
-    const trimCommentsRegex =
-      /\s*<!---*\s*trim-whitespace(?:="(?<count>\d+)")?\s*-*-->\s*/gim;
 
-    return content.replaceAll(trimCommentsRegex, function (_match, countStr) {
-      const count = +countStr;
-      if (!isNaN(count)) {
-        return " ".repeat(count);
-      }
-      return "";
-    });
-  });
+  // Images live alongside the uploaded source in upload/; copy them to /images.
+  config.addPassthroughCopy({ "upload/images": "images" });
 }
