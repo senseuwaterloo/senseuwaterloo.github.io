@@ -29,7 +29,7 @@ description: "Open-source research tools, datasets, and replication packages dev
 	<p>See all of our public repositories on <a href="https://github.com/senseuwaterloo" target="_blank" rel="noopener">GitHub</a>.</p>
 </section>
 
-<style webc:scoped>
+<style>
 	#tools>p {
 		text-align: center;
 		color: var(--color-text-muted);

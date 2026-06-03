@@ -24,7 +24,8 @@
 		transform: translateY(-4px);
 	}
 
-	h4 {
+	/* Only the card's own title — not any <h4> in slotted content */
+	article>h4:first-child {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
@@ -36,7 +37,7 @@
 		margin-bottom: 0.75rem;
 	}
 
-	h4::before {
+	article>h4:first-child::before {
 		content: "";
 		display: inline-block;
 		width: 6px;

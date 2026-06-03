@@ -20,12 +20,12 @@ description: "Members and alumni of the SENSE Lab at the University of Waterloo 
 	</section>
 </section>
 
-<style webc:scoped>
+<style>
 	#people>section {
 		margin-top: 0;
 	}
 
-	#people h3 {
+	#people>section>h3 {
 		margin-top: 3.5rem;
 		margin-bottom: 1.75rem;
 		font-size: 1.5rem;
@@ -34,7 +34,7 @@ description: "Members and alumni of the SENSE Lab at the University of Waterloo 
 		color: var(--color-text);
 	}
 
-	#people>section:first-of-type h3 {
+	#people>section:first-of-type>h3 {
 		margin-top: 1.5rem;
 	}
 

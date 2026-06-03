@@ -12,8 +12,9 @@ description: "Courses taught by Prof. Weiyi Shang at the University of Waterloo,
 	</section>
 </section>
 
-<style webc:scoped>
-	#teaching h3 {
+<style>
+	/* University headings only — not the course-card <h3> nested inside */
+	#teaching>section>h3 {
 		margin-top: 3.5rem;
 		margin-bottom: 2rem;
 		color: var(--color-text);
@@ -22,7 +23,7 @@ description: "Courses taught by Prof. Weiyi Shang at the University of Waterloo,
 		font-size: 1.5rem;
 	}
 
-	#teaching>section:first-of-type h3 {
+	#teaching>section:first-of-type>h3 {
 		margin-top: 1.5rem;
 	}
 </style>

@@ -81,7 +81,7 @@ description: "Research at the SENSE Lab: Green AIWare, software log mining, perf
 	</div>
 </section>
 
-<style webc:scoped>
+<style>
 	#research>p {
 		font-size: 1.05rem;
 		line-height: 1.8;

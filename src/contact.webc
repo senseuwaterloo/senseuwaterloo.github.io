@@ -12,7 +12,7 @@ description: "Contact information for Prof. Weiyi Shang and the SENSE Lab at the
 	</div>
 </section>
 
-<style webc:scoped>
+<style>
 	#contact {
 		text-align: center;
 	}

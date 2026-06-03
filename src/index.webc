@@ -34,7 +34,7 @@ description: "The Software Engineering and System Engineering (SENSE) Lab at the
 	</site-grid>
 </section>
 
-<style webc:scoped>
+<style>
 	#hero {
 		position: relative;
 		overflow: hidden;

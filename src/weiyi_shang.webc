@@ -25,7 +25,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 
 	<site-info-card heading="About Me" class="content-wide">
 		<p>My general research area is Software Engineering. In particular, my research interest includes software engineering for ultra-large-scale systems, software log mining, empirical software engineering, mining software repositories, and performance engineering. Our research group studies how to make complex software systems more observable, performant, and maintainable.</p>
-		<h4>Core Research Questions Addressed:</h4>
+		<h4 class="card-subhead">Core Research Questions Addressed:</h4>
 		<site-grid min="280px">
 			<site-qa-card webc:for="q of profile.questions" :number="q.number" :text="q.text"></site-qa-card>
 		</site-grid>
@@ -61,7 +61,7 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	</site-info-card>
 </section>
 
-<style webc:scoped>
+<style>
 	#profile>* {
 		margin-bottom: 3.5rem;
 	}
@@ -135,10 +135,13 @@ description: "Profile of Prof. Weiyi Shang, professor in the Department of Elect
 	}
 
 	/* info-card slotted content tweaks for the profile */
-	h4 {
+	.card-subhead {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
-		font-weight: 700;
+	}
+
+	.course h4 {
+		margin-bottom: 0.5rem;
 	}
 
 	.pubs {
