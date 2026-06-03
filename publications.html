@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SENSE Lab — Software Engineering and System Engineering | University of Waterloo</title>
+    <meta name="description" content="The Software Engineering and System Engineering (SENSE) Lab at the University of Waterloo, led by Prof. Weiyi Shang. Research in software log mining, performance engineering, empirical software engineering, and mining software repositories.">
+    <meta name="author" content="Weiyi Shang">
+    <meta property="og:title" content="SENSE Lab — University of Waterloo">
+    <meta property="og:description" content="Software Engineering and System Engineering Lab led by Prof. Weiyi Shang">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">SENSE Lab</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="publications" class="section-alt">
+            <div class="container">
+                <h2>Publications</h2>
+                <div class="filter-wrapper">
+                    <div class="filter-search-row">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.637 10.637Z" /></svg>
+                            <input type="text" id="pub-search" placeholder="Search title, author, or venue...">
+                            <button id="clear-search-btn" class="clear-input-btn" aria-label="Clear search" style="display: none;">&times;</button>
+                        </div>
+                        <button id="toggle-all-pubs" class="btn-outline">Expand All</button>
+                    </div>
+                    
+                    <div class="filter-controls-grid">
+                        <div class="filter-col">
+                            <label for="filter-topic">Topic</label>
+                            <select id="filter-topic">
+                                <option value="all">All Topics</option>
+                                <option value="logging">Logging &amp; Log Intelligence</option>
+                                <option value="performance">Performance Engineering</option>
+                                <option value="testing">Software Testing &amp; DevOps</option>
+                                <option value="api">API Usability &amp; Evolution</option>
+                                <option value="ai-llm">AI &amp; LLMs for SE</option>
+                                <option value="other">Other Topics</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-type">Type</label>
+                            <select id="filter-type">
+                                <option value="all">All Types</option>
+                                <option value="journal">Journal Papers</option>
+                                <option value="conference">Conference Papers</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-year">Year</label>
+                            <select id="filter-year">
+                                <option value="all">All Years</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-venue">Venue</label>
+                            <select id="filter-venue">
+                                <option value="all">All Venues</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filter-status-row">
+                        <span id="pub-counts">Showing all publications</span>
+                        <button id="reset-filters" class="btn-text" style="display: none;">Clear all filters</button>
+                    </div>
+                </div>
+
+                <!-- 2026 -->
+                <details class="pub-year" open>
+                    <summary class="year-header"><h3>2026</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2026" data-type="journal" data-venue="TOSEM" data-topic="logging">
+                            <p>Jianchen Zhao, Kundi Yao, Masanari Kondo, Hetong Dai, <strong>Weiyi Shang</strong>, Yasutaka Kamei. Not-So-Pretty: Studying and Segmenting Multiline Console Logs. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/JIANCHENZHAO_TOSEM_2026.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="ASE" data-topic="logging">
+                            <p>Zhiyuan Chen, Love Jayesh Ahir, Ahmad Suleiman, Kundi Yao, Yiming Tang, <strong>Weiyi Shang</strong> and Daqing Hou. Do Privacy Policies Match with the Logs? An Empirical Study of Privacy Disclosure in Android Application Logs. <em>EASE 2026.</em> <span class="pub-links"><a href="pubs/log_policy_ease_2026.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="ICPE" data-topic="ai-llm performance testing">
+                            <p>Renming Zheng, Yutong Zhao, Lu Xiao, <strong>Weiyi Shang</strong>, Lizhi Liao. Beyond Reproduction: Uncovering Latent Performance Regressions with LLM-Guided Fuzzing. <em>ICPE 2026, Emerging Research Track.</em> <span class="pub-links"><a href="pubs/RENMING_ICPE26.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="MSR" data-topic="logging">
+                            <p>Xiaohui Wang, Kundi Yao, Lizhi Liao, Pengyu Nie, Xuan Zhang, <strong>Weiyi Shang</strong>. World of Logs: A Dataset of Logs from Online Documents. <em>MSR 2026, Data Track.</em></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="SANER" data-topic="performance">
+                            <p>Lizhi Liao, <strong>Weiyi Shang</strong>, Catalin Sporea, Andrei Toma and Sarah Sajedi. On the Practical Adoption of a Static Performance Anti-Pattern Detector: An Industrial Case Study. <em>SANER Industry 2026.</em> <span class="pub-links"><a href="pubs/Lizhi_SANER_2026.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="SANER" data-topic="logging">
+                            <p>Yixi Zhao, Kundi Yao, Yiming Tang, <strong>Weiyi Shang</strong>. An Empirical Study of Privacy Leakage Vulnerability in Third-Party Android Logs Libraries. <em>SANER 2026.</em> <span class="pub-links"><a href="pubs/SANER2026_Yixi.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="SANER" data-topic="logging">
+                            <p>Qiaolin Qin, Jianchen Zhao, Heng Li, <strong>Weiyi Shang</strong>, Ettore Merlo. A Story About Cohesion and Separation: Unsupervised Metric for Log Parser Evaluation. <em>SANER 2026.</em> <span class="pub-links"><a href="pubs/QIAOLIN_SANER_2025.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2026" data-type="conference" data-venue="ICSE" data-topic="ai-llm performance">
+                            <p>Zongxiong Chen, Derui Zhu, Kundi Yao, <strong>Weiyi Shang</strong>, Jinfu Chen, Jiahui Geng, Alexander Pretschner, Jens Grossklags, Manfred Hauswirth, Sonja Schimmler. LLM4JMH: Studying the Use of LLMs for Generating Java Performance Microbenchmarks. <em>ICSE 2026.</em></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2025 -->
+                <details class="pub-year" open>
+                    <summary class="year-header"><h3>2025</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2025" data-type="journal" data-venue="TOSEM" data-topic="logging">
+                            <p>Hetong Dai, Kundi Yao, Felix Li, Jianxin You, Qianyun Shen, <strong>Weiyi Shang</strong>. LPB-Gen: Systematic Large Log-Parsing Benchmarks Generation. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/TOSEM_HETONG_DAI_2025.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="journal" data-venue="EMSE" data-topic="ai-llm performance">
+                            <p>Shuang Li, Yuntao Cheng, Jinfu Chen, Jifeng Xuan, Sen He and <strong>Weiyi Shang</strong>. Performance Analysis of AI-Generated Code: A Case Study of Copilot, Copilot Chat, CodeLlaMa, and DeepSeek-Coder Models. <em>Empirical Software Engineering Journal.</em> <span class="pub-links"><a href="pubs/EMSE_2026_SHUANG_LI.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="journal" data-venue="TOSEM" data-topic="logging">
+                            <p>Xiaohui Wang, Youshuai Tan, Zishuo Ding, Jinfu Chen, Jifeng Xuan, <strong>Weiyi Shang</strong>. Enhancing Log Sentiments: An Exploratory Study of Sentiments and Emotions with Software Logs. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/TOSEM_2025_XIAOHUI.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="journal" data-venue="IEEE Software" data-topic="ai-llm">
+                            <p>Tongwei Zhang, Kundi Yao, Hanyang Hu, Pengyu Nie, Krishna Koravadi, <strong>Weiyi Shang</strong>. Detecting DTC Requirement-Implementation Inconsistencies Using LLMs: An Experience Report. <em>IEEE Software.</em> <span class="pub-links"><a href="pubs/IEEESW_2025_TONG_ZHANG.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="ASE" data-topic="testing">
+                            <p>Haonan Zhang, Kundi Yao, Zishuo Ding, Lizhi Liao, <strong>Weiyi Shang</strong>. Who's to Blame? Rethinking the Brittleness of Automated Web GUI Testing from a Pragmatic Perspective. <em>ASE 2025.</em> <span class="pub-links"><a href="pubs/HAONAN_ASE_25.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="ASE" data-topic="performance testing">
+                            <p>Tri Minh-Triet Pham, Diego Elias Costa, <strong>Weiyi Shang</strong>, and Jinqiu Yang. ADPerf: Investigating and Testing Performance in Autonomous Driving Systems. <em>ASE 2025.</em> <span class="pub-links"><a href="pubs/TRI_ASE_25.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="NeurIPS" data-topic="ai-llm">
+                            <p>Derui Zhu, Dingfan Chen, Jinfu Chen, Jens Grossklags, Walter Pretschner, and <strong>Weiyi Shang</strong>. More Than Just Functional: LLM-as-a-Critique for Efficient Code Generation. <em>NeurIPS 2025.</em> <span class="pub-links"><a href="pubs/NEUIPS2025_ZHU.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="QRS" data-topic="ai-llm logging">
+                            <p>An Chen, Kundi Yao, Haonan Zhang, Yiming Tang and <strong>Weiyi Shang</strong>. An Empirical Study of Logging Practice in CUDA-based Deep Learning Systems. <em>QRS 2025.</em> <span class="pub-links"><a href="pubs/QRS2025_AnChen.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="QRS" data-topic="testing">
+                            <p>Hanying Shao, Zishuo Ding, Kundi Yao, Haonan Zhang and <strong>Weiyi Shang</strong>. Improving QA System Testing Efficiency Through White-Box Test Prioritization. <em>QRS 2025.</em> <span class="pub-links"><a href="pubs/QRS2025_ANNA.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="ICSE" data-topic="performance">
+                            <p>Lizhi Liao, Simon Eismann, Heng Li, Cor-Paul Bezemer, Diego Elias Costa, André van Hoorn, <strong>Weiyi Shang</strong>. Early Detection of Performance Regressions by Bridging Local Performance Data and Architectural Models. <em>ICSE 2025.</em> <strong class="award-badge">SIGSOFT Distinguished Paper Award</strong> <span class="pub-links"><a href="pubs/LIZHI_ICSE_2025.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2025" data-type="conference" data-venue="ICST" data-topic="performance testing">
+                            <p>Mostafa Jangali, Kundi Yao, Yiming Tang, Diego Elias Costa, and <strong>Weiyi Shang</strong>. Batch Execution of Microbenchmarks for Efficient Performance Testing. <em>ICST 2025, Vision and Emerging Results.</em> <span class="pub-links"><a href="pubs/MOSTAFA_ICST_2025.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2024 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2024</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="EMSE" data-topic="ai-llm testing">
+                            <p>Hanying Shao, Zishuo Ding, <strong>Weiyi Shang</strong>, Jinqiu Yang, and Nikolaos Tsantalis. Towards Effectively Testing Machine Translation Systems from White-Box Perspectives. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/SHAO-EMSE-2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="Pattern Recognition" data-topic="other">
+                            <p>Jun Ling, Fei Du, Lingyu Li, Xuan Zhang, <strong>Weiyi Shang</strong>, Chen Gao and Tong Li. Patient Teacher can Impart Locality to Improve Lightweight Vision Transformer on Small Dataset. <em>Pattern Recognition.</em> <span class="pub-links"><a href="pubs/PR_2024_2.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="Applied Intelligence" data-topic="api">
+                            <p>QiuYing Ma, Xuan Zhang, ZiShuo Ding, Chen Gao, <strong>Weiyi Shang</strong>, Qiong Nong, Yubin Ma and Zhi Jin. Temporal Knowledge Graph Reasoning Based on Evolutional Representation and Contrastive Learning. <em>Applied Intelligence.</em> <span class="pub-links"><a href="pubs/13QiuyingMa-AI.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="TOSEM" data-topic="logging testing">
+                            <p>Olivier Nourry, Yutaro Kashiwa, <strong>Weiyi Shang</strong>, Honglin Shu, and Yasutaka Kamei. My Fuzzers Won't Build: An Empirical Study of Fuzzing Build Failures. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/TOSEM_OLIVIER_2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="Pattern Recognition" data-topic="other">
+                            <p>Chen Gao, Xuan Zhang, Zhi Jin, <strong>Weiyi Shang</strong>, Yubin Ma, Linyu Li, Zishuo Ding, and Yuqin Liang. Few-shot relational triple extraction with hierarchical prototype optimization. <em>Pattern Recognition.</em> <span class="pub-links"><a href="pubs/PR_2024_1.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="TSE" data-topic="performance testing">
+                            <p>Yuanjie Xia, Lizhi Liao, Jinfu Chen, Heng Li and <strong>Weiyi Shang</strong>. Reducing the Length of Field-replay Based Load Testing. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/YUANJIE_TSE_2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="JSS" data-topic="other">
+                            <p>Xiaohui Wang, Tao Zhang, Youshuai Tan, <strong>Weiyi Shang</strong> and Yao Li. How to Effectively Mine App Reviews Concerning Software Ecosystem? A Survey of Review Characteristics. <em>Journal of Systems and Software.</em> <span class="pub-links"><a href="pubs/Xiaohui_JSS.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="journal" data-venue="TIFS" data-topic="other">
+                            <p>Derui Zhu, Jinfu Chen, Xuebing Zhou, <strong>Weiyi Shang</strong>, Ahmed E. Hassan and Jens Grossklags. Vulnerabilities of Data Protection in Vertical Federated Learning Training and Countermeasures. <em>IEEE Transactions on Information Forensics and Security.</em> <span class="pub-links"><a href="pubs/DERUI_TIFS.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2024" data-type="conference" data-venue="NeurIPS" data-topic="ai-llm">
+                            <p>Dong Huang, Yuhao Qing, <strong>Weiyi Shang</strong>, Heming Cui, and Jie Zhang. EffiBench: Benchmarking the Efficiency of Automatically Generated Code. <em>NeurIPS 2024.</em> <span class="pub-links"><a href="pubs/HUANG-NEURIPS-2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="conference" data-venue="ASE" data-topic="testing">
+                            <p>Haonan Zhang, Lizhi Liao, Zishuo Ding, <strong>Weiyi Shang</strong>, Nidhi Narula, Catalin Sporea, Andrei Toma and Sarah Sajedi. Towards a Robust Waiting Strategy for Web GUI Testing for an Industrial Software System. <em>ASE 2024, Industry track.</em> <span class="pub-links"><a href="pubs/Haonan-ASE-2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="conference" data-venue="ASE" data-topic="logging">
+                            <p>Zhiyuan Chen, Soham Sanjay Deo, Poorna Chander Reddy Puttaparthi, Yiming Tang, Xueling Zhang, and <strong>Weiyi Shang</strong>. From Logging to Leakage: A Study of Privacy Leakage in Android App Logs. <em>ASE 2024, Poster track.</em> <span class="pub-links"><a href="pubs/CHEN-ASEPOSTER-2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="conference" data-venue="ISSRE" data-topic="ai-llm performance">
+                            <p>Shuang Li, Yuntao Cheng, Jinfu Chen, Jifeng Xuan, Sen He and <strong>Weiyi Shang</strong>. Assessing the Performance of AI-Generated Code: A Case Study on GitHub Copilot. <em>ISSRE 2024.</em> <span class="pub-links"><a href="pubs/ISSRE_2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2024" data-type="conference" data-venue="FSE" data-topic="testing">
+                            <p>Zhipeng Gao, Zhipeng Xue, Xing Hu, <strong>Weiyi Shang</strong> and Xin Xia. Easy over Hard: A Simple Baseline for Test Failures Causes Prediction. <em>FSE 2024, Industry track.</em> <span class="pub-links"><a href="pubs/FSE_zhipeng_2024.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2023 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2023</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2023" data-type="journal" data-venue="TSE" data-topic="other">
+                            <p>Youshuai Tan, Jinfu Chen, <strong>Weiyi Shang</strong>, Tao Zhang, Sen Fang, Xiapu Luo, Zijie Chen, and Shuhao Qi. STRE: An Automated Approach to Suggesting App Developers When to Stop Reading Reviews. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/YOUSHUAI_TSE_2O23.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="journal" data-venue="TOSEM" data-topic="ai-llm logging">
+                            <p>Zishuo Ding, Yiming Tang, Xiaoyu Cheng, Heng Li, <strong>Weiyi Shang</strong>. LoGenText-Plus: Improving Neural Machine Translation-based Logging Texts Generation with Syntactic Templates. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/Ding_TOSEM.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="FSE" data-topic="performance">
+                            <p>Lizhi Liao, Heng Li, <strong>Weiyi Shang</strong>, Catalin Sporea, Andrei Toma and Sarah Sajedi. Adapting Performance Analytic Techniques in a Real-World Database-Centric System: An Industrial Experience Report. <em>ESEC/FSE 2023, Industrial Track.</em> <span class="pub-links"><a href="pubs/FSE_2023_LIZHI.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="ASE" data-topic="performance testing">
+                            <p>Yuanjie Xia, Zishuo Ding, and <strong>Weiyi Shang</strong>. CoMSA: A modeling driven sampling approach for configuration performance testing. <em>ASE 2023.</em> <span class="pub-links"><a href="pubs/ASE_2023_YUANJIE.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="ASE" data-topic="logging">
+                            <p>Zhenhao Li, An Ran Chen, Xing Hu, Xin Xia, Tse-Hsun Chen and <strong>Weiyi Shang</strong>. Are They All Good? Studying Practitioners' Expectations on the Readability of Log Messages. <em>ASE 2023.</em> <span class="pub-links"><a href="pubs/ASE_2023_ZHENHAO.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="FSE" data-topic="performance">
+                            <p>Jinfu Chen, Zishuo Ding, Yiming Tang, Mohammed Sayagh, Heng Li, Bram Adams and <strong>Weiyi Shang</strong>. IoPV: On Inconsistent Option Performance Variations. <em>ESEC/FSE 2023.</em> <span class="pub-links"><a href="pubs/FSE_2023_JINFU.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="SANER" data-topic="logging">
+                            <p>Jianchen Zhao, Yiming Tang, Sneha Sunil, and <strong>Weiyi Shang</strong>. Studying and Complementing the Use of Identifiers in Logs. <em>SANER 2023.</em> <span class="pub-links"><a href="pubs/SANER2023_Jianchen.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="ICSE" data-topic="logging">
+                            <p>Zishuo Ding, Yiming Tang, Yang Li, Heng Li, and <strong>Weiyi Shang</strong>. On the Temporal Relations between Logging and Code. <em>ICSE 2023.</em> <span class="pub-links"><a href="pubs/ICSE2023_ZISHUO.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="ICSE" data-topic="logging">
+                            <p>Hetong Dai, Yiming Tang, Heng Li, and <strong>Weiyi Shang</strong>. PILAR: Studying and Mitigating the Influence of Configurations on Log Parsing. <em>ICSE 2023.</em> <span class="pub-links"><a href="pubs/ICSE2023_HETONG.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2023" data-type="conference" data-venue="ICSE" data-topic="logging">
+                            <p>Zhenhao Li, Chuan Luo, Tse-Hsun (Peter) Chen, <strong>Weiyi Shang</strong>, Shilin He, Qingwei Lin and Dongmei Zhang. Did We Miss Something Important? Studying and Exploring Variable-Aware Log Abstraction. <em>ICSE 2023.</em> <span class="pub-links"><a href="pubs/ICSE2023_ZHENHAO.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2022 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2022</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2022" data-type="journal" data-venue="TSE" data-topic="performance testing">
+                            <p>Mostafa Jangali, Yiming Tang, Niclas Alexandersson, Philipp Leitner, Jinqiu Yang, and <strong>Weiyi Shang</strong>. Automated Generation and Evaluation of JMH Microbenchmark Suites from Unit Tests. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/MOSTAFA_TSE_2022.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2022" data-type="journal" data-venue="TOSEM" data-topic="ai-llm logging">
+                            <p>Zishuo Ding, Heng Li, <strong>Weiyi Shang</strong> and Tse-Hsun Chen. Towards Learning Generalizable Code Embeddings using Task-agnostic Graph Convolutional Networks. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/TOSEM_2022_Zishuo.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2022" data-type="journal" data-venue="Other" data-topic="performance testing">
+                            <p>Simon Eismann, Diego Elias Costa, Lizhi Liao, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, Andre van Hoorn, and Samuel Kounev. A Case Study on the Stability of Performance Tests for Serverless Applications. <em>Journal of Systems &amp; Software.</em> <span class="pub-links"><a href="pubs/JSS_2022_Eismann.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2022" data-type="journal" data-venue="EMSE" data-topic="logging testing">
+                            <p>Haonan Zhang, Yiming Tang, Maxime Lamothe, Heng Li, and <strong>Weiyi Shang</strong>. Studying Logging Practice in Test Code. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/EMSE_Haonan_2022.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2022" data-type="journal" data-venue="EMSE" data-topic="ai-llm performance">
+                            <p>Zishuo Ding, Heng Li, and <strong>Weiyi Shang</strong> and Tse-Hsun Chen. Can Pre-trained Code Embeddings Improve Model Performance? Revisiting the Use of Code Embeddings in Software Engineering Tasks. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Zishuo_EMSE_2022.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2022" data-type="conference" data-venue="SANER" data-topic="ai-llm logging">
+                            <p>Zishuo Ding, Heng Li, and <strong>Weiyi Shang</strong>. LoGenText: Automatically Generating Logging Texts Using Neural Machine Translation. <em>SANER 2022.</em> <span class="pub-links"><a href="pubs/Zishuo_SANER_2022.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2021 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2021</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TOSEM" data-topic="ai-llm logging performance">
+                            <p>Lizhi Liao, Heng Li, <strong>Weiyi Shang</strong>, and Lei Ma. An Empirical Study of the Impact of Hyperparameter Tuning and Model Optimization on the Performance Properties of Deep Neural Networks. <em>ACM Transactions on Software Engineering and Methodology.</em> <span class="pub-links"><a href="pubs/LIZHI_TOSEM_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TSE" data-topic="performance">
+                            <p>Lizhi Liao, Jinfu Chen, Heng Li, Yi Zeng, <strong>Weiyi Shang</strong>, Catalin Sporea, Andrei Toma and Sarah Sajedi. Locating Performance Regression Root Causes in the Field Operations of Web-based Systems: An Experience Report. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Lizhi_TSE_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TSE" data-topic="api">
+                            <p>Maxime Lamothe, Heng Li, and <strong>Weiyi Shang</strong>. Assisting Example-based API Misuse Detection via Complementary Artificial Examples. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Max_TSE_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="EMSE" data-topic="performance testing">
+                            <p>Sophia Quach, Maxime Lamothe, Bram Adams, Yasutaka Kamei, and <strong>Weiyi Shang</strong>. Evaluating the impact of falsely detected performance bug-inducing changes in JIT models. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Quach2021_Article_EvaluatingTheImpactOfFalselyDe.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="CSUR" data-topic="api">
+                            <p>Maxime Lamothe, Yann-Gaël Guéhéneuc, <strong>Weiyi Shang</strong>. A Systematic Review of API Evolution Literature. <em>ACM Computing Surveys.</em> <span class="pub-links"><a href="pubs/mlamothe_csur_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TSE" data-topic="logging">
+                            <p>Steven Locke, Heng Li, Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Wei Liu. LogAssist: Assisting Log Analysis Through Log Summarization. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/TSE2021_LogAssist.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="EMSE" data-topic="testing">
+                            <p>Sophia Quach, Maxime Lamothe, Yasutaka Kamei, and <strong>Weiyi Shang</strong>. An Empirical Study on the Use of SZZ for Identifying Inducing Changes of Non-functional Bugs. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Quach2021_Article_AnEmpiricalStudyOnTheUseOfSZZF.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TSE" data-topic="logging">
+                            <p>Kundi Yao, Mohammed Sayagh, <strong>Weiyi Shang</strong> and Ahmed E. Hassan. Improving State-of-the-art Compression Techniques for Log Management Tools. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Kundi_TSE_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="journal" data-venue="TSE" data-topic="logging testing">
+                            <p>Zhenhao Li, Tse-Hsun Chen, Jinqiu Yang and <strong>Weiyi Shang</strong>. Studying Duplicate Logging Statements and Their Relationships with Code Clones. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Zhenhao_TSE_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2021" data-type="conference" data-venue="ASE" data-topic="ai-llm">
+                            <p>Derui Zhu, Jinfu Chen, <strong>Weiyi Shang</strong>, Xuebing Zhou, Jens Grossklags and Ahmed E. Hassan. DeepMemory: Model-based Memorization Analysis of Deep Neural Language Models. <em>ASE 2021.</em> <span class="pub-links"><a href="pubs/ASE_DERUI_2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="conference" data-venue="MOBILESoft" data-topic="logging">
+                            <p>Julian Harty*, Haonan Zhang*, Lili Wei, Luca Pascarella, Maurício Aniche and <strong>Weiyi Shang</strong>. Logging Practices with Mobile Analytics: An Empirical Study on Firebase. <em>MOBILESoft 2021.</em> <span class="pub-links"><a href="pubs/MOBILESOFT_haonan2021.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2021" data-type="conference" data-venue="ICSE" data-topic="ai-llm logging">
+                            <p>Zhenhao Li, Heng Li, Tse-Hsun Chen, and <strong>Weiyi Shang</strong>. DeepLV: Suggesting Log Levels Using Ordinal Based Neural Networks. <em>ICSE 2021.</em> <span class="pub-links"><a href="pubs/Zhenhao2021ICSE.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2020 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2020</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="TSE" data-topic="performance testing">
+                            <p>Jinfu Chen, <strong>Weiyi Shang</strong> and Emad Shihab. PerfJIT: Test-level Just-in-time Prediction for Performance Regression Introducing Commits. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Jinfu2020TSE.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="EMSE" data-topic="performance">
+                            <p>Lizhi Liao, Jinfu Chen, Heng Li, Yi Zeng, <strong>Weiyi Shang</strong>, Jianmei Guo, Catalin Sporea, Andrei Toma and Sarah Sajedi. Using Black-Box Performance Models to Detect Performance Regressions under Varying Workloads: An Empirical Study. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Liao2020LogPerfReg.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="TSE" data-topic="logging">
+                            <p>Hetong Dai, Heng Li, Che-Shao Chen, <strong>Weiyi Shang</strong> and Tse-Hsun Chen. Logram: Efficient Log Parsing Using n-Gram Dictionaries. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/HetongTSE2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="IST" data-topic="logging">
+                            <p>Ahmad Abdellatif, Yi Zeng, Mohamed Elshafei, Emad Shihab, and <strong>Weiyi Shang</strong>. Simplifying the Search of npm Packages. <em>Information and Software Technology.</em> <span class="pub-links"><a href="pubs/npms.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="JSEP" data-topic="performance testing api">
+                            <p>Hammam M. Alghamdi, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, Ahmed E. Hassan and Parminder Flora. Towards Reducing the Time Needed for Load Testing. <em>Journal of Software: Evolution and Process.</em> <span class="pub-links"><a href="pubs/hammam_jsep.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="TSE" data-topic="api">
+                            <p>Maxime Lamothe, <strong>Weiyi Shang</strong> and Tse-Hsun Chen. A3: Assisting Android API Migrations Using Code Examples. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Max_TSE2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="EMSE" data-topic="logging performance">
+                            <p>Kundi Yao, Heng Li, <strong>Weiyi Shang</strong>, and Ahmed E. Hassan. A Study of the Performance of General Compressors on Log Files. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Kundi_EMSE2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="journal" data-venue="TSE" data-topic="logging">
+                            <p>Heng Li, <strong>Weiyi Shang</strong>, Bram Adams, Mohammed Sayagh, and Ahmed E. Hassan. A Qualitative Study of the Benefits and Costs of Logging from Developers' Perspectives. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/Heng_TSE_2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2020" data-type="conference" data-venue="ASE" data-topic="logging">
+                            <p>Zhenhao Li, Tse-Hsun Chen and <strong>Weiyi Shang</strong>. Where Shall We Log? Studying and Suggesting Logging Locations in Code Blocks. <em>ASE 2020.</em> <span class="pub-links"><a href="pubs/Zhenhao_ASE20.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="conference" data-venue="ICSE" data-topic="api">
+                            <p>Maxime Lamothe, <strong>Weiyi Shang</strong>. When APIs are Intentionally Bypassed: An Exploratory Study of API Workarounds. <em>ICSE 2020.</em> <span class="pub-links"><a href="pubs/mlamothe_icse_2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="conference" data-venue="ICSE" data-topic="performance testing">
+                            <p>Zishuo Ding, Jinfu Chen, <strong>Weiyi Shang</strong>. Towards the Use of the Readily Available Tests from the Release Pipeline as Performance Tests. Are We There Yet? <em>ICSE 2020.</em> <strong class="award-badge">ACM SIGSOFT Distinguished Paper Award</strong> <span class="pub-links"><a href="pubs/Zishuo_icse_2020.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2020" data-type="conference" data-venue="ICPE" data-topic="performance testing">
+                            <p>Simon Eismann, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, Dušan Okanović, André van Hoorn. Microservices: A Performance Tester's Dream or Nightmare? <em>ICPE 2020.</em> <span class="pub-links"><a href="pubs/Simon_ICPE20.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2019 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2019</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2019" data-type="journal" data-venue="EMSE" data-topic="logging performance">
+                            <p>Kundi Yao, Guilherme Bicalho de Padua, <strong>Weiyi Shang</strong>, Steve Sporea, Andrei Toma and Sarah Sajedi. Log4Perf: Suggesting and Updating Logging Locations for Web-based Systems' Performance Monitoring. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Kundi_EMSE2019.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2019" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Yi Zeng, Jinfu Chen, <strong>Weiyi Shang</strong> and Tse-Hsun Chen. Studying the Characteristics of Logging Practices in Mobile Apps: A Case Study on F-Droid. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/Zeng2019_Article_StudyingTheCharacteristicsOfLo.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2019" data-type="conference" data-venue="ASE" data-topic="logging performance testing">
+                            <p>Jinfu Chen, <strong>Weiyi Shang</strong>, Ahmed E. Hassan, Yong Wang and Jiangbin Lin. An Experience Report of Generating Load Tests Using Log-recovered Workloads at Varying Granularities of User Behaviour. <em>ASE 2019.</em> <span class="pub-links"><a href="pubs/Jinfu_ASE_2019.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2019" data-type="conference" data-venue="FSE" data-topic="testing">
+                            <p>Armin Najafi, Peter Rigby and <strong>Weiyi Shang</strong>. Bisecting Commits and Modeling Commit Risk during Testing. <em>ESEC/FSE 2019.</em> <span class="pub-links"><a href="pubs/Armin_FSE_2019.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2019" data-type="conference" data-venue="ICPE" data-topic="performance">
+                            <p>Cor-Paul Bezemer, Simon Eismann, Vincenzo Ferme, Johannes Grohmann, Robert Heinrich, Pooyan Jamshidi, <strong>Weiyi Shang</strong>, André van Hoorn, Monica Villavicencio, Jürgen Walter and Felix Willnecker. How is Performance Addressed in DevOps? A Survey on Industrial Practices. <em>ICPE 2019.</em> <span class="pub-links"><a href="pubs/its03-bezemerA.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2019" data-type="conference" data-venue="ICSE" data-topic="testing">
+                            <p>Armin Najafi, <strong>Weiyi Shang</strong> and Peter Rigby. Improving Test Effectiveness Using Test Executions History: An Industrial Experience Report. <em>ICSE-SEIP 2019.</em> <span class="pub-links"><a href="pubs/seip_2019_armin.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2019" data-type="conference" data-venue="ICSE" data-topic="logging">
+                            <p>Zhenhao Li, Tse-Hsun Chen, Jinqiu Yang and <strong>Weiyi Shang</strong>. DLFinder: Characterizing and Detecting Duplicate Logging Code Smells. <em>ICSE 2019.</em> <span class="pub-links"><a href="pubs/icse2019_zhenhao.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2018 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2018</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="IEEE Software" data-topic="performance">
+                            <p>Catia Trubiani, Pooyan Jamshidi, Jürgen Cito, <strong>Weiyi Shang</strong>, Zhen Ming Jiang and Markus Borg. Performance Issues? Hey DevOps, mind the Uncertainty! <em>IEEE Software.</em> <span class="pub-links"><a href="pubs/ieeeswperf.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="EMSE" data-topic="testing">
+                            <p>Patanamon Thongtanunam, <strong>Weiyi Shang</strong> and Ahmed E. Hassan. Will this clone be short-lived? Towards a better understanding of the characteristics of short-lived clones. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/EMSE2018_pick.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="EMSE" data-topic="other">
+                            <p>Suhaib Mujahid, Giancarlo Sierra, Rabe Abdalkareem, Emad Shihab, and <strong>Weiyi Shang</strong>. An Empirical Study of Android Wear User Complaints. <em>Empirical Software Engineering.</em></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Mehran Hassani, <strong>Weiyi Shang</strong>, Emad Shihab, Nikolaos Tsantalis. Studying and Detecting Log-Related Issues. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/EMSE2018_mehran.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Heng Li, Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Ahmed E. Hassan. Studying Software Logging Using Topic Models. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/emse2017_heng.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="journal" data-venue="EMSE" data-topic="performance testing">
+                            <p>Muhammad Moiz Arif, <strong>Weiyi Shang</strong>, Emad Shihab. Empirical Study on the Discrepancy between Performance Testing Results from Virtual and Physical Environments. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/emse_moiz.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2018" data-type="conference" data-venue="MSR" data-topic="api">
+                            <p>Maxime Lamothe and <strong>Weiyi Shang</strong>. Exploring the Use of Automated API Migrating Techniques in Practice: An Experience Report on Android. <em>MSR 2018.</em> <span class="pub-links"><a href="pubs/MSR2018_MAX.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="conference" data-venue="MSR" data-topic="testing">
+                            <p>Guilherme B. de Pádua and <strong>Weiyi Shang</strong>. Studying the relationship between exception handling practices and post-release defects. <em>MSR 2018.</em> <span class="pub-links"><a href="pubs/MSR2018_GUI.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2018" data-type="conference" data-venue="ICPE" data-topic="logging performance">
+                            <p>Kundi Yao, Guilherme Bicalho de Padua, <strong>Weiyi Shang</strong>, Steve Sporea, Andrei Toma and Sarah Sajedi. Log4Perf: Suggesting Logging Locations for Web-based Systems' Performance Monitoring. <em>ICPE 2018.</em> <span class="pub-links"><a href="pubs/icpe2018_yao.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2017 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2017</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Suhas Kabinna, Cor-Paul Bezemer, Mark D Syer, <strong>Weiyi Shang</strong>, Ahmed E. Hassan. Examining the Stability of Logging Statements. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/emse_suhas.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="CACM" data-topic="other">
+                            <p>Stuart McIlroy, <strong>Weiyi Shang</strong>, Nasir Ali, Ahmed E. Hassan. User Reviews for Top Mobile Apps in the Google Play Store. <em>Communications of the ACM.</em></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="TSE" data-topic="testing">
+                            <p>Daniel Alencar da Costa, Shane McIntosh, <strong>Weiyi Shang</strong>, Uira Kulesza, Roberta Coelho, Ahmed E. Hassan. A Framework for Evaluating the Results of the SZZ Approach for Identifying Bug-Introducing Changes. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/TSE_Daniel.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Heng Li, <strong>Weiyi Shang</strong>, Ying Zou and Ahmed E. Hassan. Towards Just-in-time Suggestions for Log Changes. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/EMSE2016_heng_logjit.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p>Heng Li, <strong>Weiyi Shang</strong>, Ahmed E. Hassan. Which Log Level Should Developers Choose for a New Logging Statement? <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/EMSE2016_heng_level.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="JSS" data-topic="testing">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Meiyappan Nagappan, Ahmed E. Hassan, and Stephen W. Thomas. Topic-based Software Defect Explanation. <em>Journal of Systems and Software.</em> <span class="pub-links"><a href="pubs/peter_jss2016.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="EMSE" data-topic="other">
+                            <p>Safwat Hassan, <strong>Weiyi Shang</strong>, Ahmed E. Hassan. An Empirical Study of Emergency Updates for Top Android Mobile Apps. <em>Empirical Software Engineering.</em></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="ASE" data-topic="performance testing">
+                            <p>Mark D. Syer, <strong>Weiyi Shang</strong>, Zhen Ming Jiang, Ahmed E. Hassan. Continuous Validation of Performance Test Workloads. <em>Automated Software Engineering Journal.</em></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="journal" data-venue="IEEE Software" data-topic="other">
+                            <p>Stuart Mcilroy, <strong>Weiyi Shang</strong>, Nasir Ali, Ahmed E. Hassan. Is It Worth Responding to Reviews? A Case Study of the Top Free Apps in the Google Play Store. <em>IEEE Software.</em></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2017" data-type="conference" data-venue="SCAM" data-topic="other">
+                            <p>Guilherme Bicalho de Padua and <strong>Weiyi Shang</strong>. Revisiting Exception Handling Practices with Exception Flow Analysis. <em>SCAM 2017.</em> <span class="pub-links"><a href="pubs/scam2017_gui.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="conference" data-venue="ICSME" data-topic="performance">
+                            <p>Jinfu Chen and <strong>Weiyi Shang</strong>. An Exploratory Study of Performance Regression Introducing Code Changes. <em>ICSME 2017.</em> <span class="pub-links"><a href="pubs/icsme2017_jinfuchen.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="conference" data-venue="ICPC" data-topic="other">
+                            <p>Guilherme Bicalho de Padua and <strong>Weiyi Shang</strong>. Studying the Prevalence of Exception Handling Anti-Patterns. <em>ICPC 2017, ERA Track.</em> <strong class="award-badge">Best ERA Paper Award</strong> <span class="pub-links"><a href="pubs/ICPC_gui.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="conference" data-venue="ICSE" data-topic="performance testing">
+                            <p>Tse-Hsun Chen, Mark D. Syer, <strong>Weiyi Shang</strong>, Zhen Ming Jiang, Ahmed E. Hassan, Mohamed Nasser, and Parminder Flora. Analytics-Driven Load Testing: An Industrial Experience Report on Load Testing of Large-Scale Systems. <em>ICSE-SEIP 2017.</em> <span class="pub-links"><a href="pubs/seip2017.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2017" data-type="conference" data-venue="MOBILESoft" data-topic="other">
+                            <p>Suhaib Mujahid, Giancarlo Sierra, Rabe Abdalkareem, Emad Shihab, and <strong>Weiyi Shang</strong>. Examining User Complaints of Wearable Apps: A Case Study on Android Wear. <em>MobiSoft 2017.</em></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2016 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2016</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2016" data-type="journal" data-venue="TSE" data-topic="performance">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Zhen Ming Jiang, Ahmed E. Hassan, Mohamed Nasser, and Parminder Flora. Finding and Evaluating the Performance Impact of Redundant Data Access for Applications Using ORM. <em>IEEE Transactions on Software Engineering.</em> <span class="pub-links"><a href="pubs/peter_tse2016.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="journal" data-venue="EMSE" data-topic="other">
+                            <p>Mohamed Sami Rakha, <strong>Weiyi Shang</strong>, Ahmed E. Hassan. Studying the Needed Effort for Identifying Duplicate Issues. <em>Empirical Software Engineering.</em></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="ICSME" data-topic="performance testing">
+                            <p>Hammam M. Alghamdi, Mark D. Syer, <strong>Weiyi Shang</strong> and Ahmed E. Hassan. An Automated Approach for Recommending When to Stop Performance Tests. <em>ICSME 2016.</em> <span class="pub-links"><a href="pubs/ICSME2016_hammam.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="FSE" data-topic="performance">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Ahmed E. Hassan, Mohamed Nasser and Parminder Flora. CacheOptimizer: Helping Developers Configure Caching Frameworks for Hibernate-based Database-centric Web Applications. <em>FSE 2016.</em> <span class="pub-links"><a href="pubs/peter_fse2016.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="MSR" data-topic="other">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Jinqiu Yang, Ahmed E. Hassan, Michael W. Godfrey, Mohamed Nasser and Parminder Flora. An Empirical Study on the Practice of Maintaining Object-Relational Mapping Code in Java Systems. <em>MSR 2016.</em> <span class="pub-links"><a href="pubs/MSR2016_Peter.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="MSR" data-topic="logging api">
+                            <p>Suhas Kabinna, Cor-Paul Bezemer, <strong>Weiyi Shang</strong> and Ahmed E. Hassan. Logging Library Migrations: A Case Study for the Apache Software Foundation Projects. <em>MSR 2016.</em> <span class="pub-links"><a href="pubs/MSR2016_suhas.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="MSR" data-topic="performance">
+                            <p>Tarek M. Ahmed, Cor-Paul Bezemer, Tse-Hsun Chen, Ahmed E. Hassan and <strong>Weiyi Shang</strong>. Studying the Effectiveness of Application Performance Management (APM) Tools for Detecting Performance Regressions for Web Applications: An Experience Report. <em>MSR 2016.</em> <span class="pub-links"><a href="pubs/MSR2016_tarek.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="ICSE" data-topic="other">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Ahmed E. Hassan, Mohamed Nasser and Parminder Flora. Detecting Problems in Database Access Code of Large Scale Systems — An Industrial Experience Report. <em>ICSE-SEIP 2016.</em> <span class="pub-links"><a href="pubs/SEIP2016_Chen.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="SANER" data-topic="logging">
+                            <p>Suhas Kabinna, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, and Ahmed E. Hassan. Examining the Stability of Logging Statements. <em>SANER 2016.</em> <span class="pub-links"><a href="pubs/SANER2016.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2016" data-type="conference" data-venue="ICPE" data-topic="performance">
+                            <p>Ravjot Singh, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, and Ahmed E. Hassan. Optimizing the Performance-Related Configurations of Object-Relational Mapping Frameworks Using a Multi-Objective Genetic Algorithm. <em>ICPE 2016.</em> <span class="pub-links"><a href="pubs/ICPE2016_Singh.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2015 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2015</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2015" data-type="journal" data-venue="EMSE" data-topic="logging">
+                            <p><strong>Weiyi Shang</strong>, Meiyappan Nagappan, Ahmed E. Hassan. Studying the Relationship between Logging Characteristics and the Code Quality of Platform Software. <em>Empirical Software Engineering.</em> <span class="pub-links"><a href="pubs/emse_shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2015" data-type="conference" data-venue="ICPE" data-topic="performance">
+                            <p><strong>Weiyi Shang</strong>, Ahmed E. Hassan, Mohamed Nasser and Parminder Flora. Automated Detection of Performance Regressions Using Regression Models on Clustered Performance Counters. <em>ICPE 2015.</em> <span class="pub-links"><a href="pubs/icpe64-shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2015" data-type="conference" data-venue="MSR" data-topic="other">
+                            <p>Tarek M. Ahmed, <strong>Weiyi Shang</strong>, and Ahmed E. Hassan. An Empirical Study of the Copy and Paste Behavior during Development. <em>MSR 2015.</em> <span class="pub-links"><a href="pubs/msr2015-tarek.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2014 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2014</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2014" data-type="journal" data-venue="JSEP" data-topic="api">
+                            <p><strong>Weiyi Shang</strong>, Zhen Ming Jiang, Bram Adams, Ahmed E. Hassan, Michael W. Godfrey, Mohamed Nasser and Parminder Flora. An Exploratory Study of the Evolution of Communicated Information about the Execution of Large Software Systems. <em>Journal of Software: Evolution and Process.</em> <span class="pub-links"><a href="pubs/smr2013-WeiyiShang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2014" data-type="conference" data-venue="ICSME" data-topic="logging">
+                            <p><strong>Weiyi Shang</strong>, Meiyappan Nagappan, Ahmed E. Hassan and Zhen Ming Jiang. Understanding Log Lines Using Development Knowledge. <em>ICSME 2014.</em> <span class="pub-links"><a href="pubs/icsme2014-shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2014" data-type="conference" data-venue="ICSE" data-topic="performance">
+                            <p>Tse-Hsun Chen, <strong>Weiyi Shang</strong>, Zhen Ming Jiang, and Ahmed E. Hassan. Detecting Performance Anti-patterns for Applications Developed Using Object-Relational Mapping. <em>ICSE 2014.</em> <span class="pub-links"><a href="pubs/peter_icse2014.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2013 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2013</h3></summary>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2013" data-type="conference" data-venue="ICSE" data-topic="other">
+                            <p><strong>Weiyi Shang</strong>, Zhen Ming Jiang, Hadi Hemmati, Bram Adams, Ahmed E. Hassan and Patrick Marin. Assisting Developers of Big Data Analytics Applications When Deploying on Hadoop Clouds. <em>ICSE 2013.</em> <strong class="award-badge">ACM SIGSOFT Distinguished Paper Award</strong> <span class="pub-links"><a href="pubs/icse13preprint.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2012 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2012</h3></summary>
+                    <div class="pub-group">
+                        <h4>Journal Papers</h4>
+                        <div class="pub-entry" data-year="2012" data-type="journal" data-venue="JSS" data-topic="other">
+                            <p><strong>Weiyi Shang</strong>, Bram Adams, Ahmed E. Hassan. Using Pig as a Data Preparation Language for Large-Scale Mining Software Repositories Studies: An Experience Report. <em>Journal of Systems and Software.</em> <span class="pub-links"><a href="pubs/jss2011_shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2012" data-type="journal" data-venue="SCP" data-topic="testing">
+                            <p>Nicolas Bettenburg, <strong>Weiyi Shang</strong>, Walid Ibrahim, Bram Adams, Ying Zou, Ahmed E. Hassan. An Empirical Study on Inconsistent Changes to Code Clones at the Release Level. <em>Science of Computer Programming.</em> <span class="pub-links"><a href="pubs/sdarticle.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2012" data-type="conference" data-venue="ICSE" data-topic="logging">
+                            <p><strong>Weiyi Shang</strong>. Bridging the Divide between Software Developers and Operators using Logs. <em>ICSE 2012, Doctoral Symposium.</em> <span class="pub-links"><a href="pubs/icse2012_Shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2011 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2011</h3></summary>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2011" data-type="conference" data-venue="WCRE" data-topic="api">
+                            <p><strong>Weiyi Shang</strong>, Zhen Ming Jiang, Bram Adams, Ahmed E. Hassan, Michael W. Godfrey, Mohamed Nasser and Parminder Flora. An Exploratory Study of the Evolution of Communicated Information about the Execution of Large Software Systems. <em>WCRE 2011.</em> <strong class="award-badge">Best Paper Award</strong> <span class="pub-links"><a href="pubs/wcre2011_shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2010 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2010</h3></summary>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2010" data-type="conference" data-venue="WCRE" data-topic="testing">
+                            <p>Gehan M. K. Selim, Liliane Barbour, <strong>Weiyi Shang</strong>, Bram Adams, Ahmed E. Hassan, Ying Zou. Studying the Impact of Clones on Software Defects. <em>WCRE 2010.</em> <span class="pub-links"><a href="pubs/wcre2010_shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2010" data-type="conference" data-venue="ASE" data-topic="other">
+                            <p><strong>Weiyi Shang</strong>, Bram Adams, Ahmed E. Hassan. An Experience Report on Scaling Tools for Mining Software Repositories Using MapReduce. <em>ASE 2010.</em> <span class="pub-links"><a href="pubs/ase2010-shang.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 2009 -->
+                <details class="pub-year">
+                    <summary class="year-header"><h3>2009</h3></summary>
+                    <div class="pub-group">
+                        <h4>Conference Papers</h4>
+                        <div class="pub-entry" data-year="2009" data-type="conference" data-venue="WCRE" data-topic="testing">
+                            <p>Nicolas Bettenburg, <strong>Weiyi Shang</strong>, Walid Ibrahim, Bram Adams, Ying Zou, Ahmed E. Hassan. An Empirical Study on Inconsistent Changes to Code Clones at Release Level. <em>WCRE 2009.</em> <span class="pub-links"><a href="pubs/bettenburg-wcre09.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                        <div class="pub-entry" data-year="2009" data-type="conference" data-venue="MSR" data-topic="other">
+                            <p><strong>Weiyi Shang</strong>, Zhen Ming Jiang, Bram Adams, Ahmed E. Hassan. MapReduce as a General Framework to Support Research in Mining Software Repositories (MSR). <em>MSR 2009.</em> <span class="pub-links"><a href="pubs/MSR2009-MSR-0114-Shang-Weiyi.pdf" target="_blank">PDF</a></span></p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024–2026 SENSE Lab, University of Waterloo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
