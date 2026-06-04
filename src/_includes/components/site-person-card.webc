@@ -1,8 +1,8 @@
 <article>
 	<a webc:if="photo && homepage" :href="homepage" :target="homepage.startsWith('http') ? '_blank' : false" :rel="homepage.startsWith('http') ? 'noopener' : false" :aria-label="name + ' homepage'">
-		<img :src="'/images/' + photo" :alt="name" loading="lazy">
+		<img :src="photo.startsWith('http') ? photo : '/images/' + photo" :alt="name" loading="lazy">
 	</a>
-	<img webc:if="photo && !homepage" :src="'/images/' + photo" :alt="name" loading="lazy">
+	<img webc:if="photo && !homepage" :src="photo.startsWith('http') ? photo : '/images/' + photo" :alt="name" loading="lazy">
 	<span webc:if="!photo" aria-hidden="true" @text="initials"></span>
 	<h4 @text="name"></h4>
 	<p webc:if="role" @text="role"></p>
