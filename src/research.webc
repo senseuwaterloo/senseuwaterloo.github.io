@@ -76,6 +76,15 @@ description: "Research at the SENSE Lab: Green AIWare, software log mining, perf
 		gap: 1.25rem;
 	}
 
+	/* site-grid's :host sets margin-inline: auto. As a flex item here, those
+	   auto cross-axis margins suppress the default stretch, collapsing the grid
+	   to its min-content width (the logos vanish). Pin it to full width so the
+	   grid lays out its columns. */
+	.sponsors site-grid {
+		width: 100%;
+		margin-inline: 0;
+	}
+
 	.sponsors h4 {
 		font-family: var(--font-heading);
 		font-size: 1.05rem;

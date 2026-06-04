@@ -14,7 +14,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--color-bg-surface);
+		/* Brand logos are designed for light backgrounds; keep the card white in
+		   both themes so the grayscale→colorize behavior reads consistently and
+		   the SVG wordmarks (fill: currentColor, i.e. black) stay legible. */
+		background-color: #ffffff;
 		border: 1px solid var(--color-card-border);
 		border-radius: var(--radius);
 		padding: 1.5rem;
@@ -58,11 +61,5 @@
 		opacity: 1;
 		filter: grayscale(0%);
 		transform: scale(1.02);
-	}
-
-	@media (prefers-color-scheme: dark) {
-		img {
-			filter: grayscale(100%) invert(0.08);
-		}
 	}
 </style>
