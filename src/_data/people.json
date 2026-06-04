@@ -1,0 +1,301 @@
+[
+  {
+    "group": "Principal Investigator",
+    "members": [
+      {
+        "name": "Weiyi Shang",
+        "role": "Professor",
+        "affiliation": "ECE, University of Waterloo",
+        "photo": "weiyi_shang.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://ece.uwaterloo.ca/~wshang/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=ZnERyl4AAAAJ" }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Current Lab Members",
+    "members": [
+      {
+        "name": "Hetong Dai",
+        "role": "Ph.D. Student",
+        "topic": "Log Parsing & Analytics",
+        "photo": "hetong_dai.jpg",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=3aOwAEAAAAAJ&hl=en" }]
+      },
+      {
+        "name": "Yuanjie Xia",
+        "role": "Ph.D. Student",
+        "topic": "Performance Testing",
+        "photo": "yuanjie_xia.jpg",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=UvQYGNoAAAAJ&hl=en" }]
+      },
+      {
+        "name": "Haonan Zhang",
+        "role": "Ph.D. Student",
+        "topic": "Web GUI Testing",
+        "photo": "haonan_zhang.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://haonan-zhang.com/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?authuser=1&user=JLFoe7AAAAAJ" }
+        ]
+      },
+      {
+        "name": "Jianchen Zhao",
+        "role": "Ph.D. Student",
+        "topic": "Log Summarization & Observability",
+        "photo": "jianchen_zhao.jpg",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=FUaHcXQAAAAJ&hl=en" }]
+      },
+      {
+        "name": "Tongwei Zhang",
+        "role": "Ph.D. Student",
+        "topic": "Requirement-Implementation Inconsistencies",
+        "initials": "TZ"
+      },
+      {
+        "name": "Xiaohui Wang",
+        "role": "Ph.D. Student",
+        "topic": "Log Sentiments & Dataset Curation",
+        "photo": "xiaohui_wang.jpg",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=2MM8pycAAAAJ&hl=zh-CN" }]
+      },
+      {
+        "name": "Jiayi Ma",
+        "role": "M.Sc. Student",
+        "topic": "Software Engineering",
+        "initials": "JM"
+      },
+      {
+        "name": "Minsi Lu",
+        "role": "Ph.D. Student",
+        "topic": "AI Software Performance",
+        "initials": "ML"
+      },
+      {
+        "name": "Tengyi Xu",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "TX"
+      },
+      {
+        "name": "Tianqin Meng",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "TM"
+      },
+      {
+        "name": "Lily Wang",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "LW"
+      },
+      {
+        "name": "Chole Wei",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Waterloo",
+        "initials": "CW"
+      },
+      {
+        "name": "Pramod Chavali",
+        "role": "Undergraduate Student",
+        "affiliation": "University of Toronto",
+        "initials": "PC"
+      }
+    ]
+  },
+  {
+    "group": "Visitors and Collaborators",
+    "members": [
+      {
+        "name": "Derui Zhu",
+        "role": "Assistant Professor",
+        "affiliation": "Rochester Institute of Technology",
+        "photo": "derui_zhu.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://www.rit.edu/directory/dxzvse-derui-zhu" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=iELr97kAAAAJ&hl=en" }
+        ]
+      },
+      {
+        "name": "Lan Liu",
+        "role": "Professor",
+        "affiliation": "Guangdong Polytechnic Normal University",
+        "initials": "LL"
+      },
+      {
+        "name": "Xuan Zhang",
+        "role": "Professor",
+        "affiliation": "Yunnan University",
+        "photo": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=21SY2MIAAAAJ&citpid=1",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=21SY2MIAAAAJ&hl=en" }]
+      },
+      {
+        "name": "Zhongxiong Chen",
+        "role": "Ph.D. Student",
+        "affiliation": "Fraunhofer FOKUS",
+        "initials": "ZC"
+      },
+      {
+        "name": "Shuang Li",
+        "role": "Ph.D. Student",
+        "affiliation": "Wuhan University",
+        "photo": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tvtg5PUAAAAJ&citpid=1",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=tvtg5PUAAAAJ&hl=zh-CN" }]
+      },
+      {
+        "name": "Ting Xu",
+        "role": "Ph.D.",
+        "affiliation": "Nankai University",
+        "initials": "TX"
+      }
+    ]
+  },
+  {
+    "group": "Alumni — Research Associates and Postdoctoral Fellows",
+    "members": [
+      {
+        "name": "Dr. Kundi Yao",
+        "role": "Postdoc (2024–2025)",
+        "affiliation": "Assistant Professor at Ontario Tech University",
+        "photo": "kundi_yao.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://kdyao.github.io/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=rio9UwMAAAAJ" }
+        ]
+      },
+      {
+        "name": "Dr. Yiming Tang",
+        "role": "Postdoc (2021–2023)",
+        "affiliation": "Assistant Professor at Rochester Institute of Technology",
+        "photo": "yiming_tang.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://yiming-tang-cs.github.io/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=yQd3GgoAAAAJ&hl=zh-CN" }
+        ]
+      },
+      {
+        "name": "Dr. Judith Islam",
+        "role": "Postdoc (2022)",
+        "affiliation": "Assistant Teaching Professor at Iowa State University",
+        "photo": "judith_islam.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://www.engineering.iastate.edu/people/profile/jislam/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=_c4mha8AAAAJ&hl=en" }
+        ]
+      },
+      {
+        "name": "Dr. Heng Li",
+        "role": "Research Associate (2019)",
+        "affiliation": "Associate Professor at Polytechnique Montréal",
+        "photo": "heng_li.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://moose.polymtl.ca/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=4tzkGvMAAAAJ&hl=en" }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Alumni — Ph.D. Students",
+    "members": [
+      {
+        "name": "Dr. Zishuo Ding",
+        "role": "Ph.D. (2019–2024)",
+        "affiliation": "Assistant Professor at HKUST(GZ)",
+        "photo": "zishuo_ding.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://personal.hkust-gz.edu.cn/ding/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=WVRSfB0AAAAJ&hl=en" }
+        ]
+      },
+      {
+        "name": "Dr. Lizhi Liao",
+        "role": "Ph.D. (2019–2024)",
+        "affiliation": "Assistant Professor at University of Guelph",
+        "photo": "lizhi_liao.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://socs.uoguelph.ca/~lliao01/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=yN6yKMYAAAAJ" }
+        ]
+      },
+      {
+        "name": "Dr. Kundi Yao",
+        "role": "Ph.D. (2018–2024)",
+        "affiliation": "Assistant Professor at Ontario Tech University",
+        "photo": "kundi_yao.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://kdyao.github.io/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=rio9UwMAAAAJ" }
+        ]
+      },
+      {
+        "name": "Dr. Zhenhao Li",
+        "role": "Ph.D. (2019–2022)",
+        "affiliation": "Assistant Professor at York University",
+        "photo": "zhenhao_li.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://ginolzh.github.io/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=StfHC9AAAAAJ&hl=en&oi=ao" }
+        ]
+      },
+      {
+        "name": "Dr. Maxime Lamothe",
+        "role": "Ph.D. (2017–2020)",
+        "affiliation": "Assistant Professor at Polytechnique Montréal",
+        "photo": "maxime_lamothe.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://lamothemax.github.io/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=N-SSIvIAAAAJ&hl=en" }
+        ]
+      },
+      {
+        "name": "Dr. Jinfu Chen",
+        "role": "Ph.D. (2016–2020)",
+        "affiliation": "Associate Professor at Wuhan University",
+        "photo": "jinfu_chen.jpg",
+        "links": [
+          { "label": "Homepage", "href": "https://jinfuchen.github.io/jinfu/" },
+          { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=kP1zzqcAAAAJ" }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Alumni — M.Sc. Students",
+    "members": [
+      { "name": "Yixi Zhao", "role": "M.Sc. (2022–2025)", "affiliation": "Developer at Scotiabank", "initials": "YZ" },
+      { "name": "Xiaoyu Cheng", "role": "M.Sc. (2022–2025)", "initials": "XC" },
+      { "name": "An Chen", "role": "M.Sc. (2021–2025)", "initials": "AC" },
+      { "name": "Mostafa Jangali", "role": "M.Sc. (2019–2024)", "affiliation": "Developer at Arctrade", "initials": "MJ", "links": [{ "label": "Homepage", "href": "https://github.com/mjangali94" }, { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=vYllUD4AAAAJ&hl=en" }] },
+      { "name": "Hanying Shao", "role": "M.Sc. (2022–2024)", "affiliation": "Environment and Climate Change Canada", "initials": "HS" },
+      { "name": "Andy Ta", "role": "M.Sc. (2021–2023)", "affiliation": "Developer at Hopper", "initials": "AT" },
+      { "name": "Haonan Zhang", "role": "M.Sc. (2019–2021)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "haonan_zhang.jpg" },
+      { "name": "Yuanjie Xia", "role": "M.Sc. (2019–2021)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "yuanjie_xia.jpg" },
+      { "name": "Nian Liu", "role": "M.Sc. (2019–2021)", "affiliation": "Developer at Zilliz", "initials": "NL" },
+      { "name": "Sophia Quach", "role": "M.Sc. (2019–2021)", "affiliation": "Developer at Wiley Edge", "initials": "SQ" },
+      { "name": "Hetong Dai", "role": "M.Sc. (2018–2020)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "hetong_dai.jpg" },
+      { "name": "Ling Chen", "role": "M.Sc. (2019–2020)", "affiliation": "Developer at Ericsson", "initials": "LC" },
+      { "name": "Yi Zeng", "role": "M.Sc. (2017–2019)", "affiliation": "Developer at Morgan Stanley", "initials": "YZ" },
+      { "name": "Zhenhao Li", "role": "M.Sc. (2017–2019)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "zhenhao_li.jpg" },
+      { "name": "Zishuo Ding", "role": "M.Sc. (2018–2019)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "zishuo_ding.jpg" },
+      { "name": "Kundi Yao", "role": "M.Sc. (2016–2018)", "affiliation": "Continued to Ph.D. in SENSE Lab", "photo": "kundi_yao.jpg" },
+      { "name": "Armin Najafi", "role": "M.Sc. (2016–2018)", "affiliation": "Developer at Amazon Web Services", "initials": "AN" },
+      { "name": "Guilherme Padua", "role": "M.Sc. (2016–2018)", "affiliation": "Developer at Apple", "initials": "GP" },
+      { "name": "Mehran Hassani", "role": "M.Sc. (2016–2018)", "affiliation": "Senior Developer at Kabam", "initials": "MH" },
+      { "name": "Muhammad Moiz Arif", "role": "M.Sc. (2015–2017)", "affiliation": "Associate Director at Moody's Analytics", "initials": "MA" }
+    ]
+  },
+  {
+    "group": "Alumni — B.Sc. (Undergraduate) Students",
+    "members": [
+      { "name": "Felix Li", "role": "B.Sc. (2024)", "affiliation": "University of Waterloo", "initials": "FL" },
+      { "name": "Qianyun Shen", "role": "B.Sc. (2023)", "affiliation": "University of Montreal", "initials": "QS" },
+      { "name": "Jianxin You", "role": "B.Sc. (2023)", "affiliation": "University of Montreal", "initials": "JY" },
+      { "name": "Sneha Sunil", "role": "B.Sc. (2022)", "affiliation": "Developer at Microsoft", "initials": "SS" },
+      { "name": "Yang Li", "role": "B.Sc. (2021)", "affiliation": "Ph.D. student at National University of Singapore (NUS)", "initials": "YL" },
+      { "name": "Sophia Quach", "role": "B.Sc. (2018)", "affiliation": "Developer at Wiley Edge", "initials": "SQ" }
+    ]
+  }
+]

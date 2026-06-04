@@ -1,0 +1,109 @@
+---
+title: "Tools & Replication Packages"
+description: "Open-source research tools, datasets, and replication packages developed by the Software Engineering and System Engineering (SENSE) Lab at the University of Waterloo."
+---
+
+<section id="tools">
+	<h2>Tools &amp; Replication Packages</h2>
+	<p>We believe in open science. We release tools, datasets, and replication packages through the SENSE Lab GitHub organization. Selected highlights:</p>
+
+	<div class="tool-group content-wide" webc:for="g of tools">
+		<h3 @text="g.group"></h3>
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Repository</th>
+						<th>Description</th>
+						<th>Category</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr webc:for="t of g.items">
+						<td><a :href="t.href" target="_blank" rel="noopener" @text="t.name"></a></td>
+						<td @text="t.description"></td>
+						<td @text="t.category"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<p>See all of our public repositories on <a href="https://github.com/senseuwaterloo" target="_blank" rel="noopener">GitHub</a>.</p>
+</section>
+
+<style>
+	#tools>p {
+		text-align: center;
+		color: var(--color-text-muted);
+	}
+
+	.tool-group h3 {
+		margin-top: 3.5rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.45rem;
+		color: var(--color-text);
+	}
+
+	.tool-group:first-of-type h3 {
+		margin-top: 2.5rem;
+	}
+
+	.table-wrap {
+		overflow-x: auto;
+		margin-bottom: 1rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		box-shadow: var(--card-shadow);
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+		background-color: var(--color-bg-surface);
+	}
+
+	th,
+	td {
+		padding: 1.1rem 1.5rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	th {
+		background-color: var(--color-bg-alt);
+		color: var(--color-text);
+		font-family: var(--font-heading);
+		font-weight: 700;
+		font-size: 0.88rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	td {
+		font-size: 0.95rem;
+		color: var(--color-text);
+	}
+
+	tr:last-child td {
+		border-bottom: none;
+	}
+
+	tbody tr {
+		transition: background-color var(--transition-fast);
+	}
+
+	tbody tr:hover td {
+		background-color: var(--color-bg-alt);
+	}
+
+	td a {
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration-color: var(--color-border);
+	}
+
+	td a:hover {
+		text-decoration-color: var(--color-primary);
+	}
+</style>

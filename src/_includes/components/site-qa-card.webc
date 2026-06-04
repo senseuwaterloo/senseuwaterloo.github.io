@@ -1,0 +1,40 @@
+<article>
+	<b aria-hidden="true" @text="number"></b>
+	<p @text="text"></p>
+</article>
+<style webc:scoped>
+	:host {
+		display: block;
+	}
+
+	article {
+		height: 100%;
+		background-color: var(--color-bg-surface);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius);
+		padding: 1.5rem;
+		box-shadow: var(--card-shadow);
+		transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+	}
+
+	article:hover {
+		transform: translateY(-4px);
+		border-color: var(--color-primary);
+		box-shadow: var(--card-shadow-hover);
+	}
+
+	b {
+		display: block;
+		font-family: var(--font-heading);
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: var(--color-secondary);
+		opacity: 0.3;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		font-size: 0.98rem;
+		line-height: 1.6;
+	}
+</style>

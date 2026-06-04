@@ -1,0 +1,48 @@
+[
+  {
+    "group": "Tools",
+    "items": [
+      {
+        "name": "PMT",
+        "href": "https://github.com/senseuwaterloo/PMT",
+        "description": "Performance Mutation Testing",
+        "category": "Performance"
+      },
+      {
+        "name": "A3",
+        "href": "https://github.com/senseuwaterloo/A3",
+        "description": "Assisting Android API migrations using code examples",
+        "category": "API Evolution"
+      }
+    ]
+  },
+  {
+    "group": "Replication Packages & Datasets",
+    "items": [
+      {
+        "name": "TempoLo Replication Package",
+        "href": "https://github.com/senseuwaterloo/TempoLo-replication-package",
+        "description": "Replication package for studying temporal relations between logging statements and source code",
+        "category": "Log Mining"
+      },
+      {
+        "name": "NFBugsExtended",
+        "href": "https://github.com/senseuwaterloo/NFBugsExtended",
+        "description": "Dataset of non-functional bugs, including bug-inducing commits",
+        "category": "Software Quality"
+      },
+      {
+        "name": "Android Log Privacy",
+        "href": "https://github.com/senseuwaterloo/Android_Log_Privacy_Leakage",
+        "description": "Empirical study of privacy leakage vulnerability in third-party Android logs libraries",
+        "category": "Privacy & Security"
+      },
+      {
+        "name": "LLM Memorization",
+        "href": "https://github.com/senseuwaterloo/LLM_Memorization",
+        "description": "Study of memorization and training data leakage in Code LLMs",
+        "category": "AI for SE"
+      }
+    ]
+  }
+]

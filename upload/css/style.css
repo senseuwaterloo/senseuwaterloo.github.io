@@ -466,19 +466,6 @@ nav.scrolled {
   margin-bottom: 2.5rem;
 }
 
-.hero-pi a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-.hero-pi a:hover {
-  color: var(--color-primary);
-  text-decoration-color: var(--color-primary);
-}
-
 .hero-cta {
   margin-top: 2rem;
   padding-top: 2rem;
@@ -1363,22 +1350,6 @@ nav.scrolled {
   transition: border-color var(--transition);
 }
 
-.person-photo-link {
-  display: inline-block;
-  border-radius: 50%;
-  margin-bottom: 1.25rem;
-}
-
-.person-photo-link .person-photo {
-  display: block;
-  margin-bottom: 0;
-}
-
-.person-photo-link:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 4px;
-}
-
 .person-card:hover .person-photo {
   border-color: var(--color-primary);
 }
@@ -1936,48 +1907,6 @@ footer a:hover {
   line-height: 1.6;
 }
 
-.profile-teaching-list {
-  display: grid;
-  gap: 1.75rem;
-  margin-top: 1.25rem;
-}
-
-.profile-teaching-group h4 {
-  color: var(--color-text);
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.profile-teaching-group ul {
-  display: grid;
-  gap: 1rem;
-  list-style: none;
-}
-
-.profile-teaching-group li {
-  display: grid;
-  gap: 0.3rem;
-}
-
-.profile-teaching-group strong {
-  color: var(--color-text);
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.profile-teaching-group span {
-  color: var(--color-primary);
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1.45;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
 /* Media Queries for profile */
 @media (max-width: 767px) {
   .profile-hero {
@@ -1999,3 +1928,4 @@ footer a:hover {
     font-size: 2rem;
   }
 }
+

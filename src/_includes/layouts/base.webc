@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="light dark">
+	<meta name="google-site-verification" content="itVrl5J3titx2GqDIL_yO0cbGHZr_opOaq-nhAWH4nI">
+	<title @text="(title ? title + ' — ' : '') + 'SENSE Lab'"></title>
+	<meta name="description" :content="description || 'The Software Engineering and System Engineering (SENSE) Lab at the University of Waterloo, led by Prof. Weiyi Shang.'">
+	<meta name="author" content="Weiyi Shang">
+	<meta property="og:title" :content="(title ? title + ' — ' : '') + 'SENSE Lab — University of Waterloo'">
+	<meta property="og:description" :content="description || 'Software Engineering and System Engineering Lab led by Prof. Weiyi Shang'">
+	<meta property="og:type" content="website">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link webc:keep rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+
+	<style>
+		/* ============================================================
+		   THEME TOKENS  (monochrome, light + dark)
+		   ============================================================ */
+		@layer theme {
+			:root {
+				--color-primary: #000000;
+				--color-primary-hover: #262626;
+				--color-primary-light: #f4f4f5;
+				--color-secondary: #525252;
+				--color-secondary-hover: #262626;
+				--color-secondary-light: #fafafa;
+				--color-accent: #000000;
+				--color-accent-hover: #262626;
+
+				--color-bg-base: #ffffff;
+				--color-bg-surface: #ffffff;
+				--color-bg-alt: #fafafa;
+				--color-bg-nav: rgba(255, 255, 255, 0.8);
+				--color-bg-nav-solid: #ffffff;
+
+				--color-text: #000000;
+				--color-text-muted: #525252;
+				--color-border: #e5e5e5;
+				--color-shadow: rgba(0, 0, 0, 0.04);
+				--color-card-border: #e5e5e5;
+
+				--hero-glow-1: rgba(0, 0, 0, 0.015);
+				--hero-glow-2: rgba(0, 0, 0, 0.008);
+
+				/* Typography */
+				--font-body: "Inter", system-ui, -apple-system, sans-serif;
+				--font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+				--line-height: 1.7;
+				--heading-line-height: 1.25;
+
+				/* Layout — full-width main, elements centered via auto margins */
+				--content-width: 48rem;   /* default prose column */
+				--content-wide: 60rem;    /* main container width (960px): grids, tables, profile */
+				--content-full: 100%;     /* full-bleed */
+				--gutter: 1.5rem;
+				--nav-height: 70px;
+				--section-pad-y: 5.5rem;
+
+				/* Misc */
+				--radius-sm: 6px;
+				--radius: 10px;
+				--radius-lg: 16px;
+				--transition-fast: 0.15s ease;
+				--transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				--card-shadow: 0 1px 3px var(--color-shadow), 0 1px 2px -1px var(--color-shadow);
+				--card-shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--color-primary: #ffffff;
+					--color-primary-hover: #e5e5e5;
+					--color-primary-light: #171717;
+					--color-secondary: #a3a3a3;
+					--color-secondary-hover: #d4d4d4;
+					--color-secondary-light: #171717;
+					--color-accent: #ffffff;
+					--color-accent-hover: #e5e5e5;
+
+					--color-bg-base: #0a0a0a;
+					--color-bg-surface: #0a0a0a;
+					--color-bg-alt: #171717;
+					--color-bg-nav: rgba(10, 10, 10, 0.8);
+					--color-bg-nav-solid: #0a0a0a;
+
+					--color-text: #ffffff;
+					--color-text-muted: #a3a3a3;
+					--color-border: #262626;
+					--color-card-border: #262626;
+					--color-shadow: rgba(0, 0, 0, 0.5);
+
+					--hero-glow-1: rgba(255, 255, 255, 0.02);
+					--hero-glow-2: rgba(255, 255, 255, 0.01);
+				}
+			}
+		}
+
+		/* ============================================================
+		   RESET
+		   ============================================================ */
+		@layer reset {
+
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: calc(var(--nav-height) + 1rem);
+				-webkit-text-size-adjust: 100%;
+			}
+
+			img,
+			picture,
+			video,
+			svg {
+				display: block;
+				max-width: 100%;
+			}
+
+			ul,
+			ol {
+				list-style: none;
+			}
+
+			button {
+				font: inherit;
+				cursor: pointer;
+				border: none;
+				background: none;
+				color: inherit;
+			}
+		}
+
+		/* ============================================================
+		   BASE TYPOGRAPHY + LAYOUT SYSTEM
+		   full-width main; sections and elements use auto horizontal margins
+		   ============================================================ */
+		@layer base {
+			body {
+				font-family: var(--font-body);
+				font-size: 1rem;
+				line-height: var(--line-height);
+				color: var(--color-text);
+				background-color: var(--color-bg-base);
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				padding-top: var(--nav-height);
+			}
+
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(16px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			main {
+				display: block;
+				width: 100%;
+				animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+			}
+
+			/* Sections are full width (so backgrounds can bleed edge-to-edge) … */
+			main>section {
+				width: 100%;
+				padding-block: var(--section-pad-y);
+			}
+
+			main>section.section-alt {
+				background-color: var(--color-bg-alt);
+			}
+
+			/* … while the flow content inside them is centered with auto margins. */
+			main>section>*,
+			main>section>.section-body>* {
+				max-width: var(--content-width);
+				margin-inline: auto;
+				padding-inline: var(--gutter);
+			}
+
+			/* Headings / type */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: var(--font-heading);
+				line-height: var(--heading-line-height);
+				color: var(--color-text);
+				font-weight: 700;
+				letter-spacing: -0.02em;
+			}
+
+			h1 {
+				font-size: 2.75rem;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			h3 {
+				font-size: 1.45rem;
+			}
+
+			h4 {
+				font-size: 1.15rem;
+			}
+
+			p {
+				color: var(--color-text);
+			}
+
+			p+p {
+				margin-top: 1rem;
+			}
+
+			a {
+				color: var(--color-primary);
+				text-decoration: none;
+				transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+			}
+
+			a:hover,
+			a:focus-visible {
+				color: var(--color-primary-hover);
+			}
+
+			strong {
+				font-weight: 600;
+			}
+
+			/* Section header: centered title with gradient underline */
+			main>section>h2 {
+				text-align: center;
+				margin-bottom: 3.5rem;
+				padding-bottom: 1rem;
+				position: relative;
+			}
+
+			main>section>h2::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 60px;
+				height: 4px;
+				background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+				border-radius: 99px;
+			}
+
+			main>section>h3 {
+				margin-top: 3.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			/* Width modifiers that components/pages can opt into */
+			.content-wide {
+				max-width: var(--content-wide) !important;
+			}
+
+			.content-full {
+				max-width: var(--content-full) !important;
+				padding-inline: 0 !important;
+			}
+
+			hr {
+				max-width: var(--content-width);
+				margin: 4rem auto;
+				border: none;
+				border-top: 1px solid var(--color-border);
+			}
+
+			@media (max-width: 767px) {
+				:root {
+					--section-pad-y: 4rem;
+					--gutter: 1.25rem;
+				}
+
+				h1 {
+					font-size: 2.25rem;
+				}
+
+				h2 {
+					font-size: 1.65rem;
+				}
+			}
+		}
+
+		/* ============================================================
+		   SITE HEADER  (kept blur-fade transparency + CSS-only menu)
+		   ============================================================ */
+		@layer header {
+			/* Solid header bar (the translucency lives on the mobile menu below) */
+			body>header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 1000;
+				height: var(--nav-height);
+				display: flex;
+				align-items: center;
+				font-family: var(--font-heading);
+				background-color: var(--color-bg-base);
+				border-bottom: 1px solid var(--color-border);
+			}
+
+			header nav {
+				width: 100%;
+				max-width: var(--content-wide);
+				margin-inline: auto;
+				padding-inline: var(--gutter);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			/* Brand (the only direct anchor child of nav) */
+			header nav>a {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.6rem;
+				font-size: 1.4rem;
+				font-weight: 800;
+				color: var(--color-text);
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+
+			header nav>a:hover {
+				opacity: 0.85;
+			}
+
+			header nav>a svg {
+				width: 26px;
+				height: 26px;
+				flex-shrink: 0;
+			}
+
+			header nav>a span:last-child {
+				font-weight: 400;
+				color: var(--color-text-muted);
+			}
+
+			/* Nav links */
+			header nav ul {
+				display: flex;
+				gap: 2rem;
+				align-items: center;
+			}
+
+			header nav ul a {
+				color: var(--color-text-muted);
+				font-size: 0.95rem;
+				font-weight: 500;
+				position: relative;
+				padding-block: 0.25rem;
+			}
+
+			header nav ul a:hover,
+			header nav ul a:focus-visible {
+				color: var(--color-text);
+			}
+
+			header nav ul a[aria-current="page"] {
+				color: var(--color-primary);
+				font-weight: 600;
+			}
+
+			header nav ul a[aria-current="page"]::after {
+				content: "";
+				position: absolute;
+				bottom: -4px;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+				border-radius: 99px;
+			}
+
+			/* CSS-only hamburger: a checkbox toggles the menu, no JS */
+			header nav>input[type="checkbox"] {
+				display: none;
+			}
+
+			header nav>label {
+				display: none;
+				flex-direction: column;
+				justify-content: center;
+				gap: 6px;
+				width: 30px;
+				height: 30px;
+			}
+
+			header nav>label span {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: var(--color-text);
+				border-radius: 2px;
+				transition: transform var(--transition), opacity var(--transition);
+			}
+
+			@media (max-width: 767px) {
+				header nav>label {
+					display: flex;
+				}
+
+				header nav ul {
+					position: fixed;
+					top: var(--nav-height);
+					left: 0;
+					right: 0;
+					flex-direction: column;
+					gap: 0;
+					padding: 0.5rem 0;
+					/* Translucent frosted panel — content behind shows through fluidly */
+					background-color: var(--color-bg-nav);
+					backdrop-filter: blur(12px) saturate(180%);
+					-webkit-backdrop-filter: blur(12px) saturate(180%);
+					border-bottom: 1px solid var(--color-border);
+					box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+					transform: translateY(-120%);
+					opacity: 0;
+					pointer-events: none;
+					transition: transform var(--transition), opacity var(--transition);
+				}
+
+				header nav>input[type="checkbox"]:checked~ul {
+					transform: translateY(0);
+					opacity: 1;
+					pointer-events: auto;
+				}
+
+				header nav>input[type="checkbox"]:checked~label span:nth-child(1) {
+					transform: translateY(8px) rotate(45deg);
+				}
+
+				header nav>input[type="checkbox"]:checked~label span:nth-child(2) {
+					opacity: 0;
+				}
+
+				header nav>input[type="checkbox"]:checked~label span:nth-child(3) {
+					transform: translateY(-8px) rotate(-45deg);
+				}
+
+				header nav ul a {
+					display: block;
+					width: 100%;
+					text-align: center;
+					padding: 1rem 1.5rem;
+					font-size: 1.05rem;
+				}
+
+				header nav ul a[aria-current="page"]::after {
+					display: none;
+				}
+			}
+		}
+
+	</style>
+	<style webc:keep @raw="getBundle('css')"></style>
+	<script webc:keep type="module" @raw="getBundle('js')"></script>
+</head>
+
+<body id="page-top">
+	<header>
+		<nav>
+			<a href="/">
+				<svg webc:keep viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="9.5" cy="9.5" r="6.5" stroke="currentColor" stroke-width="2.2"></circle>
+					<path d="M14 14L20 20" stroke="currentColor" stroke-width="3.2" stroke-linecap="square"></path>
+				</svg>
+				<span>SENSE</span> <span>Lab</span>
+			</a>
+			<input id="nav-toggle" type="checkbox" aria-hidden="true">
+			<label for="nav-toggle" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul>
+				<li><a href="/research/" :aria-current="page.url.startsWith('/research') ? 'page' : false">Research</a></li>
+				<li><a href="/publications/" :aria-current="page.url.startsWith('/publications') ? 'page' : false">Publications</a></li>
+				<li><a href="/tools/" :aria-current="page.url.startsWith('/tools') ? 'page' : false">Tools</a></li>
+				<li><a href="/people/" :aria-current="page.url.startsWith('/people') ? 'page' : false">People</a></li>
+				<li><a href="/teaching/" :aria-current="page.url.startsWith('/teaching') ? 'page' : false">Teaching</a></li>
+				<li><a href="/contact/" :aria-current="page.url.startsWith('/contact') ? 'page' : false">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main @raw="content"></main>
+
+	<footer>
+		<p>&copy; 2024–2026 SENSE Lab, University of Waterloo. All rights reserved.</p>
+	</footer>
+</body>
+
+</html>

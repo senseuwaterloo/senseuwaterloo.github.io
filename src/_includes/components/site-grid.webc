@@ -1,0 +1,16 @@
+<div :style="`grid-template-columns: repeat(auto-fill, minmax(min(${min || '240px'}, 100%), 1fr));`">
+	<slot></slot>
+</div>
+<style webc:scoped>
+	:host {
+		display: block;
+		max-width: var(--content-wide);
+		margin-inline: auto;
+	}
+
+	div {
+		display: grid;
+		gap: 2rem;
+		align-items: stretch;
+	}
+</style>

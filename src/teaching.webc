@@ -1,0 +1,29 @@
+---
+title: "Teaching"
+description: "Courses taught by Prof. Weiyi Shang at the University of Waterloo, Concordia University, and Queen's University — software testing, quality assurance, software design, and mining large software data."
+---
+
+<section id="teaching" class="section-alt">
+	<h2>Teaching</h2>
+
+	<section webc:for="u of courses">
+		<h3 @text="u.university"></h3>
+		<site-course-card webc:for="c of u.courses" :title="c.title" :meta="c.meta" :description="c.description"></site-course-card>
+	</section>
+</section>
+
+<style>
+	/* University headings only — not the course-card <h3> nested inside */
+	#teaching>section>h3 {
+		margin-top: 3.5rem;
+		margin-bottom: 2rem;
+		color: var(--color-text);
+		border-bottom: 2px solid var(--color-primary);
+		padding-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	#teaching>section:first-of-type>h3 {
+		margin-top: 1.5rem;
+	}
+</style>

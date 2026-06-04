@@ -1,0 +1,25 @@
+[
+  {
+    "group": "Government Funding",
+    "sponsors": [
+      { "name": "NSERC (Natural Sciences and Engineering Research Council of Canada)", "href": "https://www.nserc-crsng.gc.ca/", "logo": "nserc.svg" },
+      { "name": "FRQNT (Fonds de recherche du Québec – Nature et technologies)", "href": "https://frq.gouv.qc.ca/nature-et-technologies/", "logo": "frqnt.svg" }
+    ]
+  },
+  {
+    "group": "Industry Partners",
+    "sponsors": [
+      { "name": "Alibaba Group", "href": "https://www.alibabagroup.com/", "logo": "alibaba.svg" },
+      { "name": "Ericsson", "href": "https://www.ericsson.com/", "logo": "ericsson.svg" },
+      { "name": "Wind River", "href": "https://www.windriver.com/", "logo": "windriver.svg" },
+      { "name": "ERA Environmental", "href": "https://www.era-environmental.com/", "logo": "era.svg" }
+    ]
+  },
+  {
+    "group": "Academic Institutions",
+    "sponsors": [
+      { "name": "University of Waterloo", "href": "https://uwaterloo.ca/", "logo": "waterloo.svg" },
+      { "name": "Concordia University", "href": "https://www.concordia.ca/", "logo": "concordia.svg" }
+    ]
+  }
+]

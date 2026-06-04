@@ -1,0 +1,259 @@
+<div id="pub-list" aria-live="polite"></div>
+<script @html="'window.__PUBS__ = ' + JSON.stringify($data.publications).replace(/[<>&]/g, (c) => '\\u00' + c.charCodeAt(0).toString(16)) + ';'"></script>
+
+<style webc:scoped>
+	:host {
+		display: block;
+		max-width: var(--content-wide);
+		margin-inline: auto;
+	}
+
+	.pub-year {
+		margin-bottom: 2rem;
+		background-color: var(--color-bg-surface);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius);
+		overflow: hidden;
+		box-shadow: var(--card-shadow);
+		transition: border-color var(--transition);
+	}
+
+	.pub-year:hover {
+		border-color: var(--color-primary);
+	}
+
+	.year-header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		cursor: pointer;
+		padding: 1.25rem 1.75rem;
+		list-style: none;
+		user-select: none;
+	}
+
+	.year-header::-webkit-details-marker {
+		display: none;
+	}
+
+	.year-header h3 {
+		margin: 0;
+		font-size: 1.45rem;
+		font-weight: 700;
+		color: var(--color-text);
+	}
+
+	.year-header::after {
+		content: "";
+		margin-left: auto;
+		width: 8px;
+		height: 8px;
+		border-right: 2px solid var(--color-text-muted);
+		border-bottom: 2px solid var(--color-text-muted);
+		transform: rotate(-45deg);
+		transition: transform var(--transition);
+	}
+
+	.pub-year[open] .year-header::after {
+		transform: rotate(45deg);
+	}
+
+	.pub-year[open] .year-header {
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.pub-group {
+		margin-bottom: 1.75rem;
+	}
+
+	.pub-year[open] .pub-group {
+		padding-inline: 1.75rem;
+	}
+
+	.pub-year[open] .pub-group:first-of-type {
+		padding-top: 1.5rem;
+	}
+
+	.pub-year[open] .pub-group:last-of-type {
+		padding-bottom: 1.75rem;
+		margin-bottom: 0;
+	}
+
+	.pub-group h4 {
+		font-family: var(--font-heading);
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--color-primary);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.pub-entry {
+		margin-bottom: 1.25rem;
+		padding: 0.25rem 0 0.25rem 1.25rem;
+		border-left: 3px solid var(--color-border);
+		transition: border-color var(--transition-fast);
+	}
+
+	.pub-entry:last-child {
+		margin-bottom: 0;
+	}
+
+	.pub-entry:hover {
+		border-color: var(--color-primary);
+	}
+
+	.pub-entry .title {
+		font-weight: 600;
+		color: var(--color-text);
+	}
+
+	.pub-entry .authors {
+		color: var(--color-text);
+	}
+
+	.pub-entry em {
+		font-style: italic;
+		color: var(--color-text-muted);
+	}
+
+	.pub-links {
+		display: inline-block;
+		margin-left: 0.5rem;
+	}
+
+	.pub-links a {
+		display: inline-block;
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		padding: 0.15rem 0.6rem;
+		border-radius: 99px;
+		background-color: var(--color-primary-light);
+		color: var(--color-primary);
+		text-decoration: none;
+		transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+	}
+
+	.pub-links a:hover,
+	.pub-links a:focus-visible {
+		background-color: var(--color-primary);
+		color: var(--color-bg-base);
+		transform: translateY(-1px);
+	}
+
+	.pub-entry.hidden,
+	.pub-group.hidden,
+	.pub-year.hidden {
+		display: none !important;
+	}
+</style>
+
+<script>
+	(() => {
+		const listEl = document.getElementById("pub-list");
+		const raw = window.__PUBS__;
+		if (!listEl || !raw) return;
+
+		const esc = (s) => String(s).replace(/[&<>]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]));
+
+		// Entries already carry year / type / venue / topic / formatted content / pdf.
+		const entries = Array.isArray(raw) ? raw : [];
+		const years = [...new Set(entries.map((e) => e.year).filter(Boolean))].sort((a, b) => b - a);
+		const GROUPS = [["journal", "Journal Papers"], ["conference", "Conference Papers"]];
+
+		listEl.innerHTML = years
+			.map((year, yi) => {
+				const groups = GROUPS.map(([type, label]) => {
+					const items = entries.filter((e) => e.year === year && e.type === type);
+					if (!items.length) return "";
+					const rows = items
+						.map(
+							(it) =>
+								`<div class="pub-entry" data-year="${it.year}" data-type="${it.type}" data-venue="${esc(it.venue)}" data-topic="${esc(it.topic || "")}"><p>${it.content}${it.pdf ? ` <span class="pub-links"><a href="/pubs/${encodeURI(it.pdf)}" target="_blank" rel="noopener">PDF</a></span>` : ""}</p></div>`
+						)
+						.join("");
+					return `<div class="pub-group"><h4>${label}</h4>${rows}</div>`;
+				}).join("");
+				return `<details class="pub-year"${yi === 0 ? " open" : ""}><summary class="year-header"><h3>${year}</h3></summary>${groups}</details>`;
+			})
+			.join("");
+
+		// Populate Year + Venue dropdowns
+		const fYear = document.getElementById("filter-year");
+		const fVenue = document.getElementById("filter-venue");
+		years.forEach((y) => fYear && fYear.appendChild(new Option(y, y)));
+		[...new Set(entries.map((e) => e.venue).filter(Boolean))]
+			.sort((a, b) => (a === "Other" ? 1 : b === "Other" ? -1 : a.localeCompare(b)))
+			.forEach((v) => fVenue && fVenue.appendChild(new Option(v, v)));
+
+		// Filtering
+		const search = document.getElementById("pub-search");
+		const clearBtn = document.getElementById("clear-search-btn");
+		const fTopic = document.getElementById("filter-topic");
+		const fType = document.getElementById("filter-type");
+		const resetBtn = document.getElementById("reset-filters");
+		const counts = document.getElementById("pub-counts");
+		const toggleAll = document.getElementById("toggle-all-pubs");
+		const total = entries.length;
+		if (counts) counts.textContent = `Showing all ${total} publications`;
+
+		function applyFilter() {
+			const q = (search?.value || "").toLowerCase().trim();
+			const topic = fTopic?.value || "all";
+			const type = fType?.value || "all";
+			const year = fYear?.value || "all";
+			const venue = fVenue?.value || "all";
+			let visible = 0;
+
+			listEl.querySelectorAll(".pub-entry").forEach((el) => {
+				const matches =
+					(!q || el.textContent.toLowerCase().includes(q)) &&
+					(topic === "all" || (el.dataset.topic || "").split(" ").includes(topic)) &&
+					(type === "all" || el.dataset.type === type) &&
+					(year === "all" || el.dataset.year === year) &&
+					(venue === "all" || el.dataset.venue === venue);
+				el.classList.toggle("hidden", !matches);
+				if (matches) visible++;
+			});
+
+			listEl.querySelectorAll(".pub-group").forEach((g) =>
+				g.classList.toggle("hidden", !g.querySelector(".pub-entry:not(.hidden)"))
+			);
+			const active = q || topic !== "all" || type !== "all" || year !== "all" || venue !== "all";
+			listEl.querySelectorAll(".pub-year").forEach((d) => {
+				const has = d.querySelector(".pub-entry:not(.hidden)");
+				d.classList.toggle("hidden", !has);
+				if (has && active) d.open = true;
+			});
+
+			if (counts) counts.textContent = `Showing ${visible} of ${total} publications`;
+			if (clearBtn) clearBtn.hidden = !q;
+			if (resetBtn) resetBtn.hidden = !active;
+		}
+
+		[search, fTopic, fType, fYear, fVenue].forEach(
+			(el) => el && el.addEventListener(el.tagName === "INPUT" ? "input" : "change", applyFilter)
+		);
+		clearBtn?.addEventListener("click", () => {
+			if (search) search.value = "";
+			applyFilter();
+			search?.focus();
+		});
+		resetBtn?.addEventListener("click", () => {
+			if (search) search.value = "";
+			[fTopic, fType, fYear, fVenue].forEach((s) => s && (s.value = "all"));
+			applyFilter();
+		});
+		toggleAll?.addEventListener("click", () => {
+			const vis = [...listEl.querySelectorAll(".pub-year:not(.hidden)")];
+			const allOpen = vis.every((d) => d.open);
+			vis.forEach((d) => (d.open = !allOpen));
+			toggleAll.textContent = allOpen ? "Expand All" : "Collapse All";
+		});
+	})();
+</script>
