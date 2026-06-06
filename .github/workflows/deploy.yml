@@ -1,20 +1,19 @@
-name: Deploy to server
+name: Build site
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
-# One deploy at a time; cancel an in-progress deploy when a newer one is queued.
 concurrency:
-  group: deploy
+  group: build
   cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,30 +30,3 @@ jobs:
 
       - name: Build site
         run: npm run build  # -> _site/
-
-      # Join the Headscale tailnet so the (otherwise firewalled) server is
-      # reachable over its tailnet address. This is an OUTBOUND connection from
-      # the runner to Headscale, so no inbound ports need to be opened.
-      - name: Connect to tailnet
-        uses: tailscale/github-action@v3
-        with:
-          # Ephemeral + reusable pre-auth key from:
-          #   headscale preauthkeys create --user <user> --ephemeral --reusable --expiration 1h
-          authkey: ${{ secrets.TS_AUTHKEY }}
-          # Point the client at the Headscale control server (not Tailscale SaaS).
-          args: --login-server=${{ secrets.HEADSCALE_URL }} --accept-routes --hostname=gh-deploy
-          # Headscale 0.28 requires Tailscale client >= 1.74.0 (no upper bound).
-          version: 1.78.1
-
-      - name: Deploy to /srv/site/static
-        env:
-          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}   # server's tailnet name / MagicDNS / IP
-          DEPLOY_USER: ${{ vars.DEPLOY_USER }}   # dedicated deploy user
-          SSH_KEY: ${{ secrets.SSH_KEY }}        # private key for that user
-        run: |
-          mkdir -p ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          rsync -az --delete \
-            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=accept-new" \
-            _site/ "$DEPLOY_USER@$DEPLOY_HOST:/srv/site/static/"
