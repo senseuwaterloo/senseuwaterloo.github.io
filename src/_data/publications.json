@@ -402,9 +402,9 @@
   {
     "year": "2022",
     "type": "journal",
-    "venue": "Other",
+    "venue": "JSS",
     "topic": "performance testing",
-    "content": "Simon Eismann, Diego Elias Costa, Lizhi Liao, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, Andre van Hoorn, and Samuel Kounev. A Case Study on the Stability of Performance Tests for Serverless Applications. <em>Journal of Systems &amp; Software.</em>",
+    "content": "Simon Eismann, Diego Elias Costa, Lizhi Liao, Cor-Paul Bezemer, <strong>Weiyi Shang</strong>, Andre van Hoorn, and Samuel Kounev. A Case Study on the Stability of Performance Tests for Serverless Applications. <em>Journal of System and Software.</em>",
     "pdf": "JSS_2022_Eismann.pdf"
   },
   {
