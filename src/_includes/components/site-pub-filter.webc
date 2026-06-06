@@ -49,12 +49,14 @@
 <style webc:scoped>
 	:host {
 		display: block;
+		width: 100%;
 		max-width: var(--content-wide);
 		margin-inline: auto;
 		margin-bottom: 2.5rem;
 	}
 
 	form {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		gap: 1.25rem;
@@ -132,9 +134,13 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
+		min-inline-size: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	fieldset label {
+		min-width: 0;
 		display: flex;
 		flex-direction: column;
 		gap: 0.4rem;
@@ -147,6 +153,10 @@
 	}
 
 	select {
+		box-sizing: border-box;
+		width: 100%;
+		min-width: 0;
+		max-width: 100%;
 		font: inherit;
 		font-size: 0.92rem;
 		color: var(--color-text);
