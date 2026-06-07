@@ -1,16 +1,16 @@
 [Unit]
-Description=Pull and build the lab website
+Description=Pull and build the %i website
 Wants=network-online.target
 After=network-online.target
 
 [Service]
 Type=oneshot
 User=infra
-WorkingDirectory=/usr/local/src/senseuwaterloo
+WorkingDirectory=/usr/local/src/%i
 # Proceed only when there are new commits (or no build exists yet);
 # a failing condition is a silent skip, not a logged failure.
-ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/senseuwaterloo/index.html ]; }'
+ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/%i/index.html ]; }'
 ExecStart=/usr/bin/git reset -q --hard origin/main
 # --ignore-scripts: dependency lifecycle scripts never execute on this host.
 ExecStart=/usr/bin/npm ci --ignore-scripts --silent
-ExecStart=/usr/bin/npx @11ty/eleventy --output=/var/www/senseuwaterloo
+ExecStart=/usr/bin/npx @11ty/eleventy --output=/var/www/%i

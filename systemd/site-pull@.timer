@@ -1,5 +1,5 @@
 [Unit]
-Description=Poll for website updates
+Description=Poll %i for updates
 
 [Timer]
 OnBootSec=1min
