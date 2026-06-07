@@ -24,3 +24,7 @@ ExecStart=git reset -q --hard origin/main
 ExecStart=sh -c 'rm -rf "$CACHE_DIRECTORY/build" && cp -a /usr/local/src/%i "$CACHE_DIRECTORY/build"'
 # --ignore-scripts: dependency lifecycle scripts never execute on this host.
 ExecStart=sh -c 'cd "$CACHE_DIRECTORY/build" && npm ci --ignore-scripts --silent && npx @11ty/eleventy --output=/var/www/%i'
+# Runs only on real deploys (not on condition-skips): `journalctl -t senseuw-site`
+# is a clean deploy history, free of the per-tick Starting/Finished chatter that
+# PID 1 logs and per-unit settings cannot suppress (systemd issue #9328).
+ExecStartPost=sh -c 'logger -t senseuw-site -p user.notice "%i: deployed $(git rev-parse --short HEAD)"'
