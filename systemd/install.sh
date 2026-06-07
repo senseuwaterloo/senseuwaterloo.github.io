@@ -11,8 +11,9 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SITE="${1:-senseuw}"
 
-install -m 644 "$HERE/senseuw-site@.service" "$HERE/senseuw-site@.timer" /etc/systemd/system/
-install -m 644 "$HERE/senseuw-site.sysusers" /etc/sysusers.d/senseuw-site.conf
+install -D -m 644 -t /etc/systemd/system "$HERE/senseuw-site@.service" "$HERE/senseuw-site@.timer"
+# -D: Ubuntu does not pre-create /etc/sysusers.d
+install -D -m 644 "$HERE/senseuw-site.sysusers" /etc/sysusers.d/senseuw-site.conf
 systemd-sysusers
 install -d -m 700 /etc/credstore
 install -d -o senseuw-site -g senseuw-site "/var/www/$SITE"
