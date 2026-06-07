@@ -10,7 +10,7 @@ Starting point: [`/Users/weiyishang/Work/lab_website/src/_data/people.json`](/Us
 
 - Minsi Lu: new personal website found at [minsilu.github.io](https://minsilu.github.io/). Per standing rule, do not add without approval.
 - Jiayi Ma: LinkedIn indicates a personal website exists, but the public search result does not expose the URL. Needs manual confirmation before adding any homepage link.
-- Chole Wei: likely spelling mismatch with `Chloe Wei` based on University of Waterloo LinkedIn search results, but this is not strong enough to change automatically.
+- Chloe Wei: name corrected from `Chole Wei` after user confirmation.
 
 ## Checked and no confident website edit needed
 
