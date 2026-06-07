@@ -3,8 +3,8 @@
 # Install the site-pull systemd units. Idempotent; run as root on the server.
 #
 # The site deploys pull-based: site-pull.timer polls this repo's main every
-# 2 minutes and, on new commits, rebuilds into /srv/site/static (served by
-# Caddy). No deploy credentials exist anywhere. See homepage issue #7.
+# 2 minutes and, on new commits, rebuilds into /srv/homepage/_site (served
+# by Caddy). No deploy credentials exist anywhere. See homepage issue #7.
 #
 set -euo pipefail
 
@@ -12,7 +12,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 
 [ "$(id -u)" -eq 0 ] || { echo "run as root" >&2; exit 1; }
 id infra >/dev/null 2>&1 || { echo "missing 'infra' user" >&2; exit 1; }
-[ -d /srv/site/.git ] || { echo "missing checkout at /srv/site" >&2; exit 1; }
+[ -d /srv/homepage/.git ] || { echo "missing checkout at /srv/homepage" >&2; exit 1; }
 for cmd in git npm npx; do
   [ -x "/usr/bin/$cmd" ] || { echo "/usr/bin/$cmd not found (units use absolute paths)" >&2; exit 1; }
 done
