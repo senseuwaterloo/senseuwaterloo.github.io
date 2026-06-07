@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Pull main, rebuild, and sync the built site into the web root.
+# Idempotent: exits immediately when the checkout is already up to date.
+# Run by cron (see site-pull.cron). Logs to syslog tag `site-pull`.
+set -euo pipefail
+
+CHECKOUT=/srv/site/homepage   # existing clone of the repo
+DEST=/srv/site/static         # web root served by Caddy
+
+git -C "$CHECKOUT" fetch origin main
+if [[ $(git -C "$CHECKOUT" rev-parse HEAD) == $(git -C "$CHECKOUT" rev-parse origin/main) \
+      && -d $CHECKOUT/_site ]]; then
+  exit 0
+fi
+
+git -C "$CHECKOUT" reset --hard origin/main
+cd "$CHECKOUT"
+# --ignore-scripts: don't let dependency lifecycle scripts execute on this
+# host. The Eleventy/WebC build is pure JS and does not need them.
+npm ci --ignore-scripts
+npm run build   # -> _site/
+rsync -a --delete _site/ "$DEST"/
+logger -t site-pull "deployed $(git rev-parse --short HEAD)"

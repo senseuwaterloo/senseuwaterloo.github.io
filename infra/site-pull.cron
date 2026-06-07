@@ -1,0 +1,3 @@
+# Install as /etc/cron.d/site-pull
+# flock prevents overlapping runs if a build outlasts the interval.
+*/2 * * * * deploy flock -n /tmp/site-pull.lock /usr/local/bin/site-pull 2>&1 | logger -t site-pull
