@@ -1,0 +1,16 @@
+[Unit]
+Description=Pull and build the lab website
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=infra
+WorkingDirectory=/srv/site
+# Proceed only when there are new commits (or no build exists yet);
+# a failing condition is a silent skip, not a logged failure.
+ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -d static ]; }'
+ExecStart=/usr/bin/git reset -q --hard origin/main
+# --ignore-scripts: dependency lifecycle scripts never execute on this host.
+ExecStart=/usr/bin/npm ci --ignore-scripts --silent
+ExecStart=/usr/bin/npx @11ty/eleventy --output=static
