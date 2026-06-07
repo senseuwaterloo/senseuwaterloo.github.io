@@ -17,6 +17,14 @@ Environment=npm_config_cache=%C/senseuw-site/%i/npm
 # mounts it into the service only while it runs (%d = that directory).
 LoadCredential=deploy-key:/etc/credstore/%i-deploy-key
 Environment="GIT_SSH_COMMAND=ssh -i %d/deploy-key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+# A no-change tick would otherwise journal three info-level lines
+# (Starting/Skipped/Finished) every interval. Since v249, LogLevelMax also
+# filters PID 1's messages about the unit (systemd PR #19050), dropping the
+# per-tick chatter; warnings and errors still get through. Process output
+# (git/npm) is logged at info by default and would be dropped too, so
+# SyslogLevel raises it to keep build failures diagnosable.
+LogLevelMax=notice
+SyslogLevel=notice
 # Proceed only when there are new commits (or no build exists yet);
 # a failing condition is a silent skip, not a logged failure.
 ExecCondition=sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/%i/index.html ]; }'
@@ -25,6 +33,5 @@ ExecStart=sh -c 'rm -rf "$CACHE_DIRECTORY/build" && cp -a /usr/local/src/%i "$CA
 # --ignore-scripts: dependency lifecycle scripts never execute on this host.
 ExecStart=sh -c 'cd "$CACHE_DIRECTORY/build" && npm ci --ignore-scripts --silent && npx @11ty/eleventy --output=/var/www/%i'
 # Runs only on real deploys (not on condition-skips): `journalctl -t senseuw-site`
-# is a clean deploy history, free of the per-tick Starting/Finished chatter that
-# PID 1 logs and per-unit settings cannot suppress (systemd issue #9328).
+# is a clean deploy history across instances. user.notice clears LogLevelMax.
 ExecStartPost=sh -c 'logger -t senseuw-site -p user.notice "%i: deployed $(git rev-parse --short HEAD)"'
