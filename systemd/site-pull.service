@@ -6,11 +6,11 @@ After=network-online.target
 [Service]
 Type=oneshot
 User=infra
-WorkingDirectory=/srv/homepage
+WorkingDirectory=/usr/local/src/senseuwaterloo
 # Proceed only when there are new commits (or no build exists yet);
 # a failing condition is a silent skip, not a logged failure.
-ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -d _site ]; }'
+ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/senseuwaterloo/index.html ]; }'
 ExecStart=/usr/bin/git reset -q --hard origin/main
 # --ignore-scripts: dependency lifecycle scripts never execute on this host.
 ExecStart=/usr/bin/npm ci --ignore-scripts --silent
-ExecStart=/usr/bin/npx @11ty/eleventy
+ExecStart=/usr/bin/npx @11ty/eleventy --output=/var/www/senseuwaterloo
