@@ -5,12 +5,22 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-User=infra
+User=senseuw-site
 WorkingDirectory=/usr/local/src/%i
+# systemd-managed mutable state: home for the user (StateDirectory) and a
+# per-instance scratch area (CacheDirectory) where npm and the build write,
+# keeping the source checkout pristine.
+StateDirectory=senseuw-site
+CacheDirectory=senseuw-site/%i
+Environment=npm_config_cache=%C/senseuw-site/%i/npm
+# Read-only GitHub deploy key, root-owned under /etc/credstore; systemd
+# mounts it into the service only while it runs (%d = that directory).
+LoadCredential=deploy-key:/etc/credstore/%i-deploy-key
+Environment="GIT_SSH_COMMAND=ssh -i %d/deploy-key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
 # Proceed only when there are new commits (or no build exists yet);
 # a failing condition is a silent skip, not a logged failure.
-ExecCondition=/bin/sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/%i/index.html ]; }'
-ExecStart=/usr/bin/git reset -q --hard origin/main
+ExecCondition=sh -c 'git fetch -q origin main && { [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ] || [ ! -e /var/www/%i/index.html ]; }'
+ExecStart=git reset -q --hard origin/main
+ExecStart=sh -c 'rm -rf "$CACHE_DIRECTORY/build" && cp -a /usr/local/src/%i "$CACHE_DIRECTORY/build"'
 # --ignore-scripts: dependency lifecycle scripts never execute on this host.
-ExecStart=/usr/bin/npm ci --ignore-scripts --silent
-ExecStart=/usr/bin/npx @11ty/eleventy --output=/var/www/%i
+ExecStart=sh -c 'cd "$CACHE_DIRECTORY/build" && npm ci --ignore-scripts --silent && npx @11ty/eleventy --output=/var/www/%i'

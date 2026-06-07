@@ -1,0 +1,4 @@
+# Declarative service user (systemd-sysusers). Home at /var/lib/senseuw-site:
+# npm needs a writable $HOME for its cache; systemd sets HOME from the user
+# database for User= units.
+u senseuw-site - "Website deploy sandbox" /var/lib/senseuw-site

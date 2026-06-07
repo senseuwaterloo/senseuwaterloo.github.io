@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 #
-# Install the senseuw-site template units and enable an instance.
-# Idempotent; run as root on the server.
-#
-# The site deploys pull-based: senseuw-site@SITE.timer polls the repo's main
-# every 2 minutes and, on new commits, rebuilds the checkout at
-# /usr/local/src/SITE into /var/www/SITE (served by Caddy). The instance
-# name after '@' supplies both paths via %i. No deploy credentials exist
-# anywhere. See homepage issue #7.
+# Place the systemd declarations and enable a site instance. Run as root.
+# Assumes nothing of the host beyond systemd (plus git/node on the search
+# path, resolved by systemd itself at service start).
 #
 # Usage: install.sh [SITE]   (default: senseuw)
 #
@@ -16,25 +11,34 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SITE="${1:-senseuw}"
 
-[ "$(id -u)" -eq 0 ] || { echo "run as root" >&2; exit 1; }
-id infra >/dev/null 2>&1 || { echo "missing 'infra' user" >&2; exit 1; }
-[ -d "/usr/local/src/$SITE/.git" ] || { echo "missing checkout at /usr/local/src/$SITE" >&2; exit 1; }
-for cmd in git npm npx; do
-  [ -x "/usr/bin/$cmd" ] || { echo "/usr/bin/$cmd not found (units use absolute paths)" >&2; exit 1; }
-done
-
-install -d -o infra -g infra "/var/www/$SITE"
 install -m 644 "$HERE/senseuw-site@.service" "$HERE/senseuw-site@.timer" /etc/systemd/system/
+install -m 644 "$HERE/senseuw-site.sysusers" /etc/sysusers.d/senseuw-site.conf
+systemd-sysusers
+install -d -m 700 /etc/credstore
+install -d -o senseuw-site -g senseuw-site "/var/www/$SITE"
 systemctl daemon-reload
 systemctl enable --now "senseuw-site@$SITE.timer"
-systemctl start "senseuw-site@$SITE"   # build now rather than waiting a tick
 
 cat <<EOF
-Installed. Useful commands:
-  systemctl list-timers 'senseuw-site@*'      # next/last poll
-  systemctl status senseuw-site@$SITE         # last run result
-  journalctl -u senseuw-site@$SITE            # build/deploy log
-  systemctl start senseuw-site@$SITE          # force an immediate deploy
+Declarations installed; senseuw-site@$SITE.timer enabled.
 
-If an old site-pull or crontab deploy line exists in a crontab, remove it: crontab -e -u infra
+One-time provisioning (secrets/data — deliberately not in this repo):
+
+  1. Deploy key (read-only):
+       ssh-keygen -t ed25519 -N '' -C "senseuw-site@$SITE" -f /etc/credstore/$SITE-deploy-key
+       chmod 600 /etc/credstore/$SITE-deploy-key
+     Register the .pub as a read-only deploy key on the GitHub repo
+     (Settings -> Deploy keys).
+
+  2. Checkout:
+       GIT_SSH_COMMAND="ssh -i /etc/credstore/$SITE-deploy-key -o IdentitiesOnly=yes" \\
+         git clone git@github.com:senseuwaterloo/homepage.git /usr/local/src/$SITE
+       chown -R senseuw-site:senseuw-site /usr/local/src/$SITE
+
+  3. First build:  systemctl start senseuw-site@$SITE
+
+Useful commands:
+  systemctl status senseuw-site@$SITE          # last run result
+  journalctl -u senseuw-site@$SITE             # build/deploy log
+  systemctl list-timers 'senseuw-site@*'       # polling status
 EOF
