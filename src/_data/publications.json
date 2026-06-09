@@ -10,6 +10,14 @@
   {
     "year": "2026",
     "type": "journal",
+    "venue": "TSE",
+    "topic": "testing",
+    "content": "Youshuai Tan, Zhanwei Zhang, Zishuo Ding, Jinfu Chen, <strong>Weiyi Shang</strong>. ICE: Reducing Search Space for Error-inducing Input Detection. <em>IEEE Transactions on Software Engineering.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
     "venue": "EMSE",
     "topic": "ai-llm performance",
     "content": "Shuang Li, Yuntao Cheng, Jinfu Chen, Jifeng Xuan, Sen He and <strong>Weiyi Shang</strong>. Performance Analysis of AI-Generated Code: A Case Study of Copilot, Copilot Chat, CodeLlaMa, and DeepSeek-Coder Models. <em>Empirical Software Engineering Journal.</em>",
