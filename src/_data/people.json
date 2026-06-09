@@ -145,6 +145,11 @@
         "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=tvtg5PUAAAAJ&hl=zh-CN" }]
       },
       {
+        "name": "Youshuai Tan",
+        "photo": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ooOeZ8IAAAAJ&citpid=1",
+        "links": [{ "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=ooOeZ8IAAAAJ&hl=zh-CN" }]
+      },
+      {
         "name": "Ting Xu",
         "role": "Ph.D. Student",
         "affiliation": "Nankai University",
