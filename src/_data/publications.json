@@ -10,6 +10,22 @@
   {
     "year": "2026",
     "type": "journal",
+    "venue": "Neurocomputing",
+    "topic": "other",
+    "content": "Yuqin Liang, Xiaopeng Li, Chen Gao, Xuan Zhang, <strong>Weiyi Shang</strong>, Kunpeng Du, Zhihong Zheng, Hexing Yang and Tong Li. Document-level Event Argument Extraction by Leveraging Span Boundaries and Argument Dependencies. <em>Neurocomputing.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
+    "venue": "SIGSOFT SEN",
+    "topic": "performance testing",
+    "content": "Heng Li, Luca Traini and <strong>Weiyi Shang</strong>. Summary of the First International Workshop on DevOps for Sustainability (DevOpsSustain 2025). <em>ACM SIGSOFT Software Engineering Notes.</em>",
+    "pdf": ""
+  },
+  {
+    "year": "2026",
+    "type": "journal",
     "venue": "TSE",
     "topic": "testing",
     "content": "Youshuai Tan, Zhanwei Zhang, Zishuo Ding, Jinfu Chen, <strong>Weiyi Shang</strong>. ICE: Reducing Search Space for Error-inducing Input Detection. <em>IEEE Transactions on Software Engineering.</em>",
